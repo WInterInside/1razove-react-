@@ -7,6 +7,7 @@ export default function HomePage() {
   return (
     <div className="HomePage">
     <h1 className="main__heading visually-hidden">1razovoe</h1>
+
     <Decision />
     <Brands />
     <About />

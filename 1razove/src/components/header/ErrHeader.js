@@ -7,7 +7,7 @@ import LogoMenu from "../img/logo-small-blue.png";
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header header--404">
       <div className="container">
         <div className="header__wraper header__wraper--main">
           <a className="header__logo" href="index.html">
@@ -25,10 +25,25 @@ export default function Header() {
                   </span>
                 </button>
               </div>
-              <Nav />
-              <Lang />
+              <nav className="navigation">
+                <ul className="navigation__list">
+                  <li className="navigation__item"><a className="navigation__link navigation__link--mobile" href="index.html#brands"> Бренди та Напрямки </a> </li>
+                  <li className="navigation__item"><a className="navigation__link navigation__link--mobile" href="contacts.html">Контактна Інформація</a></li>
+                </ul>
+              </nav>
+              <div className="languages">
+                <ul className="languages__list">
+                  <li className="languages__item">Укр</li>
+                  <li className="languages__item">Рус</li>
+                  <li className="languages__item">Eng</li>
+                </ul>
+              </div>
             </div>
-            <p className="header__text">А скільки пацієнтів та лікарів <span className="header__text header__text--colored">наражаються на небезпеку через неякісну обробку?</span></p>
+            <div className="header__error">
+              <h1 className="header__text header__text--err">404</h1>
+              <p className="header__text header__text--err"> Упс! <span className="header__text header__text--colored">ТакоЇ сторінки не існує</span></p>
+              <a className="header__link button button--index" href="index.html">На головну сторінку</a>
+            </div>
           </div>
         </div>
       </div>
