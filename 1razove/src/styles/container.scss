@@ -1,0 +1,27 @@
+.container {
+  max-width: 949px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--padding0 {
+    padding: 0;
+  }
+
+  &--slider {
+    margin-top: 20px;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 950px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    &--slider {
+      margin-top: 40px;
+      padding-right: 0;
+    }
+  }
+}

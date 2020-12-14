@@ -1,0 +1,81 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 421px;
+}
+
+.navigation__heading {
+  @include din-pro (50px, 54px, #2789ff);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.navigation__item {
+  margin-right: 52px;
+  margin-bottom: 10px;
+
+  @include pragmatica (18px, 32px, #ffffff);
+  cursor: pointer;
+
+  @media (min-width: 950px) {
+    margin-bottom: 0;
+  }
+
+  &--blue {
+    color: #0627b0;
+  }
+}
+
+.navigation__link {
+  @include pragmatica (18px, 24px, #ffffff);
+  font-size: 18px;
+  line-height: 32px;
+  cursor: pointer;
+
+  &--blue {
+    color: #0627b0;
+  }
+
+  &--mobile {
+    @include pragmatica (18px, 22px, #0627b0);
+
+    @media (min-width: 950px) {
+      color: $white;
+    }
+  }
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.navigation__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  height: 350px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  background-color: #f0f0f0;
+}
+
+.navigation__contact {
+  width: 50%;
+  margin-bottom: 40px;
+
+  &--adress {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+
+  &--telephone {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+
+  &--email {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+}

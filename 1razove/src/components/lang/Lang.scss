@@ -1,0 +1,27 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.languages__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 155px;
+}
+
+.languages__item {
+  margin-right: 30px;
+
+  @include pragmatica (18px, 22px, #0627b0);
+  cursor: pointer;
+
+  @media (min-width: 950px) {
+    @include pragmatica (18px, 32px, #ffffff);
+  }
+
+  &--blue {
+    color: #0627b0;
+  }
+}
+
+.languages__item:last-child {
+  margin-right: 0;
+}

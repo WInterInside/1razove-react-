@@ -1,0 +1,54 @@
+@mixin list-style () {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin text($text-color, $font-size, $line-height, $font-weight:500) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+  font-weight: $font-weight;
+}
+
+@mixin lr-paddings() {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin round($round-width, $round-height, $round-fill) {
+  width: $round-width;
+  height: $round-height;
+  background-color: $round-fill;
+  border-radius: 50%;
+}
+
+@mixin background ($background-position, $background-repeat) {
+  background-position: $background-position;
+  background-repeat: $background-repeat;
+}
+
+@mixin din-pro ($font-size, $line-height, $color) {
+  font-family: "DINpro", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  letter-spacing: -0.02em;
+}
+
+@mixin pragmatica ($font-size, $line-height, $color) {
+  font-family: "Pragmatica", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

@@ -1,0 +1,147 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.header {
+  width: 100%;
+  background-color: $bg-blue;
+  color: $white;
+  padding-top: 15px;
+  padding-bottom: 60px;
+
+  @media (min-width: 950px) {
+    padding-bottom: 95px;
+  }
+
+  &--contacts {
+    background-color: $white;
+  }
+
+  &--product {
+    background-color: $white;
+    color: #0627b0;
+  }
+
+  &--404 {
+    height: 100vh;
+  }
+}
+
+.header__link {
+  @include din-pro (18px, 27px, #0627b0);
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.header__wraper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  &--menu {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    min-height: 222px;
+    padding: 30px 15px;
+    padding-top: 15px;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    color: #0627b0;
+    border-radius: 0 0 20px 20px;
+
+    @media (min-width: 950px) {
+      position: relative;
+      justify-content: space-between;
+      color: $white;
+      background-color: transparent;
+    }
+  }
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+  }
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--row {
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-width: 950px) {
+      display: none;
+    }
+  }
+}
+
+.header__logo--mobile {
+  display: block;
+  margin-bottom: 30px;
+
+  @media (min-width: 950px) {
+    display: none;
+  }
+}
+
+.header__img {
+  max-width: none;
+  margin-right: 0;
+  width: 167px;
+  height: 261px;
+
+  @media (min-width: 950px) {
+    width: 316px;
+    height: 512px;
+    margin-right: 146px;
+  }
+
+  &--small {
+    width: 173px;
+    height: 39px;
+    margin-right: 0;
+
+    @media (min-width: 950px) {
+      width: 247px;
+      height: 56px;
+      margin-right: 215px;
+    }
+  }
+}
+
+.header__text {
+  padding: 0;
+
+  @include din-pro (42px, 44px, $white);
+  text-transform: uppercase;
+
+  @media (min-width: 950px) {
+    margin-top: 402px;
+
+    @include din-pro (54px, 54px, $white);
+  }
+
+  &--colored {
+    color: #2789ff;
+  }
+
+  &--err {
+    margin: 0;
+  }
+}
+
+.header__menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+
+  @media (min-width: 950px) {
+    display: none;
+  }
+}
+
+.header__error {
+  margin-top: auto;
+}

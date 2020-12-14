@@ -1,0 +1,63 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.leaflet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  min-height: 324px;
+  border-radius: 15px;
+  padding: 25px 10px;
+  background-color: #fdbdc7;
+
+  @media (min-width: 950px) {
+    display: block;
+    min-height: 396px;
+    border-radius: 30px;
+    padding: 40px 20px;
+  }
+
+  &::before {
+    @include pseudo;
+    top: -6px;
+    right: -6px;
+    width: 51px;
+    height: 51px;
+    border-bottom-left-radius: 15px;
+    background: linear-gradient(45deg, rgba(251, 64, 115, 1) 45%, rgba(255, 255, 255, 1) 45%);
+
+    @media (min-width: 950px) {
+      @include pseudo;
+      top: -10px;
+      right: -10px;
+      width: 100px;
+      height: 100px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+}
+
+.leaflet__text {
+  @include din-pro (34px, 34px, #0627b0);
+  margin: 0;
+  margin-bottom: 15px;
+  padding-right: 40px;
+
+  @media (min-width: 950px) {
+    @include din-pro (50px, 50px, #0627b0);
+    margin-bottom: 60px;
+    padding-right: 200px;
+  }
+
+  &--colored {
+    padding-right: 0;
+    color: #0627b0;
+
+    @media (min-width: 950px) {
+      padding-right: 0;
+      color: #2789ff;
+    }
+  }
+}

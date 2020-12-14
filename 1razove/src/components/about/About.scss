@@ -1,0 +1,82 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.about {
+  padding-top: 80px;
+
+  @media (min-width: 950px) {
+    padding-top: 150px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+    margin-bottom: 150px;
+  }
+}
+
+.about__block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: 20px;
+
+    @media (min-width: 950px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 950px) {
+    width: 50%;
+  }
+}
+
+.about__heading {
+  @include din-pro (54px, 37px, #0627b0);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  @media (min-width: 950px) {
+    @include din-pro (90px, 54px, #0627b0);
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.about__discription {
+  @include din-pro (42px, 44px, #2789ff);
+  text-transform: uppercase;
+  padding-right: 0;
+  margin: 0;
+
+  @media (min-width: 950px) {
+    @include din-pro (54px, 54px, #2789ff);
+    padding-right: 40px;
+  }
+}
+
+.about__text {
+  @include pragmatica (18px, 22px, #0627b0);
+  margin-top: 0;
+
+  &:last-child {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 950px) {
+    @include pragmatica (24px, 32px, #0627b0);
+
+    &:last-child {
+      margin-bottom: 70px;
+    }
+  }
+}

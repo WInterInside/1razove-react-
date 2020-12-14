@@ -1,0 +1,141 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.decision {
+  padding-top: 90px;
+  background-color: $bg-blue;
+  color: $white;
+
+  @media (min-width: 950px) {
+    padding-top: 50px;
+  }
+}
+
+.decision__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+  }
+
+  &--column {
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 50px;
+
+    @media (min-width: 950px) {
+      margin-left: 20px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &--main {
+    flex-wrap: nowrap;
+  }
+}
+
+.decision__logo {
+  margin-bottom: 60px;
+
+  @media (min-width: 950px) {
+    margin-bottom: 0;
+  }
+}
+
+.decision__img {
+  width: 167px;
+
+  @media (min-width: 950px) {
+    min-width: 325px;
+    height: 397px;
+  }
+}
+
+.decision__text {
+  padding: 0;
+  margin: 0;
+
+  @include din-pro (42px, 44px, $white);
+  text-transform: uppercase;
+
+  @media (min-width: 950px) {
+    @include din-pro (54px, 54px, $white);
+  }
+
+  &--colored {
+    padding-right: 0;
+    color: #2789ff;
+
+    @media (min-width: 950px) {
+      padding-right: 200px;
+    }
+  }
+}
+
+.decision__list {
+  list-style: none;
+  counter-reset: product-counter;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 80px;
+
+  @media (min-width: 950px) {
+    margin-bottom: 158px;
+  }
+}
+
+.decision__item {
+  counter-increment: decision-counter;
+  position: relative;
+  padding-left: 58px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin-bottom: 23px;
+
+  @include pragmatica (16px, 21px, #ffffff);
+
+  @media (min-width: 950px) {
+    @include pragmatica (24px, 32px, #ffffff);
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    @include pseudo;
+    content: counter(decision-counter);
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    padding-top: 5px;
+    border-radius: 7px;
+    background-color: #fb4073;
+    display: inline-block;
+    color: $white;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.decision__item:last-child {
+  margin-bottom: 0;
+}
+
+.decision__video {
+  width: 100%;
+  height: 200px;
+  margin-top: 5px;
+  border-radius: 20px;
+  opacity: 0.7;
+
+  @media (min-width: 950px) {
+    width: 100%;
+    height: 589px;
+    margin-top: 20px;
+    border-radius: 50px;
+  }
+}

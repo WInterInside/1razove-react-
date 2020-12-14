@@ -1,28 +1,27 @@
-.App {
-  text-align: center;
-}
+@import "styles/normalize";
+@import "styles/fonts";
+@import "styles/global";
+@import "styles/mixins";
+@import "styles/vars";
+@import "styles/visually-hidden";
+@import "styles/container";
+@import "styles/button";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #0627b0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #fff;
-}
-
-.App-text {
-  font-size: 54px;
-  line-height: 54px;
-}
-
-.App-text--colored {
-  color: #2789ff;
-}
+/*
+@import "components/container";
+@import "styles/blocks/footer";
+@import "blocks/header";
+@import "blocks/visually-hidden";
+@import "blocks/button";
+@import "blocks/languages";
+@import "blocks/navigation";
+@import "blocks/decision";
+@import "blocks/problematic";
+@import "blocks/about-us";
+@import "blocks/brands";
+@import "blocks/leaflet";
+@import "blocks/product";
+@import "blocks/social";
+@import "blocks/contacts";
+@import "blocks/products";
+*/

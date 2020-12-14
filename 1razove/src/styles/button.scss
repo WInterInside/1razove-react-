@@ -1,0 +1,46 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.button {
+  border: none;
+  display: inline-block;
+  text-align: center;
+  min-height: 64px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  background-color: $bg-blue;
+
+  @include pragmatica (18px, 22px, $white);
+  font-weight: normal;
+  cursor: pointer;
+
+  @media (min-width: 950px) {
+    line-height: 32px;
+    width: 50%;
+  }
+
+  &--pdf {
+    margin-top: 50px;
+  }
+
+  &--index {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $white;
+    color: #0627b0;
+
+    @media (min-width: 950px) {
+      margin-top: 50px;
+      max-width: 280px;
+    }
+  }
+
+  &--more {
+    padding-top: 0;
+  }
+}

@@ -1,15 +1,16 @@
-import logo from './logo.svg';
-import './App.scss';
+import "./App.scss";
+import Header from "./components/header/Header";
+import HomePage from "./pages/HomePage";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="App-text">
-          А скільки пацієнтів та лікарів <span className="App-text App-text--colored">наражаються на небезпеку через неякісну обробку?</span>
-        </p>
-      </header>
+      <Header />
+
+      <HomePage />
+
+      <Footer />
     </div>
   );
 }

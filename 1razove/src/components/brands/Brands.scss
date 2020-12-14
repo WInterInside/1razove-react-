@@ -1,0 +1,106 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.brands {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: #f0f0f0;
+
+  @media (min-width: 950px) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+}
+
+.brands__heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include din-pro (54px, 54px, #0627b0);
+
+  @media (min-width: 950px) {
+    margin-bottom: 60px;
+
+    @include din-pro (90px, 90px, #0627b0);
+  }
+}
+
+.brands__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+  }
+}
+
+.brands__wrapper {
+  width: 100%;
+  min-height: 192px;
+  padding: 30px 15px;
+  border-radius: 18px;
+  background-color: $white;
+
+  @media (min-width: 950px) {
+    width: 325px;
+    height: 232px;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+}
+
+.brands__item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 30px;
+
+    @media (min-width: 950px) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 950px) {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+}
+
+.brands__item:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.brands__discription {
+  @include pragmatica (18px, 24px, #0627b0);
+  vertical-align: bottom;
+  margin: 0;
+
+  @media (min-width: 950px) {
+    @include pragmatica (18px, 22px, #0627b0);
+  }
+
+  &--maxtec {
+    margin-top: 32px;
+  }
+
+  &--ulrich {
+    margin-top: 32px;
+  }
+
+  &--flexicare {
+    margin-top: 44px;
+  }
+
+  &--deltamed {
+    margin-top: 16px;
+  }
+}
+
+.brands__button {
+  display: block;
+
+  @media (min-width: 950px) {
+    display: none;
+  }
+}
