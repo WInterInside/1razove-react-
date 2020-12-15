@@ -36,16 +36,16 @@
   line-height: 32px;
   cursor: pointer;
 
-  &--blue {
-    color: #0627b0;
-  }
-
   &--mobile {
     @include pragmatica (18px, 22px, #0627b0);
 
     @media (min-width: 950px) {
       color: $white;
     }
+  }
+
+  &--blue {
+    color: #0627b0;
   }
 }
 

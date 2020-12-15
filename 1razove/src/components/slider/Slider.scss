@@ -1,0 +1,56 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.product__slides {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 80px;
+  background-color: #f0f0f0;
+
+  @media (min-width: 950px) {
+    padding-top: 40px;
+    padding-bottom: 65px;
+    margin-bottom: 150px;
+  }
+}
+
+.product__slideimg {
+  height: 288px;
+
+  @media (min-width: 950px) {
+    height: 468px;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__toggls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include din-pro (34px, 34px, #0627b0);
+
+  @media (min-width: 950px) {
+    @include din-pro (40px, 54px, #0627b0);
+  }
+
+  outline: none;
+}
+
+.product__arrow {
+  outline: none;
+  cursor: pointer;
+}
+
+.product__arrow--prev {
+  margin-right: 20px;
+}
+
+.product__arrow--next {
+  margin-right: 5px;
+}

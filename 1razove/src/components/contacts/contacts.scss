@@ -1,0 +1,107 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+  }
+}
+
+.contacts__card {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 350px;
+  padding: 40px 30px;
+  margin-bottom: 80px;
+  border-radius: 30px;
+  background-color: #f0f0f0;
+
+  @media (min-width: 950px) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 160px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: 950px) {
+    flex-direction: row;
+  }
+}
+
+.contacts__header {
+  @include din-pro (54px, 54px, #fb4073);
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-right: 0;
+  padding-left: 15px;
+
+  @media (min-width: 950px) {
+    @include din-pro (90px, 52px, #fb4073);
+    margin-right: 65px;
+  }
+}
+
+.contacts__heading {
+  @include din-pro (42px, 44px, #2789ff);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: 950px) {
+    @include din-pro (50px, 54px, #2789ff);
+  }
+}
+
+.contacts__item {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media (min-width: 950px) {
+    width: 50%;
+  }
+
+  &--adress {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+
+  &--telephone {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+
+  &--email {
+    @include pragmatica (18px, 24px, #0627b0);
+  }
+}
+
+.contacts__adress {
+  font-style: normal;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.social__item {
+  display: inline-block;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__icon {
+  width: 40px;
+  height: 40px;
+}
