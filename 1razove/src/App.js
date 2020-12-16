@@ -14,11 +14,12 @@ function App() {
   return (
     <div className="App">
       <BrandPage />
+      
       <Header />
       <WhiteHeader />
       <ErrHeader />
 
-      <ProductPage />
+
       <ContactsPage />
       <ProductPage />
       <HomePage />
