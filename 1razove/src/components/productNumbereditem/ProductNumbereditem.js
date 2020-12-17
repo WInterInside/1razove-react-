@@ -1,7 +1,7 @@
 import React from "react"
-import "../product__card/Product__card.scss";
+import "../productCard/ProductCard.scss";
 
-export default function Product__numbereditem() {
+export default function ProductNumbereditem() {
   return (
     <li className="product__numbereditem">lorum ipsum dolor set amet</li>
   )

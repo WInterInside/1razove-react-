@@ -1,6 +1,6 @@
 import React from "react"
 import "./Decision.scss";
-import Logo1 from "../img/1.svg";
+import Logo1 from "../../images/1.svg";
 
 export default function Decision() {
   return (

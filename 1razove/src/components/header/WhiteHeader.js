@@ -1,16 +1,13 @@
 import React from "react"
 import "./Header.scss";
-import Nav from "../nav/Nav";
-import Lang from "../lang/Lang";
-import Logo from "../img/logo.svg";
-import LogoMenu from "../img/logo-small-blue.png";
+import LogoMenu from "../../images/logo-small-blue.png";
 
 export default function WhiteHeader() {
   return (
     <header className="header header--product">
       <div className="container">
         <div className="header__wraper header__wraper--main">
-          <a className="header__logo" href="index.html">
+          <a className="header__logo" href="/">
             <picture>
               <img className="header__img header__img--small" src={LogoMenu} alt="1razovoe logotype" width="247" height="56" />
             </picture>
@@ -18,7 +15,7 @@ export default function WhiteHeader() {
           <div className="header__wraper header__wraper--column">
             <div className="header__wraper header__wraper--menu">
               <div className="header__wraper header__wraper--row">
-                <a className="header__logo header__logo--mobile" href="index.html">
+                <a className="header__logo header__logo--mobile" href="/">
                   <picture>
                     <img className="header__img header__img--small" src={LogoMenu} alt="1razovoe logotype" width="247" height="56" />
                   </picture>
@@ -31,8 +28,8 @@ export default function WhiteHeader() {
               </div>
               <nav className="navigation">
                 <ul className="navigation__list">
-                  <li className="navigation__item"><a className="navigation__link navigation__link--blue navigation__link--mobile" href="index.html#brands"> Бренди та Напрямки </a> </li>
-                  <li className="navigation__item"><a className="navigation__link navigation__link--blue navigation__link--mobile" href="contacts.html">Контактна Інформація</a></li>
+                  <li className="navigation__item"><a className="navigation__link navigation__link--blue navigation__link--mobile" href="#brands"> Бренди та Напрямки </a> </li>
+                  <li className="navigation__item"><a className="navigation__link navigation__link--blue navigation__link--mobile" href="/contacts">Контактна Інформація</a></li>
                 </ul>
               </nav>
               <div className="languages">
@@ -45,7 +42,7 @@ export default function WhiteHeader() {
               </div>
             </div>
           </div>
-        <a className="header__link" href="brand-page.html">← Назад до бренду <span>Brand Name</span></a>
+        <a className="header__link" href="/brand/12">← Назад до бренду <span>Brand Name</span></a>
       </div>
     </header>
   )

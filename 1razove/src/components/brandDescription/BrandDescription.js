@@ -1,13 +1,13 @@
 import React from "react"
 import "./Brand.scss";
-import Brand__img from "../img/maxtec.svg";
+import BrandImg from "../../images/maxtec.svg";
 
-export default function Brand__discription() {
+export default function BrandDescription() {
   return (
-    <div className="brand__discription">
+    <div className="brand__description">
       <div className="brand__logotype">
         <picture>
-          <img className="brand__img" src={Brand__img} alt="logotype" width="277" height="92" />
+          <img className="brand__img" src={BrandImg} alt="logotype" width="277" height="92" />
         </picture>
       </div>
       <h1 className="brand__heading">Maxtec</h1>

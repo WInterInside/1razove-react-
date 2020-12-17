@@ -43,7 +43,7 @@ export default function Problematic() {
               </div>
             </div>
           </div>
-          <div className="problematic__discription container">
+          <div className="problematic__description container">
             <h2 className="problematic__heading">Проблематика</h2>
             <p className="problematic__text">Витрати коштів на використання виробів багаторазового призначення - контрольовані і прогнозовані</p>
           </div>

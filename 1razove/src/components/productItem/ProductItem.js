@@ -1,8 +1,8 @@
 import React from "react"
 
-import "../product__card/Product__card.scss";
+import "../productCard/ProductCard.scss";
 
-export default function Product__item() {
+export default function ProductItem() {
   return (
     <li className="product__item product__item--advantages">
       <h3 className="product__heading product__heading--advantages">Lorum</h3>

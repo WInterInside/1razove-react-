@@ -3,13 +3,12 @@ import React, {useEffect} from "react";
 import {tns} from 'tiny-slider/src/tiny-slider';
 import "./Slider.scss";
 
-import Slide from "../img/slide.jpg";
+import Slide from "../../images/slide.jpg";
 
 export default function Slider() {
 
   useEffect (
     () => {
-      console.log ("huy");
       setTimeout (
         () => {
           var slider = tns({
