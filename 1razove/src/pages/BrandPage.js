@@ -2,20 +2,19 @@ import React from "react"
 // import  from "../components//";
 
 import BrandDescription from "../components/brandDescription/BrandDescription";
-import ProductsCard from "../components/productsCard/ProductsCard";
-import WhiteHeader from "../components/header/WhiteHeader";
+import Products from "../components/products/Products";
+import BrandHeader from "../components/header/BrandHeader";
+import Form from "../components/form/Form";
 export default function BrandPage(props) {
 
   console.log(props.match.params.id);
 
   return (
     <div className="brand">
-      <WhiteHeader />
+      <BrandHeader />
       <BrandDescription />
-      <div className="products">
-        <h2 className="products__heading products__heading--h2">Унікальні товари</h2>
-      <ProductsCard />
-      </div>
+      <Products />
+      <Form />
     </div>
   )
 }

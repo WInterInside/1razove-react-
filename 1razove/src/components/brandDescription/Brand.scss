@@ -1,2 +1,108 @@
 @import "src/styles/mixins";
 @import "src/styles/vars";
+
+.brand__discription {
+  background-color: $bg-blue;
+  padding-bottom: 50px;
+  padding-top: 70px;
+
+  @media (min-width: 950px) {
+    padding-top: 65;
+  }
+}
+
+.brand__logotype {
+  display: flex;
+  align-items: center;
+  width: 168px;
+  height: 168px;
+  border-radius: 16px;
+  margin-right: 135px;
+  margin-top: 5px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: $white;
+
+  @media (min-width: 950px) {
+    width: 325px;
+    height: 325px;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &--desctop {
+    display: none;
+
+    @media (min-width: 950px) {
+      display: flex;
+    }
+  }
+
+  &--mobile {
+    display: flex;
+
+    @media (min-width: 950px) {
+      display: none;
+    }
+  }
+}
+
+.brand__wrapper {
+  display: flex;
+  flex-direction: row;
+
+  &--column {
+    width: 100%;
+    flex-direction: column;
+
+    @media (min-width: 950px) {
+      width: 70%;
+    }
+  }
+}
+
+.brand__heading {
+  @include din-pro (54px, 54px, #ffffff);
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: 950px) {
+    @include din-pro (90px, 54px, #ffffff);
+  }
+
+  &--h2 {
+    @include din-pro (42px, 44px, #ffffff);
+
+    @media (min-width: 950px) {
+      @include din-pro (54px, 54px, #ffffff);
+    }
+  }
+
+  &--colored {
+    color: #2789ff;
+  }
+}
+
+.brand__text {
+  @include pragmatica (18px, 22px, #ffffff);
+  padding: 0;
+
+  @media (min-width: 950px) {
+    padding-right: 120px;
+
+    @include pragmatica (18px, 24px, #ffffff);
+  }
+
+  &--sphere {
+    @include din-pro (42px, 44px, #ffffff);
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    @media (min-width: 950px) {
+      @include din-pro (54px, 54px, #ffffff);
+    }
+  }
+}

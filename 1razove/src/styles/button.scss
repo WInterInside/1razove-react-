@@ -40,7 +40,29 @@
     }
   }
 
+  &--price {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $white;
+    color: #0627b0;
+
+    @media (min-width: 950px) {
+      max-width: 280px;
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+
   &--more {
+    padding-top: 0;
+  }
+
+  &--products {
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  &--submit {
     padding-top: 0;
   }
 }

@@ -13,7 +13,7 @@ export default function Header() {
           <a className="header__logo" href="/">
             <img className="header__img" src={Logo} alt="1razovoe logotype" width="316" height="522" />
           </a>
-          <div className="header__wraper header__wraper--column">
+          <div className="header__wraper header__wraper--index header__wraper--column">
             <div className="header__wraper header__wraper--menu">
               <div className="header__wraper header__wraper--row">
                 <a className="header__logo header__logo--mobile" href="/">

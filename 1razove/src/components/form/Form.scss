@@ -1,0 +1,126 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.form {
+  border: 1px solid #2789ff;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 440px;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media (min-width: 950px) {
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.form__toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 40px;
+  top: -35px;
+
+  @media (min-width: 950px) {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 30px;
+    top: -45px;
+  }
+
+  @media (min-width: 950px) {
+    top: 0;
+    right: -45px;
+  }
+
+  &::before {
+    @include pseudo;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #0627b0;
+    transform: rotate(45deg);
+
+    @media (min-width: 950px) {
+      top: 20px;
+      width: 40px;
+      height: 3px;
+    }
+  }
+
+  &::after {
+    @include pseudo;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #0627b0;
+    transform: rotate(135deg);
+
+    @media (min-width: 950px) {
+      top: 20px;
+      width: 40px;
+      height: 3px;
+    }
+  }
+}
+
+.form__text {
+  @include pragmatica (18px, 22px, #2789ff);
+
+  @media (min-width: 950px) {
+    @include pragmatica (18px, 32px, #2789ff);
+  }
+
+  &--main {
+    @include din-pro (42px, 44px, #2789ff);
+    text-transform: uppercase;
+    margin: 0;
+
+    @media (min-width: 950px) {
+      @include din-pro (54px, 54px, #2789ff);
+    }
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 65px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border: 1px solid #2789ff;
+
+  @include pragmatica (18px, 32px, #2789ff);
+
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  @include pragmatica (18px, 32px, #2789ff);
+}
+
+::-moz-placeholder {
+  @include pragmatica (18px, 32px, #2789ff);
+}
+
+:-moz-placeholder {
+  @include pragmatica (18px, 32px, #2789ff);
+}
+
+:-ms-input-placeholder {
+  @include pragmatica (18px, 32px, #2789ff);
+}

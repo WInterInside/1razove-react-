@@ -6,7 +6,6 @@
   background-color: $bg-blue;
   color: $white;
   padding-top: 15px;
-  padding-bottom: 60px;
 
   @media (min-width: 950px) {
     padding-bottom: 95px;
@@ -23,6 +22,10 @@
 
   &--404 {
     height: 100vh;
+  }
+
+  &--brand {
+    padding-bottom: 0;
   }
 }
 
@@ -51,7 +54,9 @@
     border-radius: 0 0 20px 20px;
 
     @media (min-width: 950px) {
+      min-height: inherit;
       position: relative;
+      margin-bottom: auto;
       justify-content: space-between;
       color: $white;
       background-color: transparent;
@@ -64,6 +69,7 @@
 
   &--column {
     flex-direction: column;
+    justify-content: space-between;
   }
 
   &--row {
@@ -73,6 +79,14 @@
     @media (min-width: 950px) {
       display: none;
     }
+  }
+
+  &--main {
+    align-items: center;
+  }
+
+  &--index {
+    height: 516px;
   }
 }
 
@@ -117,7 +131,7 @@
   text-transform: uppercase;
 
   @media (min-width: 950px) {
-    margin-top: 402px;
+    margin-bottom: 0;
 
     @include din-pro (54px, 54px, $white);
   }
