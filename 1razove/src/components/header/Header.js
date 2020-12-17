@@ -5,7 +5,7 @@ import Lang from "../lang/Lang";
 import Logo from "../../images/logo.svg";
 import LogoMenu from "../../images/logo-small-blue.png";
 
-export default function Header() {
+export default function Header({data}) {
   return (
     <header className="header">
       <div className="container">
@@ -25,10 +25,14 @@ export default function Header() {
                   </span>
                 </button>
               </div>
-              <Nav />
+              <Nav data={data.menu}/>
               <Lang />
             </div>
-            <p className="header__text">А скільки пацієнтів та лікарів <span className="header__text header__text--colored">наражаються на небезпеку через неякісну обробку?</span></p>
+            {
+              data.scrollText.map((value, index) => {
+                return  <p key={index} className="header__text">{value.white}<span className="header__text header__text--colored">{value.blue}</span></p>;
+              })
+            }
           </div>
         </div>
       </div>

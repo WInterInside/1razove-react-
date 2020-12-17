@@ -2,7 +2,7 @@ import React from "react"
 import "./Decision.scss";
 import Logo1 from "../../images/1.svg";
 
-export default function Decision() {
+export default function Decision({data}) {
   return (
     <section className="decision">
       <div className="container">
@@ -16,15 +16,16 @@ export default function Decision() {
             </a>
           </div>
           <div className="decision__wrapper decision__wrapper--column">
-            <p className="decision__text">Рішення – використовуй одноразове! <span className="decision__text decision__text--colored">Перехід на одноразові медичні вироби позбавить вас таких проблем:</span></p>
+            <p className="decision__text">{data.titleWhite} <span className="decision__text decision__text--colored">{data.title}</span></p>
             <ol className="decision__list">
-              <li className="decision__item">Гарантія чистоти і стерильності</li>
-              <li className="decision__item">Чіткі витрати в бюджеті лікарні</li>
-              <li className="decision__item">Ризики  післяопераційних ускладнень мінімізовано</li>
-              <li className="decision__item">Реальна економія!</li>
+              {
+                data.text.split('|').map((value,index) => {
+                  return <li key={index} className="decision__item">{value}</li>
+                })
+              }
             </ol>
-            <p className="decision__text">Нас підтримують лідери в галузі</p>
-            <iframe className="decision__video" width="480" height="360" src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameBorder="0" allowFullScreen></iframe>
+            <p className="decision__text">{data.videoTitle}</p>
+            <iframe className="decision__video" width="480" height="360" src={data.videoUrl} frameBorder="0" allowFullScreen></iframe>
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import "./App.scss";
+import axios from 'axios';
 
+import { useEffect } from 'react';
 import HomePage from "./pages/HomePage";
 import ContactsPage from "./pages/ContactsPage";
 import ProductPage from "./pages/ProductPage";
@@ -15,6 +17,8 @@ import {
 } from "react-router-dom";
 
 function App() {
+
+
   return (
     <Router>
     <div className="App">
