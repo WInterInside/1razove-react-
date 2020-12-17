@@ -1,0 +1,183 @@
+{
+  "project": {
+    "langs": [
+      {
+        "langText": "EN",
+        "lang": "en"
+      },
+      {
+        "langText": "UA",
+        "lang": "ua"
+      },
+      {
+        "langText": "RU",
+        "lang": "ru"
+      }
+    ]
+  },
+  "heroBlock": {
+    "scrollText": [
+      {
+        "white": "А скільки пацієнтів та лікарів",
+        "blue": "наражаються на небезпеку через неякісну обробку?"
+      },
+      {
+        "white": "А скільки пацієнтів та лікарів",
+        "blue": "наражаються на небезпеку через неякісну обробку?"
+      },
+      {
+        "white": "А скільки пацієнтів та лікарів",
+        "blue": "наражаються на небезпеку через неякісну обробку?"
+      }
+    ],
+    "menu": [
+      { "url": "brands", "text": "Бренди та Напрямки"},
+      { "url": "contacts", "text": "Контактна Інформація"}
+    ]
+  },
+  "cardsBlock": {
+    "cards": [
+      {
+        "title": "ПЕРЕРОБКА СКЛАДНА, ДОРОГА І НЕ ДАЄ 100% СТЕРИЛЬНІСТЬ",
+        "backgroundColor": "#2789FF",
+        "text": "Витрати праці/енергії/води | Організувати контроль якості | Утилізація хімікатів | Повторна стерилізація погіршує продукт | Витрати на заміну"
+      },
+      {
+        "title": "ПЕРЕРОБКА СКЛАДНА, ДОРОГА І НЕ ДАЄ 100% СТЕРИЛЬНІСТЬ",
+        "backgroundColor": "#FDBDC7",
+        "text": "Витрати праці/енергії/води | Організувати контроль якості | Утилізація хімікатів | Повторна стерилізація погіршує продукт | Витрати на заміну"
+      },
+      {
+        "title": "ПЕРЕРОБКА СКЛАДНА, ДОРОГА І НЕ ДАЄ 100% СТЕРИЛЬНІСТЬ",
+        "backgroundColor": "#2789FF",
+        "text": "Витрати праці/енергії/води | Організувати контроль якості | Утилізація хімікатів | Повторна стерилізація погіршує продукт | Витрати на заміну"
+      }
+    ],
+    "title": "проблематика",
+    "text": "Витрати коштів на використання виробів багаторазового призначення — неконтрольовані та непрогнозовані"
+  },
+  "videoBlock": {
+    "titleWhite": "Рішення – використовуй одноразове!",
+    "title": "Перехід на одноразові медичні вироби позбавить вас таких проблем:",
+    "text": "Гарантія чистоти і стерильності | Чіткі витрати в бюджеті лікарні | Ризики післяопераційних ускладнень мінімізовано | Реальна економія!",
+    "videoTitle": "Нас підтримують лідери в галузі",
+    "videoUrl": "https://www.youtube.com/watch?v=VPnAwlTBjIE"
+  },
+  "brandBlock": {
+    "title": "Товари провідних світових брендів",
+    "brands": [
+      {
+        "img": "/images/maxtec-small.png",
+        "text": "Анастезіологія та ІТ",
+        "url": "/brands/maxtec"
+      },
+      {
+        "img": "/images/ulrich-small.png",
+        "text": "Радіологія",
+        "url": "/brands/maxtec"
+      },
+      {
+        "img": "/images/flexicare-small.png",
+        "text": "Анастезіологія та ІТ,  Екстрена медицина",
+        "url": "/brands/maxtec"
+      },
+      {
+        "img": "/images/deltamed-small.png",
+        "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
+        "url": "/brands/maxtec"
+      },
+      {
+        "img": "/img",
+        "text": "Інфузійна терапія, Екстрена медицина",
+        "url": "/brands/maxtec"
+      }
+    ]
+  },
+  "aboutBlock": {
+    "title": "Про 1razove",
+    "text": "Ми – Разове: компанія, яка продає медичні вироби одноразового використання кращих світових брендів. ",
+    "description": "Наш фокус  - на якості. Тому вся продукція пройшла перевірку з якості та має відповідні документи. Ми маємо торгових представників по території України, які готові ґрунтовно проконсультувати та здійснити постачання медичних одноразових виробів у ваш медичний заклад. Разове віддано пропагує використання тільки одноразового, заради безпеки пацієнтів та медичного персоналу!",
+    "cardTitle": "Завантажте листівку",
+    "cardText": "з науковими даними про використання Одноразових медичних виробів",
+    "cardBtnText": "Завантажити PDF",
+    "cardPdfLink": "/link"
+  },
+  "contactBlock": {
+    "redText": "сміливо телефонуйте або пишіть нам:",
+    "text": "Якщо ви готові впроваджувати використання одноразових медичних виробів або хочете  проконсультуватися — ",
+    "email": "info@1razove.ua",
+    "phone": "8 044 454 33 22"
+  },
+  "brandsList": [
+      {
+        "url": "/maxtec",
+        "title": "Maxtec",
+        "blueText": "CФера використання:",
+        "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
+        "description": "Maxtec has been a leader in oxygen analysis and delivery products for over 20 years. We provide a full line of replacement oxygen sensors and SpO2 probes compatible with all major applications in the market. Customers worldwide have come to appreciate Maxtec for our well-known oxygen analyzers and monitors in both medical and non-medical applications. Our range of products also include pulse oximeters, neonatal products, air-oxygen mixers, ventilator and ventilator support products applicable to hospital, homecare, and anesthesia markets.",
+        "btnText": "Отримати прайс-лист",
+        "btnLink": "/link",
+        "uniqueTitle": "Унікальні товари",
+        "products": [
+          {
+            "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
+            "img": "/img.jpg",
+            "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
+            "btnText": "Дізнатись більше",
+            "url": "/product-link"
+          },
+          {
+            "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
+            "img": "/img.jpg",
+            "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
+            "btnText": "Дізнатись більше",
+            "url": "/product-link"
+          }
+        ]
+      },
+      {
+        "url": "/maxtec",
+        "title": "Maxtec",
+        "blueText": "CФера використання:",
+        "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
+        "description": "Maxtec has been a leader in oxygen analysis and delivery products for over 20 years. We provide a full line of replacement oxygen sensors and SpO2 probes compatible with all major applications in the market. Customers worldwide have come to appreciate Maxtec for our well-known oxygen analyzers and monitors in both medical and non-medical applications. Our range of products also include pulse oximeters, neonatal products, air-oxygen mixers, ventilator and ventilator support products applicable to hospital, homecare, and anesthesia markets.",
+        "btnText": "Отримати прайс-лист",
+        "btnLink": "/link",
+        "uniqueTitle": "Унікальні товари",
+        "products": [
+          {
+            "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
+            "img": "/img.jpg",
+            "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
+            "btnText": "Дізнатись більше",
+            "url": "/product-link"
+          },
+          {
+            "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
+            "img": "/img.jpg",
+            "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
+            "btnText": "Дізнатись більше",
+            "url": "/product-link"
+          }
+        ]
+      }
+    ],
+  "products": [
+    {
+      "brand": "maxtec",
+      "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
+      "text": "Система назальної високопотокової оксигенотерапії MaxVenturi® – це інноваційний пристрій, який забезпечує подачу через назальну канюлю значного обсягу підігрітої та зволоженої повітряно-кисневої суміші, що знижує можливість розвитку запального процесу в дихальних шляхах, а також зменшує енергетичні втрати, особливо в умовах, коли спостерігається гостра дихальна недостатність.",
+      "images": [ 
+        { "url": "/img.jpg", "title": "title" },
+        { "url": "/img.jpg", "title": "title" },
+        { "url": "/img.jpg", "title": "title" }
+      ],
+      "imgTitle": "Фото продукту",
+      "textHtml": "<div class='sad'></div><div class='sad'></div>",
+      "downloadBlockTitle": "Завантажте листівку",
+      "downloadBlockTitle2": "з даними про Систему назальної високопотокової оксигенотерапії MaxVenturi®",
+      "downloadBlockBtnText": "Завантажити PDF",
+      "downloadBlockBtnLink": "/link"
+    }
+  ]
+}
