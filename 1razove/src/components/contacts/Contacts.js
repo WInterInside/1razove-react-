@@ -1,7 +1,7 @@
 import React from "react"
 import "./contacts.scss";
 
-export default function Contacts() {
+export default function Contacts({data}) {
   return (
     <section className="contacts">
       <div className="container container--padding0">

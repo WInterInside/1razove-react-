@@ -9,12 +9,12 @@ export default function BrandPage(props) {
 
   console.log(props.match.params.id);
   let data = getData();
-
+  let [ brand ] = data.brandsList.filter(x => x.url === '/maxtec');
   return (
     <div className="brand">
-      <BrandHeader />
-      <BrandDescription data={data} />
-      <Products />
+      <BrandHeader data={data} />
+      <BrandDescription data={brand} />
+      <Products data={brand} />
       <Form />
     </div>
   )

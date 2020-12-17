@@ -2,7 +2,7 @@ import React from "react"
 import "./Header.scss";
 import LogoMenu from "../../images/logo-small-blue.png";
 
-export default function WhiteHeader() {
+export default function WhiteHeader({data}) {
   return (
     <header className="header header--product">
       <div className="container">
@@ -34,9 +34,11 @@ export default function WhiteHeader() {
               </nav>
               <div className="languages">
                 <ul className="languages__list">
-                  <li className="languages__item languages__item--blue languages__item--mobile">Укр</li>
-                  <li className="languages__item languages__item--blue languages__item--mobile">Рус</li>
-                  <li className="languages__item languages__item--blue languages__item--mobile">Eng</li>
+                  {
+                    data.project.langs.map((value, index) => {
+                      <li key={index} className="languages__item languages__item--blue languages__item--mobile">{value.langText}</li>
+                    })
+                  }
                 </ul>
               </div>
               </div>

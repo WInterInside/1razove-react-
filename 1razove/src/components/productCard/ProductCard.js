@@ -7,27 +7,24 @@ import ProductIndications from "../productIndications/ProductIndications";
 import ProductAdvantages from "../productAdvantages/ProductAdvantages";
 import Leaflet from "../leaflet/Leaflet";
 
-export default function ProductCard() {
+export default function ProductCard({data}) {
   return (
     <div className="product__card">
       <div className="product__image product__image--desktop">
         <picture>
-          <img className="product__img" src={ProductImg} alt="Система назальної високопотокової оксигенотерапії MaxVenturi®" />
+          <img className="product__img" src={data.images[0].url} alt={data.title} />
         </picture>
       </div>
       <div className="product__discriprion">
-        <h1 className="product__name">MaxVenturi® Система назальної високопотокової оксигенотерапії</h1>
+        <h1 className="product__name">{data.title}</h1>
         <div className="product__image product__image--mobile">
           <picture>
-            <img className="product__img" src={ProductImg} alt="Система назальної високопотокової оксигенотерапії MaxVenturi®" />
+            <img className="product__img" src={data.images[0].url} alt={data.title} />
           </picture>
         </div>
-        <p className="product__text">Система назальної високопотокової оксигенотерапії MaxVenturi® – це інноваційний пристрій,
-          який забезпечує подачу через назальну канюлю значного обсягу підігрітої та зволоженої повітряно-кисневої суміші,
-          що знижує можливість розвитку запального процесу в дихальних шляхах, а також зменшує енергетичні втрати, особливо в умовах,
-          коли спостерігається гостра дихальна недостатність.</p>
+        <p className="product__text">{data.text}</p>
         <ProductIndications />
-        <p className="product__text">У маленьких дітей за допомогою системи оксигенотерапії MaxVenturi® лікують обструктивні бронхіти та бронхіоліти, а також помірно важкий респіраторний дистрес синдром.</p>
+        <p className="product__text"></p>
 
         <ProductAdvantages />
         <Leaflet />
