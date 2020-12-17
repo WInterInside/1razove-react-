@@ -2,7 +2,7 @@ import React from "react"
 import "./Decision.scss";
 import Logo1 from "../img/1.svg";
 
-export default function Footer() {
+export default function Decision() {
   return (
     <section className="decision">
       <div className="container">
