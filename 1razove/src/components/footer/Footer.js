@@ -10,7 +10,7 @@ export default function Footer() {
           <ul className="footer__contacts">
             <li className="footer__contact footer__contact--email">
               <h2 className="footer__heading visually-hidden">Емейл:</h2>
-              <a className="footer__contactlink" href="info@1razove.ua">info@1razove.ua</a>
+              <a className="footer__contactlink" href="mailto:info@1razove.ua">info@1razove.ua</a>
             </li>
             <li className="footer__contact footer__contact--telephone">
               <h2 className="footer__heading visually-hidden">Телефон:</h2>

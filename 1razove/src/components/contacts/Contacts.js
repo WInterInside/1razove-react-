@@ -18,7 +18,7 @@ export default function Contacts({data}) {
             </li>
             <li className="contacts__item contacts__item--email">
               <h2 className="contacts__heading">Емейл:</h2>
-              <a href="info@1razove.ua">info@1razove.ua</a>
+              <a href="mailto:info@1razove.ua">info@1razove.ua</a>
             </li>
             <li className="contacts__item contacts__item--telephone">
               <h2 className="contacts__heading">Телефон:</h2>

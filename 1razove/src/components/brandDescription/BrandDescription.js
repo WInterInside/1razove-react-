@@ -16,9 +16,9 @@ export default function BrandDescription({data}) {
             <div class="brand__logotype brand__logotype--mobile">
               <picture>
                 <img className="brand__img" src={data.brandImage} alt="logotype" width="277" height="92" />
-              </picture>              
+              </picture>
             </div>
-            <p class="brand__text">{data.description}</p>
+            <p class="brand__text brand__text--discription">{data.description}</p>
             <div class="brand__sphere">
               <h2 class="brand__heading brand__heading--colored brand__heading--h2">{data.blueText}</h2>
               <p class="brand__text brand__text--sphere">{data.text}</p>

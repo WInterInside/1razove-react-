@@ -71,27 +71,27 @@
       {
         "img": "/images/maxtec-small.png",
         "text": "Анастезіологія та ІТ",
-        "url": "/brands/maxtec"
+        "url": "/brand/maxtec"
       },
       {
         "img": "/images/ulrich-small.png",
         "text": "Радіологія",
-        "url": "/brands/maxtec"
+        "url": "/brand/maxtec"
       },
       {
         "img": "/images/flexicare-small.png",
         "text": "Анастезіологія та ІТ,  Екстрена медицина",
-        "url": "/brands/maxtec"
+        "url": "/brand/maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brands/maxtec"
+        "url": "/brand/maxtec"
       },
       {
         "img": "/img",
         "text": "Інфузійна терапія, Екстрена медицина",
-        "url": "/brands/maxtec"
+        "url": "/brand/maxtec"
       }
     ]
   },
@@ -124,14 +124,14 @@
         "products": [
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
-            "img": "/static/media/maxtec.svg",
+            "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
             "url": "/product/maxtec"
           },
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
-            "img": "/img.jpg",
+            "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
             "url": "/product/maxtec"
@@ -141,7 +141,7 @@
       {
         "url": "/maxtec1",
         "title": "Maxtec",
-        "brandImage": "/images/maxtec.svg",
+        "brandImage": "/images/MaxVenturi.jpg",
         "blueText": "CФера використання:",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "description": "Maxtec has been a leader in oxygen analysis and delivery products for over 20 years. We provide a full line of replacement oxygen sensors and SpO2 probes compatible with all major applications in the market. Customers worldwide have come to appreciate Maxtec for our well-known oxygen analyzers and monitors in both medical and non-medical applications. Our range of products also include pulse oximeters, neonatal products, air-oxygen mixers, ventilator and ventilator support products applicable to hospital, homecare, and anesthesia markets.",
@@ -151,14 +151,14 @@
         "products": [
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
-            "img": "/img.jpg",
+            "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
             "url": "/product/maxtec"
           },
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
-            "img": "/img.jpg",
+            "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
             "url": "/product/maxtec"
@@ -172,10 +172,12 @@
       "brand": "maxtec",
       "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
       "text": "Система назальної високопотокової оксигенотерапії MaxVenturi® – це інноваційний пристрій, який забезпечує подачу через назальну канюлю значного обсягу підігрітої та зволоженої повітряно-кисневої суміші, що знижує можливість розвитку запального процесу в дихальних шляхах, а також зменшує енергетичні втрати, особливо в умовах, коли спостерігається гостра дихальна недостатність.",
-      "images": [ 
-        { "url": "/img.jpg", "title": "title" },
-        { "url": "/img.jpg", "title": "title" },
-        { "url": "/img.jpg", "title": "title" }
+      "images": [
+        { "url": "/images/MaxVenturi-large.png", "title": "title" },
+        { "url": "/images/slide.jpg", "title": "title" },
+        { "url": "/images/slide.jpg", "title": "title" },
+        { "url": "/images/slide.jpg", "title": "title" },
+        { "url": "/images/slide.jpg", "title": "title" }
       ],
       "imgTitle": "Фото продукту",
       "textHtml": "<div class='sad'></div><div class='sad'></div>",

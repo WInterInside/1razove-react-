@@ -94,6 +94,10 @@
     @include pragmatica (18px, 24px, #ffffff);
   }
 
+  &--discription {
+    margin-bottom: 40px;
+  }
+
   &--sphere {
     @include din-pro (42px, 44px, #ffffff);
     text-transform: uppercase;

@@ -10,7 +10,7 @@ export default function WhiteHeader({data}) {
         <div className="header__wraper header__wraper--main">
           <a className="header__logo" href="/">
             <picture>
-              <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
+              <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="65" />
             </picture>
           </a>
           <div className="header__wraper header__wraper--column">
