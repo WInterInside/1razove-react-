@@ -31,8 +31,13 @@
   flex-wrap: wrap;
 
   @media (min-width: 950px) {
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2vw;
   }
+
+
 }
 
 .brands__wrapper {
@@ -43,7 +48,7 @@
   background-color: $white;
 
   @media (min-width: 950px) {
-    width: 325px;
+    width: 100%;
     height: 232px;
     padding: 30px 20px;
     border-radius: 20px;
@@ -58,17 +63,17 @@
 
     @media (min-width: 950px) {
       margin-right: 0;
+      margin-bottom: 0;
     }
-  }
-
-  @media (min-width: 950px) {
-    margin-bottom: 20px;
-    margin-right: 20px;
   }
 }
 
 .brands__item:nth-child(4n+4) {
-  margin-right: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: 1439px) {
+    margin-right: 0;
+  }
 }
 
 .brands__description {
