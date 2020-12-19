@@ -7,15 +7,15 @@ export default function WhiteHeader({data}) {
   return (
     <header className="header header--product">
       <div className="container">
-        <div className="header__wraper header__wraper--main">
+        <div className="header__wrapper header__wrapper--main">
           <a className="header__logo" href="/">
             <picture>
               <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="65" />
             </picture>
           </a>
-          <div className="header__wraper header__wraper--column">
-            <div className="header__wraper header__wraper--menu">
-              <div className="header__wraper header__wraper--row">
+          <div className="header__wrapper header__wrapper--column">
+            <div className="header__wrapper header__wrapper--menu">
+              <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
                   <picture>
                     <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
