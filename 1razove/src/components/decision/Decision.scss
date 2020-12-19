@@ -5,6 +5,8 @@
   padding-top: 90px;
   background-color: $bg-blue;
   color: $white;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: 950px) {
     padding-top: 50px;
@@ -15,6 +17,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @media (min-width: 950px) {
     flex-direction: row;
@@ -33,6 +36,10 @@
 
   &--main {
     flex-wrap: nowrap;
+  }
+
+  &--logo{
+    min-width: 325px;
   }
 }
 
