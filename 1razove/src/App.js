@@ -1,6 +1,5 @@
 import "./App.scss";
 import axios from 'axios';
-
 import { useEffect } from 'react';
 import HomePage from "./pages/HomePage";
 import ContactsPage from "./pages/ContactsPage";
