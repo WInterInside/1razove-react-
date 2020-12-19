@@ -1,6 +1,5 @@
 import React from "react"
 import "./Decision.scss";
-import Logo1 from "../../images/1.svg";
 
 export default function Decision({data}) {
   return (
@@ -11,7 +10,7 @@ export default function Decision({data}) {
           <div className="decision__wrapper">
             <a className="decision__logo">
               <picture>
-                <img className="decision__img" src={Logo1} alt="1razovoe logotype" width="325" height="397" />
+                <img className="decision__img" src="/images/1.svg" alt="1razovoe logotype" width="325" height="397" />
               </picture>
             </a>
           </div>

@@ -2,8 +2,6 @@ import React from "react"
 import "./Header.scss";
 import Nav from "../nav/Nav";
 import Lang from "../lang/Lang";
-import Logo from "../../images/logo.svg";
-import LogoMenu from "../../images/logo-small-blue.png";
 
 export default function Header({data}) {
   return (
@@ -11,13 +9,13 @@ export default function Header({data}) {
       <div className="container">
         <div className="header__wraper header__wraper--main">
           <a className="header__logo" href="/">
-            <img className="header__img" src={Logo} alt="1razovoe logotype" width="316" height="522" />
+            <img className="header__img" src="/images/logo.svg" alt="1razovoe logotype" width="316" height="522" />
           </a>
           <div className="header__wraper header__wraper--index header__wraper--column">
             <div className="header__wraper header__wraper--menu">
               <div className="header__wraper header__wraper--row">
                 <a className="header__logo header__logo--mobile" href="/">
-                  <img className="header__img header__img--small" src={LogoMenu} alt="1razovoe logotype" width="247" height="56" />
+                  <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
                 </a>
                 <button className="header__menu header__menu--on" type="button"><span className="visually-hidden">Открыть меню</span>
                   <span className="header__toggle">

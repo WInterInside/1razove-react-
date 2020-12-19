@@ -1,5 +1,4 @@
 import React from "react"
-import ProductsImg from "../../images/MaxVenturi.jpg";
 
 export default function ProductsCard() {
   return (
@@ -8,7 +7,7 @@ export default function ProductsCard() {
       <div className="products__wrapper products__wrapper--row">
         <a className="products__link" href="/product/12">
           <picture>
-            <img className="products__img" src={ProductsImg} alt="Система назальної високопотокової оксигенотерапії MaxVenturi®" />
+            <img className="products__img" src="/images/MaxVenturi.jpg" alt="Система назальної високопотокової оксигенотерапії MaxVenturi®" />
           </picture>
         </a>
         <div className="products__description">

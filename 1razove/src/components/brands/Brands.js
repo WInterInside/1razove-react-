@@ -1,9 +1,5 @@
 import React from "react"
 import "./Brands.scss";
-import MaxtecLogo from "../../images/maxtec-small.png";
-import UlrichLogo from "../../images/ulrich-small.png";
-import FlexicareLogo from "../../images/flexicare-small.png";
-import DeltamedLogo from "../../images/deltamed-small.png";
 
 
 export default function Brands({data}) {

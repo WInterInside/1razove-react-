@@ -1,6 +1,5 @@
 import React from "react"
 import "./Brand.scss";
-import BrandImg from "../../images/maxtec.svg";
 
 export default function BrandDescription({data}) {
   return (

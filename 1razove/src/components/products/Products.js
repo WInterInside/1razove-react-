@@ -1,6 +1,5 @@
 import React from "react"
 import "./Products.scss";
-import ProductsImg from "../../images/MaxVenturi.jpg";
 
 export default function Products({data}) {
   return (

@@ -1,8 +1,6 @@
 import React from "react"
 import "./ProductCard.scss";
 
-import ProductImg from "../../images/MaxVenturi-large.png";
-
 import ProductIndications from "../productIndications/ProductIndications";
 import ProductAdvantages from "../productAdvantages/ProductAdvantages";
 import Leaflet from "../leaflet/Leaflet";

@@ -3,8 +3,6 @@ import React, {useEffect} from "react";
 import {tns} from 'tiny-slider/src/tiny-slider';
 import "./Slider.scss";
 
-import Slide from "../../images/slide.jpg";
-
 export default function Slider({data}) {
 
   useEffect (
