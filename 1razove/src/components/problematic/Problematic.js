@@ -23,8 +23,8 @@ export default function Problematic({data}) {
   
     var scrollAnimation = new TimelineMax();
     scrollAnimation.set(document.getElementById('problematic-cards'), {autoAlpha: 1})
-      .to(document.getElementById('problematic-0'), 1, {y:'200%', autoAlpha: 1, delay:0.75}, "trans1")
-      .to(document.getElementById('problematic-1'), 1, {y:'200%', autoAlpha: 1, delay:0.75}, "trans2");
+      .to(document.getElementById('problematic-0'), 8, {y:'200%', autoAlpha: 1, delay:2}, "trans1")
+      .to(document.getElementById('problematic-1'), 8, {y:'200%', autoAlpha: 1, delay:2}, "trans2");
       //.to(document.getElementById('problematic-2'), 1, {y:'200%', autoAlpha: 1, delay:0.75}, "trans3");
 
 
