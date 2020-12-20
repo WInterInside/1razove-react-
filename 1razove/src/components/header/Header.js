@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import "./Header.scss";
 import Nav from "../nav/Nav";
 import Lang from "../lang/Lang";
@@ -7,6 +7,7 @@ import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLi
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 export default function Header({data}) {
+  let [ showMenu, setShowMenu ] = useState(false);
   ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
   useEffect(() => {
@@ -16,9 +17,6 @@ export default function Header({data}) {
         duration: "200%"
       }
     });
-
-    // get all slides
-    var slides = document.querySelectorAll(".problematic__card");
 
     var scrollAnimation = new TimelineMax();
     scrollAnimation.set(document.getElementById('home-header'), {autoAlpha: 1})
@@ -34,6 +32,10 @@ export default function Header({data}) {
       //scene.offset(400);
   })
 
+  function toggleMenu(){
+    setShowMenu(!showMenu);
+  }
+
   return (
     <header className="header" id="home-header">
       <div className="container">
@@ -42,24 +44,19 @@ export default function Header({data}) {
             <img className="header__img" src="/images/logo.svg" alt="1razovoe logotype" width="316" height="522" />
           </a>
           <div className="header__wrapper header__wrapper--index header__wrapper--column">
-            <div className="header__wrapper header__wrapper--menu">
+            <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`}>
               <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
                   <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
                 </a>
-                <button className="header__menu header__menu--on" type="button"><span className="visually-hidden">Открыть меню</span>
-                  <span className="header__toggle">
-                    x
-                  </span>
-                </button>
               </div>
-              <Nav data={data.menu}/>
-              <Lang />
+              <Nav data={data.heroBlock.menu}/>
+              <Lang data={data.project.langs}/>
             </div>
             <div className="header__wrapper--text">
               <div id="animated-text">
                 {
-                  data.scrollText.map((value, index) => {
+                  data.heroBlock.scrollText.map((value, index) => {
                     return  <p key={index} className="header__text" id={`scroll-text-${index}`}>
                         {value.white}
                         <span className="header__text header__text--colored">{value.blue}</span>
@@ -67,6 +64,11 @@ export default function Header({data}) {
                   })
                 }
               </div>
+            </div>
+            <div className={`header__hamburger ${showMenu ? 'header__hamburger--on' : ''}`} onClick={() => toggleMenu()}>
+              <span className="header__hamburger-span"></span>
+              <span className="header__hamburger-span"></span>
+              <span className="header__hamburger-span"></span>
             </div>
           </div>
         </div>

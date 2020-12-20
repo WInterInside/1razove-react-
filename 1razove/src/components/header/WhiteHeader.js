@@ -1,5 +1,6 @@
 import React from "react"
 import "./Header.scss";
+import dataStore from '../../stores/dataStore';
 
 export default function WhiteHeader({data}) {
 
@@ -42,7 +43,7 @@ export default function WhiteHeader({data}) {
                 <ul className="languages__list">
                   {
                     data.project.langs.map((value, index) => {
-                      return <li key={index} className="languages__item languages__item--blue languages__item--mobile">{value.langText}</li>
+                      return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item languages__item--blue languages__item--mobile">{value.langText}</li>
                     })
                   }
                 </ul>

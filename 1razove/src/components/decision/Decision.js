@@ -5,6 +5,9 @@ import "./Decision.scss";
 export default function Decision({data}) {
 
   useEffect(() => {
+    if(window.innerWidth <= 950)
+      return;
+
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({triggerElement: "#moving-logo-trigger", duration: 800, triggerHook: 0, })
       .setPin("#moving-logo")

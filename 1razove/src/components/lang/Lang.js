@@ -1,13 +1,17 @@
 import React from "react"
 import "./Lang.scss";
+import dataStore from '../../stores/dataStore';
 
-export default function Header() {
+export default function Lang({data}) {
+  console.log(data);
   return (
     <div className="languages">
       <ul className="languages__list">
-        <li className="languages__item">Укр</li>
-        <li className="languages__item">Рус</li>
-        <li className="languages__item">Eng</li>
+        {
+          data.map((value,index) => {
+            return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item">{value.langText}</li>
+          })
+        }
       </ul>
     </div>
   )

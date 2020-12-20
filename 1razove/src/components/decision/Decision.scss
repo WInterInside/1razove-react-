@@ -40,6 +40,11 @@
 
   &--logo{
     min-width: 325px;
+    margin-bottom: 60px;
+
+    @media (min-width: 950px){
+      margin-bottom: 0;
+    }
   }
 }
 

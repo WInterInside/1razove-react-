@@ -1,5 +1,6 @@
 import React from "react"
 import "./Header.scss";
+import dataStore from '../../stores/dataStore';
 
 export default function BrandHeader({data}) {
   return (
@@ -19,11 +20,11 @@ export default function BrandHeader({data}) {
                     <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
                   </picture>
                 </a>
-                <button className="header__menu header__menu--on" type="button"><span className="visually-hidden">Открыть меню</span>
-                  <span className="header__toggle">
-                    x
-                  </span>
-                </button>
+                <div className="header__menu">
+                  <span className="header__menu-span"></span>
+                  <span className="header__menu-span"></span>
+                  <span className="header__menu-span"></span>
+                </div>
               </div>
               <nav className="navigation">
                 <ul className="navigation__list">
@@ -38,7 +39,7 @@ export default function BrandHeader({data}) {
                 <ul className="languages__list">
                   {
                     data.project.langs.map((value,index) => {
-                      return <li key={index} className="languages__item">{value.langText}</li>
+                      return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item">{value.langText}</li>
                     })
                   }
                 </ul>
