@@ -2,7 +2,6 @@
 @import "src/styles/vars";
 
 .form {
-  border: 1px solid #2789ff;
 
   position: relative;
   background-color: #fff;
@@ -30,7 +29,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  right: 40px;
+  right: 15px;
   top: -35px;
 
   @media (min-width: 950px) {
