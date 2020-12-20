@@ -55,8 +55,7 @@ export default function Slider({data}) {
                 </picture>
               </div>
             })
-          }
-          
+          }          
         </div>
       </div>
     </div>

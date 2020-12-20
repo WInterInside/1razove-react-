@@ -95,14 +95,6 @@
       display: none;
     }
   }
-
-  &--main {
-    align-items: center;
-  }
-
-  &--index {
-    height: 516px;
-  }
 }
 
 .header__logo--mobile {
@@ -133,7 +125,7 @@
 
     @media (min-width: 950px) {
       width: 247px;
-      height: 56px;
+      height: 65px;
       margin-right: 215px;
     }
   }

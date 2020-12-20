@@ -29,6 +29,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-height: 2000px;
+  transition: all 1s ease;
 
   @media (min-width: 700px) {
     display: grid;

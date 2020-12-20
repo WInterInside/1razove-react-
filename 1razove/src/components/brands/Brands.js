@@ -1,8 +1,25 @@
 import React from "react"
+import { useState } from 'react';
 import "./Brands.scss";
 
 
 export default function Brands({data}) {
+
+
+  const [count, setCount] = useState(4);
+  const [name, setName] = useState("Показати більше");
+
+
+  function toggleBrands() {
+    if (count <= 4) {
+      setCount(count + 100);
+      setName("Згорнути");
+    } else {
+      setCount(count - 100);
+      setName("Показати більше");
+    }
+  }
+
   return (
     <section className="brands">
       <a className="brands__link" name="brands"></a>
@@ -10,7 +27,7 @@ export default function Brands({data}) {
         <h2 className="brands__heading">{data.title}</h2>
         <ul className="brands__list">
           {
-            data.brands.map((value,index) => {
+            data.brands.slice(0, count).map((value,index) => {
               return <li key={index} className="brands__item">
                 <a className="brands__link" href={value.url}>
                   <div className="brands__wrapper">
@@ -23,7 +40,9 @@ export default function Brands({data}) {
             })
           }
         </ul>
-        <button className="brands__button button button--more button--on" type="button" name="button">Показати більше</button>
+        <button className="brands__button button button--more button--on" type="button" name="button" onClick={() => toggleBrands()}>
+          <span className="button__text">{name}</span>
+        </button>
       </div>
     </section>
   )

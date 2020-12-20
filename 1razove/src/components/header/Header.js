@@ -8,7 +8,7 @@ import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 export default function Header({data}) {
   ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
-  
+
   useEffect(() => {
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
@@ -16,10 +16,10 @@ export default function Header({data}) {
         duration: "200%"
       }
     });
-  
+
     // get all slides
     var slides = document.querySelectorAll(".problematic__card");
-  
+
     var scrollAnimation = new TimelineMax();
     scrollAnimation.set(document.getElementById('home-header'), {autoAlpha: 1})
       .to(document.getElementById('animated-text'), 305, {y:'-110%', ease:Power1.easeIn, autoAlpha: 1, delay:2}, "trans1");
