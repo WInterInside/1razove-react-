@@ -1,8 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Header.scss";
 import dataStore from '../../stores/dataStore';
 
 export default function BrandHeader({data}) {
+  let [ showMenu, setShowMenu ] = useState(false);
+
+  function toggleMenu(){
+    setShowMenu(!showMenu);
+  }
+
   return (
     <header className="header header--brand">
       <div className="container">
@@ -13,7 +19,8 @@ export default function BrandHeader({data}) {
             </picture>
           </a>
           <div className="header__wrapper header__wrapper--column">
-            <div className="header__wrapper header__wrapper--menu">
+            <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`}>
+
               <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
                   <picture>
@@ -26,6 +33,7 @@ export default function BrandHeader({data}) {
                   <span className="header__menu-span"></span>
                 </div>
               </div>
+
               <nav className="navigation">
                 <ul className="navigation__list">
                   {
@@ -44,6 +52,11 @@ export default function BrandHeader({data}) {
                   }
                 </ul>
               </div>
+            </div>
+            <div className={`header__hamburger ${showMenu ? 'header__hamburger--on' : ''}`} onClick={() => toggleMenu()}>
+              <span className="header__hamburger-span"></span>
+              <span className="header__hamburger-span"></span>
+              <span className="header__hamburger-span"></span>
             </div>
           </div>
         </div>
