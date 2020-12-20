@@ -6,7 +6,7 @@ import "./Brands.scss";
 export default function Brands({data}) {
 
 
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(window.innerWidth <= 950 ? 4:100);
   const [name, setName] = useState("Показати більше");
 
 
@@ -40,7 +40,7 @@ export default function Brands({data}) {
             })
           }
         </ul>
-        <button className="brands__button button button--more button--on" type="button" name="button" onClick={() => toggleBrands()}>
+        <button className={`brands__button button button--more button--on ${data.brands.length <= 4 ? 'hidden' : ''}`} type="button" name="button" onClick={() => toggleBrands()}>
           <span className="button__text">{name}</span>
         </button>
       </div>
