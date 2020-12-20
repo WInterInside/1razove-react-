@@ -4,15 +4,15 @@ import Brands from "../components/brands/Brands";
 import About from "../components/about/About";
 import Problematic from "../components/problematic/Problematic";
 import Header from "../components/header/Header";
-import getData from '../stores/dataStore';
+import dataStore from '../stores/dataStore';
 
 export default function HomePage() {
 
-  let data = getData();
+  let data = dataStore.getData();
 
   return (
     <div className="HomePage">
-      <Header data={data.heroBlock}/>
+      <Header data={data}/>
       <h1 className="main__heading visually-hidden">1razovoe</h1>
 
       <Problematic data={data.cardsBlock}/>

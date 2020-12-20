@@ -1,5 +1,6 @@
 import React from "react"
 import "./Header.scss";
+import dataStore from '../../stores/dataStore';
 
 export default function BrandHeader({data}) {
   return (
@@ -38,7 +39,7 @@ export default function BrandHeader({data}) {
                 <ul className="languages__list">
                   {
                     data.project.langs.map((value,index) => {
-                      return <li key={index} className="languages__item">{value.langText}</li>
+                      return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item">{value.langText}</li>
                     })
                   }
                 </ul>

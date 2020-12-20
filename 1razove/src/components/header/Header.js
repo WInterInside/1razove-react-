@@ -53,13 +53,13 @@ export default function Header({data}) {
                   </span>
                 </button>
               </div>
-              <Nav data={data.menu}/>
-              <Lang />
+              <Nav data={data.heroBlock.menu}/>
+              <Lang data={data.project.langs}/>
             </div>
             <div className="header__wrapper--text">
               <div id="animated-text">
                 {
-                  data.scrollText.map((value, index) => {
+                  data.heroBlock.scrollText.map((value, index) => {
                     return  <p key={index} className="header__text" id={`scroll-text-${index}`}>
                         {value.white}
                         <span className="header__text header__text--colored">{value.blue}</span>

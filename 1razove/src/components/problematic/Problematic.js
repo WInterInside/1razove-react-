@@ -25,10 +25,6 @@ export default function Problematic({data}) {
       if((data.cards.length - 1) > index)
         scrollAnimation = scrollAnimation.to(document.getElementById(`problematic-${index}`), 8, {y:'200%', autoAlpha: 1, delay:2}, `trans${index}`);
     })
-      
-      //.to(document.getElementById('problematic-1'), 8, {y:'200%', autoAlpha: 1, delay:2}, "trans2");
-      //.to(document.getElementById('problematic-2'), 1, {y:'200%', autoAlpha: 1, delay:0.75}, "trans3");
-
 
     var scene = new ScrollMagic.Scene({triggerElement: "#problematic", duration: 100})
       .setPin("#problematic")

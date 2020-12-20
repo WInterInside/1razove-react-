@@ -1,10 +1,10 @@
 import React from "react"
 import "../components/header/Header.scss";
-import getData from '../stores/dataStore';
+import dataStore from '../stores/dataStore';
 
 export default function ErrorPage() {
 
-  let data = getData();
+  let data = dataStore.getData();
   
   return (
     <header className="header header--404">
@@ -42,7 +42,7 @@ export default function ErrorPage() {
                 <ul className="languages__list">
                 {
                     data.project.langs.map((value, index) => {
-                      return <li key={index} className="languages__item">{value.langText}</li>
+                      return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item">{value.langText}</li>
                     })
                   }
                 </ul>

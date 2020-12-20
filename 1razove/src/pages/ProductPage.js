@@ -1,10 +1,10 @@
 import React from "react"
-import getData from '../stores/dataStore';
+import dataStore from '../stores/dataStore';
 import Slider  from "../components/slider/Slider";
 import Product__card from "../components/productCard/ProductCard";
 import WhiteHeader from "../components/header/WhiteHeader";
 export default function ProductPage() {
-  let data = getData();
+  let data = dataStore.getData();
   let [product] = data.products.filter(x => x.url === 'maxtec');
   return (
     <div className="product">
