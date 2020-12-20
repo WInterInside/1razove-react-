@@ -1,7 +1,19 @@
-import React from "react"
+import React, {useState} from "react"
 import "./Brand.scss";
+import Overlay from '../overlay/Overlay';
+import Form from '../form/Form';
 
 export default function BrandDescription({data}) {
+  let [showPopup, setShowPopup] = useState(false);
+
+  function closePopup(){
+    setShowPopup(false);
+  }
+
+  function openPopup(){
+    setShowPopup(true);
+  }
+
   return (
     <section className="brand__discription">
       <div className="container">
@@ -23,10 +35,17 @@ export default function BrandDescription({data}) {
               <h2 className="brand__heading brand__heading--colored brand__heading--h2">{data.blueText}</h2>
               <p className="brand__text brand__text--sphere">{data.text}</p>
             </div>
-            <a className="brand__link button button--price" href={data.btnLink}>{data.btnText}</a>
+            <a className="brand__link button button--price" onClick={() => openPopup()}>{data.btnText}</a>
           </div>
         </div>
       </div>
+
+      { 
+        showPopup && <Overlay closePopup={() => closePopup()}>
+          <Form closePopup={() => closePopup()}/>
+        </Overlay>
+      }
+
     </section>
   )
 }

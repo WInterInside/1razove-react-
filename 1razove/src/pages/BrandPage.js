@@ -16,7 +16,6 @@ export default function BrandPage(props) {
       <BrandHeader data={data} />
       <BrandDescription data={brand} />
       <Products data={brand} />
-      <Form />
     </div>
   )
 }
