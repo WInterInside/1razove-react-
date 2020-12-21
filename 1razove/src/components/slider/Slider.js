@@ -10,13 +10,11 @@ export default function Slider({data}) {
   let [showPopup, setShowPopup] = useState(false);
 
   function openOverlay(url){
-    console.log(url);
     setSelectedImage(url);
     setShowPopup(true);
   }
 
   function closePopup(){
-    console.log('closePopup');
     setShowPopup(false);
   }
 
@@ -33,6 +31,7 @@ export default function Slider({data}) {
         controls: true,
         nav: false,
         autoplay: false,
+        loop: false,
         mouseDrag: true,
         arrowKeys: true,
         controlsContainer: '.product__toggls',
@@ -74,10 +73,13 @@ export default function Slider({data}) {
       </div>
       { 
         showPopup && <Overlay closePopup={() => closePopup()}>
-          <picture>
-            <source type="image/webp" srcSet={selectedImg} />
-            <img className="product__slideimg" src={selectedImg} />
-          </picture>
+          <div className="wrapper__popup">
+            <picture>
+              <source type="image/webp" srcSet={selectedImg} />
+              <img className="product__slideimg" src={selectedImg} />
+            </picture>
+            <div className="close" onClick={() => closePopup()}></div>
+          </div>
         </Overlay>
       }
     </div>
