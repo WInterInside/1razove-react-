@@ -20,7 +20,7 @@ export default function Products({data}) {
                 </div>
                 <div className="products__discription">
                   <p className="products__text">{value.text}</p>
-                  <a href={value.url} className="button button--products">{value.btnText}</a>
+                  <a href={`/product/${value.url}`} className="button button--products">{value.btnText}</a>
                 </div>
               </div>
             </div>

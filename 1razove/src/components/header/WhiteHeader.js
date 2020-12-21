@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./Header.scss";
 import dataStore from '../../stores/dataStore';
 
-export default function WhiteHeader({data}) {
+export default function WhiteHeader({data, brandLink, brand}) {
   let [ showMenu, setShowMenu ] = useState(false);
 
   function toggleMenu(){
@@ -61,7 +61,7 @@ export default function WhiteHeader({data}) {
             </div>
           </div>
         </div>
-        <a className="header__link" href="/brand/12">← Назад до бренду <span>Brand Name</span></a>
+        <a className="header__link" href={`/brand/${brandLink}`}>← Назад до бренду <span>{brand}</span></a>
       </div>
     </header>
   )

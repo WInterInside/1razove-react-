@@ -31,7 +31,7 @@
       }
     ],
     "menu": [
-      { "url": "#brands", "text": "Бренди та Напрямки"},
+      { "url": "/#brands", "text": "Бренди та Напрямки"},
       { "url": "contacts", "text": "Контактна Інформація"}
     ]
   },
@@ -69,57 +69,57 @@
       {
         "img": "/images/maxtec-small.png",
         "text": "Анастезіологія та ІТ",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/ulrich-small.png",
         "text": "Радіологія",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/flexicare-small.png",
         "text": "Анастезіологія та ІТ,  Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/flexicare-small.png",
         "text": "Анастезіологія та ІТ,  Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/images/deltamed-small.png",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       },
       {
         "img": "/img",
         "text": "Інфузійна терапія, Екстрена медицина",
-        "url": "/brand/maxtec"
+        "url": "maxtec"
       }
     ]
   },
@@ -140,7 +140,7 @@
   },
   "brandsList": [
       {
-        "url": "/maxtec",
+        "url": "maxtec",
         "title": "Maxtec",
         "brandImage": "/images/maxtec.svg",
         "blueText": "Cфера використання:",
@@ -155,19 +155,19 @@
             "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
-            "url": "/product/maxtec"
+            "url": "maxtec"
           },
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
             "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
             "btnText": "Дізнатись більше",
-            "url": "/product/maxtec"
+            "url": "maxtec"
           }
         ]
       },
       {
-        "url": "/maxtec1",
+        "url": "maxtec1",
         "title": "Maxtec",
         "brandImage": "/images/MaxVenturi.jpg",
         "blueText": "CФера використання:",
@@ -198,6 +198,7 @@
     {
       "url": "maxtec",
       "brand": "maxtec",
+      "brandLink": "maxtec",
       "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
       "text": "Система назальної високопотокової оксигенотерапії MaxVenturi® – це інноваційний пристрій, який забезпечує подачу через назальну канюлю значного обсягу підігрітої та зволоженої повітряно-кисневої суміші, що знижує можливість розвитку запального процесу в дихальних шляхах, а також зменшує енергетичні втрати, особливо в умовах, коли спостерігається гостра дихальна недостатність.",
       "images": [

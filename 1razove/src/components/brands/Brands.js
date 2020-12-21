@@ -29,7 +29,7 @@ export default function Brands({data}) {
           {
             data.brands.slice(0, count).map((value,index) => {
               return <li key={index} className="brands__item">
-                <a className="brands__link" href={value.url}>
+                <a className="brands__link" href={`/brand/${value.url}`}>
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
                     <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
