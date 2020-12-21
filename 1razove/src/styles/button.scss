@@ -66,8 +66,12 @@
   }
 
   &--products {
-    padding-top: 15px;
+    padding-top: 20px;
     width: 100%;
+    
+    @media (min-width: 950px) {
+      padding-top: 15px;
+    }
   }
 
   &--submit {
