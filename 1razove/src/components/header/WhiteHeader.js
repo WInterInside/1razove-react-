@@ -15,7 +15,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
         <div className="header__wrapper header__wrapper--main">
           <a className="header__logo" href="/">
             <picture>
-              <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="65" />
+              <img className="header__img header__img--smallblue" src="/images/logo-small-blue.svg" alt="1razovoe logotype" width="247" height="56" />
             </picture>
           </a>
           <div className="header__wrapper header__wrapper--column">
@@ -24,7 +24,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
               <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
                   <picture>
-                    <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
+                    <img className="header__img header__img--menu" src="/images/logo-small-blue.svg" alt="1razovoe logotype" width="173" height="39" />
                   </picture>
                 </a>
                 <div className="header__menu">
@@ -64,7 +64,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
         {
           brandLink && <a className="header__link" href={`/brand/${brandLink}`}>← Назад до бренду <span>{brand}</span></a>
         }
-        
+
       </div>
     </header>
   )

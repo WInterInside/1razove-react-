@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "DINPro-noncond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/DINpro(regularnoncond).woff2") format("woff2"), url("../fonts/DINpro(regularnoncond).woff") format("woff");
+}
+
+@font-face {
   font-family: "Pragmatica";
   font-style: normal;
   font-weight: 400;

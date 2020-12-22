@@ -6,6 +6,7 @@
   padding-bottom: 50px;
 
   @media (min-width: 950px) {
+    padding-top: 50px;
     padding-bottom: 80px;
   }
 }
@@ -26,8 +27,13 @@
 
   @media (min-width: 1120px) {
     width: 48%;
-    margin: 0;
+    margin-right: 20px;
+    margin-left: 0;
     margin-bottom: 20px;
+    
+    &:nth-child(even) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -42,6 +48,7 @@
   &--h2 {
     @include din-pro (54px, 54px, #fb4073);
     padding-left: 15px;
+    margin: 50px 0;
 
     @media (min-width: 950px) {
       @include din-pro (90px, 54px, #fb4073);
@@ -97,7 +104,6 @@
 
   &--cards {
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: flex-start;
   }
 }

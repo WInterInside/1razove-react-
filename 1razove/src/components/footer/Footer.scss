@@ -35,7 +35,7 @@
   @media (min-width: 950px) {
     padding-right: 55px;
 
-    @include din-pro (50px, 50px, #fb4073);
+    @include din-pro (54px, 54px, #fb4073);
   }
 
   &--colored {
@@ -51,7 +51,7 @@
 }
 
 .footer__contactlink {
-  @include din-pro (50px, 50px, $white);
+  @include din-pro (54px, 54px, $white);
 }
 
 .footer__link {

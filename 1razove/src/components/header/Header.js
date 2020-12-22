@@ -47,7 +47,7 @@ export default function Header({data}) {
             <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`}>
               <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
-                  <img className="header__img header__img--small" src="/images/logo-small-blue.png" alt="1razovoe logotype" width="247" height="56" />
+                  <img className="header__img header__img--menu" src="/images/logo-small-blue.svg" alt="1razovoe logotype" width="173" height="39" />
                 </a>
               </div>
               <Nav data={data.heroBlock.menu}/>
@@ -58,7 +58,7 @@ export default function Header({data}) {
                 {
                   data.heroBlock.scrollText.map((value, index) => {
                     return  <p key={index} className="header__text" id={`scroll-text-${index}`}>
-                        {value.white}
+                        {value.white + " "}
                         <span className="header__text header__text--colored">{value.blue}</span>
                       </p>;
                   })

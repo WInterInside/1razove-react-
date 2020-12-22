@@ -19,15 +19,15 @@
     "scrollText": [
       {
         "white": "А сколько докторов и пациентов",
-        "blue": " наражаються на небезпеку через неякісну обробку?"
+        "blue": "наражаються на небезпеку через неякісну обробку?"
       },
       {
         "white": "А сколько докторов и пациентов",
-        "blue": " наражаються на небезпеку через неякісну обробку?"
+        "blue": "наражаються на небезпеку через неякісну обробку?"
       },
       {
         "white": "А сколько докторов и пациентов",
-        "blue": " наражаються на небезпеку через неякісну обробку?"
+        "blue": "наражаються на небезпеку через неякісну обробку?"
       }
     ],
     "menu": [
@@ -67,7 +67,7 @@
     "title": "Товари провідних світових брендів",
     "brands": [
       {
-        "img": "/images/maxtec-small.png",
+        "img": "/images/maxtec-small.svg",
         "text": "Анастезіологія та ІТ",
         "url": "maxtec"
       },
@@ -77,42 +77,42 @@
         "url": "maxtec"
       },
       {
-        "img": "/images/flexicare-small.png",
+        "img": "/images/flexicare-small.svg",
         "text": "Анастезіологія та ІТ,  Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/flexicare-small.png",
+        "img": "/images/flexicare-small.svg",
         "text": "Анастезіологія та ІТ,  Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       },
       {
-        "img": "/images/deltamed-small.png",
+        "img": "/images/deltamed-small.svg",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "url": "maxtec"
       }

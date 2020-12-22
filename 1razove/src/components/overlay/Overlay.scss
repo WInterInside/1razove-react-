@@ -2,7 +2,7 @@
 @import "src/styles/vars";
 
 .overlay {
-  background-color: #ffffffdb;
+  background-color: rgba(240,240,240, 0.85);  
   position: fixed;
   top: 0;
   left: 0;
@@ -20,4 +20,3 @@
     z-index: 1;
   }
 }
-

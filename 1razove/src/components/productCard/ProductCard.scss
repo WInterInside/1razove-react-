@@ -2,10 +2,12 @@
 @import "src/styles/vars";
 
 .product__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 50px;
+  padding-top: 25px;
 
   @media (min-width: 950px) {
     flex-direction: row;
@@ -36,6 +38,11 @@
       display: block;
     }
   }
+}
+.product__img {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 25px;
 }
 
 .product__discriprion {
