@@ -2,7 +2,6 @@
 @import "src/styles/vars";
 
 .form {
-
   position: relative;
   background-color: #fff;
   display: flex;
@@ -17,7 +16,7 @@
   margin: 0 auto;
 
   @media (min-width: 950px) {
-    width: 50%;
+    width: 48%;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 25px;
@@ -78,6 +77,11 @@
   }
 }
 
+.form__toggle:hover::before,
+.form__toggle:hover::after {
+  background-color: $hb;
+}
+
 .form__text {
   @include pragmatica (18px, 22px, #2789ff);
 
@@ -94,6 +98,10 @@
       @include din-pro (54px, 54px, #2789ff);
     }
   }
+
+  &--sub {
+    color: #0627B0;
+  }
 }
 
 .form__input {
@@ -104,8 +112,9 @@
   padding-left: 15px;
   border: 1px solid #2789ff;
 
-  @include pragmatica (18px, 32px, #2789ff);
+  @include pragmatica (18px, 32px, #0627B0);
 
+  text-transform: capitalize;
   outline: none;
 }
 

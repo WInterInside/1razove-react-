@@ -76,7 +76,7 @@
 
   &--telephone {
     @include pragmatica (18px, 24px, #0627b0);
-    
+
     @media (min-width: 950px) {
       margin-bottom: 0;
     }
@@ -113,4 +113,12 @@
 .social__icon {
   width: 40px;
   height: 40px;
+}
+
+.social__hovered {
+  fill: #0627B0;
+
+  &:hover {
+    fill: #2789FF;
+  }
 }

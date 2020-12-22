@@ -20,6 +20,10 @@
   &--blue {
     color: #0627b0;
   }
+
+  &:hover {
+    color: $hb;
+  }
 }
 
 .languages__item:last-child {

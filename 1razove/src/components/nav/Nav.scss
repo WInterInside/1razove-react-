@@ -47,6 +47,10 @@
   &--blue {
     color: #0627b0;
   }
+
+  &:hover {
+    color: $hb;
+  }
 }
 
 .navigation__item:last-child {

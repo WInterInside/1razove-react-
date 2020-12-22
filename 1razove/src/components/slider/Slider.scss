@@ -46,6 +46,10 @@
 .product__arrow {
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    color: $hb;
+  }
 }
 
 .product__arrow--prev {
@@ -112,6 +116,11 @@
       height: 3px;
     }
   }
+}
+
+.close:hover::before,
+.close:hover::after {
+  background-color: $hb; 
 }
 
 .slider__popup{

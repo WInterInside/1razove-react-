@@ -141,7 +141,7 @@
         "blueText": "Cфера використання:",
         "text": "Анастезіологія та ІТ, Радіологія, Інфузійна терапія, Екстрена медицина",
         "description": "Maxtec has been a leader in oxygen analysis and delivery products for over 20 years. We provide a full line of replacement oxygen sensors and SpO2 probes compatible with all major applications in the market. Customers worldwide have come to appreciate Maxtec for our well-known oxygen analyzers and monitors in both medical and non-medical applications. Our range of products also include pulse oximeters, neonatal products, air-oxygen mixers, ventilator and ventilator support products applicable to hospital, homecare, and anesthesia markets.",
-        "btnText": "Отримати прайс-лист",
+        "btnText": "Отримати Прайс-Лист",
         "btnLink": "/prices",
         "uniqueTitle": "Унікальні товари",
         "products": [
@@ -149,14 +149,14 @@
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
             "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
-            "btnText": "Дізнатись більше",
+            "btnText": "Дізнатись Більше",
             "url": "maxtec"
           },
           {
             "title": "MaxVenturi® Система назальної високопотокової оксигенотерапії",
             "img": "/images/MaxVenturi.jpg",
             "text": "Інжектор CT Motion – прогресивне обладнання, створене з використанням інноваційних німецьких технологій, використовується для дозованого введення контрастної речовини при обстеженні органів людини на комп'ютерному томографі.",
-            "btnText": "Дізнатись більше",
+            "btnText": "Дізнатись Більше",
             "url": "maxtec"
           }
         ]

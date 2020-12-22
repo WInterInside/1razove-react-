@@ -32,7 +32,7 @@ export default function Form({closePopup}) {
   return (
     <section className="form container container-padding0" onClick={(e) => stopPropagation(e)}>
       <p className="form__text form__text--main">Отримати прайс-лист продуктів Maxtec</p>
-      <p className="form__text">Введіть ваші дані і ми відправимо вам прайс-лист на пошту.</p>
+      <p className="form__text form__text--sub">Введіть ваші дані і ми відправимо вам прайс-лист на пошту.</p>
       <form>
         <div className="form__wrapper">
           <label className="form__label visually-hidden" for="name"> Ваше ім’я / Назва організації </label>
@@ -42,7 +42,7 @@ export default function Form({closePopup}) {
           <label className="form__label visually-hidden" for="email"> Email </label>
           <input onChange={onEmailChange} className="form__input" type="text" name="name" id="email" placeholder="Email" required />
         </div>
-        <input onClick={submit} className="form__submit button button--submit" name="submit" value="Отримати прайс-лист" />
+        <input onClick={submit} className="form__submit button button--submit" name="submit" value="Отримати Прайс-Лист" />
         <div className="form__toggle" onClick={() => close()}></div>
       </form>
     </section>
