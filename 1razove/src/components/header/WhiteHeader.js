@@ -61,7 +61,10 @@ export default function WhiteHeader({data, brandLink, brand}) {
             </div>
           </div>
         </div>
-        <a className="header__link" href={`/brand/${brandLink}`}>← Назад до бренду <span>{brand}</span></a>
+        {
+          brandLink && <a className="header__link" href={`/brand/${brandLink}`}>← Назад до бренду <span>{brand}</span></a>
+        }
+        
       </div>
     </header>
   )

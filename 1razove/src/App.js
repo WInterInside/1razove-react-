@@ -12,6 +12,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
 
@@ -26,8 +27,8 @@ function App() {
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/brand/:id" component={BrandPage} />
         <Route path="/404" component={ErrorPage} />
-        <Route path="/" component={HomePage} />
-        <Route path="*" component={ErrorPage} />
+        <Route path="/" exact component={HomePage} />
+        <Redirect from='*' to='/404' />
       </Switch>
 
       <Footer />

@@ -27,15 +27,13 @@ export default function ErrorPage() {
               </div>
               <nav className="navigation">
                 <ul className="navigation__list">
-                {
-                  data.map((value, index) => {
-                    return <li className="navigation__item">
-                        <a key={index} className="navigation__link navigation__link--mobile" href={value.url}>{value.text} </a> 
-                      </li>
-                  })
-                }
-                  
-                  <li className="navigation__item"><a className="navigation__link navigation__link--mobile" href="/contacts">Контактна Інформація</a></li>
+                  {
+                    data.heroBlock.menu.map((value, index) => {
+                      return <li className="navigation__item">
+                          <a key={index} className="navigation__link navigation__link--mobile" href={value.url}>{value.text} </a> 
+                        </li>
+                    })
+                  }
                 </ul>
               </nav>
               <div className="languages">
