@@ -5,17 +5,33 @@ import "./Slider.scss";
 import Overlay from '../overlay/Overlay';
 
 let initialized = false;
+let imgIndex = 0;
 export default function Slider({data}) {
   let [selectedImg, setSelectedImage] = useState('');
   let [showPopup, setShowPopup] = useState(false);
 
-  function openOverlay(url){
+  function openOverlay(url, index){
     setSelectedImage(url);
+    imgIndex = index;
     setShowPopup(true);
   }
 
   function closePopup(){
     setShowPopup(false);
+  }
+
+  function moveSlides(e, increment){
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    if(!isAvailable(increment))
+      return;
+
+    imgIndex += increment;
+    setSelectedImage(data.images[imgIndex].url, imgIndex);
+  }
+
+  function isAvailable(increment){
+    return ((imgIndex + increment) < data.images.length) && ((imgIndex + increment) >= 0);
   }
 
   useEffect (() => {
@@ -61,7 +77,7 @@ export default function Slider({data}) {
         <div className="product__slider">
           {
             data.images.map((value,index) => {
-              return <div key={index} className="product__slide" onClick={() => openOverlay(value.url)}>
+              return <div key={index} className="product__slide" onClick={() => openOverlay(value.url, index)}>
                 <picture>
                   <source type="image/webp" srcSet={value.url} />
                   <img className="product__slideimg" src={value.url} alt={value.title} />
@@ -73,13 +89,18 @@ export default function Slider({data}) {
       </div>
       { 
         showPopup && <Overlay closePopup={() => closePopup()}>
-          <div className="wrapper__popup">
-            <picture>
-              <source type="image/webp" srcSet={selectedImg} />
-              <img className="product__slideimg" src={selectedImg} />
-            </picture>
-            <div className="close" onClick={() => closePopup()}></div>
+          <div className="slider__popup">
+            <div className="slider__popup-left" onClick={(e) => moveSlides(e, -1)}></div>
+            <div className="slider__popup-right" onClick={(e) => moveSlides(e, 1)}></div>
+            <div className="wrapper__popup">
+              <picture>
+                <source type="image/webp" srcSet={selectedImg} />
+                <img className="product__slideimg" src={selectedImg} />
+              </picture>
+              <div className="close" onClick={() => closePopup()}></div>
+            </div>
           </div>
+
         </Overlay>
       }
     </div>
