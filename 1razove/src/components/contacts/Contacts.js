@@ -11,10 +11,12 @@ export default function Contacts({data}) {
             <ul className="contacts__list">
             <li className="contacts__item contacts__item--adress">
               <h2 className="contacts__heading">Наша адреса:</h2>
-              <address className="contacts__adress">
-                Б. Xмельницького, 39<br />
-                01033, Київ<br />
-              </address>
+                <a className="contacts__link" href="https://goo.gl/maps/eiW6tiefjzq9vrmi7"  target="_blank">
+                  <address className="contacts__adress">
+                    Б. Xмельницького, 39<br />
+                    01033, Київ<br />
+                  </address>
+                </a>
             </li>
             <li className="contacts__item contacts__item--email">
               <h2 className="contacts__heading">Емейл:</h2>
