@@ -147,3 +147,24 @@
     height: 100%;
   }
 }
+
+.animated{
+  transition: all 0.5s ease;
+  
+  &--right{
+    opacity: 0;
+    transform: translateX(80vw);
+    &-start{
+      transition: none;
+      transform: translateX(80vw);
+    }
+  }
+  &--left{
+    opacity: 0;
+    transform: translateX(-80vw);
+    &-start{
+      transition: none;
+      transform: translateX(-80vw);
+    }
+  }
+}

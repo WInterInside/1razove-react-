@@ -3,21 +3,29 @@ import React, {useEffect, useState} from "react";
 import {tns} from 'tiny-slider/src/tiny-slider';
 import "./Slider.scss";
 import Overlay from '../overlay/Overlay';
+import swipeHandler from "../../helpers/swipeHandler";
 
 let initialized = false;
 let imgIndex = 0;
 export default function Slider({data}) {
+  let [animationClass, setAnimationClass] = useState('');
   let [selectedImg, setSelectedImage] = useState('');
   let [showPopup, setShowPopup] = useState(false);
 
-  function openOverlay(url, index){
+  function openOverlay(e, url, index){
     setSelectedImage(url);
     imgIndex = index;
     setShowPopup(true);
+    swipeHandler.addSwipes(e, );
   }
 
   function closePopup(){
     setShowPopup(false);
+  }
+
+  function preventClose(e){
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
   }
 
   function moveSlides(e, increment){
@@ -25,9 +33,19 @@ export default function Slider({data}) {
     e.nativeEvent.stopImmediatePropagation();
     if(!isAvailable(increment))
       return;
+    setAnimationClass( increment < 0 ? 'animated--right' : 'animated--left');
 
-    imgIndex += increment;
-    setSelectedImage(data.images[imgIndex].url, imgIndex);
+    setTimeout(() => {
+      setAnimationClass( increment < 0 ? 'animated--left-start' : 'animated--right-start' );
+      imgIndex += increment;
+
+      if(!data.images[imgIndex])
+        imgIndex = increment < 0 ? 0 : (data.images.length - 1);
+
+      setSelectedImage(data.images[imgIndex].url, imgIndex);
+      setTimeout(() => {setAnimationClass('')}, 50);
+    }, 500);
+
   }
 
   function isAvailable(increment){
@@ -77,7 +95,7 @@ export default function Slider({data}) {
         <div className="product__slider">
           {
             data.images.map((value,index) => {
-              return <div key={index} className="product__slide" onClick={() => openOverlay(value.url, index)}>
+              return <div key={index} className="product__slide" onClick={(e) => openOverlay(e, value.url, index)}>
                 <picture>
                   <source type="image/webp" srcSet={value.url} />
                   <img className="product__slideimg" src={value.url} alt={value.title} />
@@ -92,7 +110,7 @@ export default function Slider({data}) {
           <div className="slider__popup">
             <div className="slider__popup-left" onClick={(e) => moveSlides(e, -1)}></div>
             <div className="slider__popup-right" onClick={(e) => moveSlides(e, 1)}></div>
-            <div className="wrapper__popup">
+            <div className={`wrapper__popup animated ${animationClass}`} onClick={preventClose}>
               <picture>
                 <img className="product__slideimg" src={selectedImg} />
               </picture>
