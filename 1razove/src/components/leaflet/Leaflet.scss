@@ -48,6 +48,7 @@
   margin: 0;
   margin-bottom: 15px;
   padding-right: 40px;
+  text-transform: uppercase;
 
   @media (min-width: 950px) {
     @include din-pro (54px, 54px, #0627b0);
@@ -57,7 +58,7 @@
 
   &--colored {
     padding-right: 0;
-    color: #0627b0;
+    color: #2789ff;
 
     @media (min-width: 950px) {
       padding-right: 0;

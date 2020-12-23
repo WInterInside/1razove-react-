@@ -84,17 +84,16 @@ export default function Slider({data}) {
                 </picture>
               </div>
             })
-          }          
+          }
         </div>
       </div>
-      { 
+      {
         showPopup && <Overlay closePopup={() => closePopup()}>
           <div className="slider__popup">
             <div className="slider__popup-left" onClick={(e) => moveSlides(e, -1)}></div>
             <div className="slider__popup-right" onClick={(e) => moveSlides(e, 1)}></div>
             <div className="wrapper__popup">
               <picture>
-                <source type="image/webp" srcSet={selectedImg} />
                 <img className="product__slideimg" src={selectedImg} />
               </picture>
               <div className="close" onClick={() => closePopup()}></div>

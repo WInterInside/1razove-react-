@@ -39,7 +39,17 @@ export default function Decision({data}) {
               }
             </ol>
             <p className="decision__text">{data.videoTitle}</p>
-            <iframe className="decision__video" width="480" height="360" src={data.videoUrl} frameBorder="0" allowFullScreen></iframe>
+            <div className="decision__videowrapper">
+              <div className="decision__videocover">
+              </div>
+              <div className="decision__videotoggle">
+                <svg width="54" height="54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect className="decision__hovered" width="54" height="54" rx="10" fill="#FB4073"/>
+                  <path d="M37 25.768c1.333.77 1.333 2.694 0 3.464L22.75 37.46c-1.333.77-3-.192-3-1.732V19.273c0-1.54 1.667-2.502 3-1.732L37 25.768z" fill="#fff"/>
+                </svg>
+              </div>
+              <iframe className="decision__video" width="480" height="360" src={data.videoUrl} frameBorder="0" allowFullScreen></iframe>
+            </div>
           </div>
         </div>
       </div>

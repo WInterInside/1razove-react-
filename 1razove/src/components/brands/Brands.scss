@@ -15,7 +15,8 @@
 .brands__heading {
   margin-top: 0;
   margin-bottom: 20px;
-
+  text-transform: uppercase;
+  
   @include din-pro (54px, 54px, #0627b0);
 
   @media (min-width: 950px) {

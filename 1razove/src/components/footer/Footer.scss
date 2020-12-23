@@ -10,7 +10,7 @@
   flex-direction: column;
   max-width: 949px;
   min-height: 451px;
-  padding: 45px 15px;
+  padding: 30px 15px;
   background-color: $bg-blue;
   border-radius: 30px;
 
@@ -29,6 +29,7 @@
   margin-bottom: auto;
   text-align: left;
   padding-right: 0;
+  text-transform: uppercase;
 
   @include din-pro (34px, 34px, #fb4073);
 

@@ -41,13 +41,16 @@ export default function Header({data}) {
       <div className="container">
         <div className="header__wrapper header__wrapper--main">
           <a className="header__logo" href="/">
-            <img className="header__img" src="/images/logo.svg" alt="1razovoe logotype" width="316" height="522" />
+            <picture>
+              <source media="(min-width: 950px)" srcSet="/images/logo.svg" />
+              <img className="header__img" src="/images/1mobile.svg" alt="1razovoe logotype" width="316" height="522" />
+            </picture>
           </a>
           <div className="header__wrapper header__wrapper--index header__wrapper--column">
             <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`}>
               <div className="header__wrapper header__wrapper--row">
                 <a className="header__logo header__logo--mobile" href="/">
-                  <img className="header__img header__img--menu" src="/images/logo-small-blue.svg" alt="1razovoe logotype" width="173" height="39" />
+                  <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
                 </a>
               </div>
               <Nav data={data.heroBlock.menu}/>

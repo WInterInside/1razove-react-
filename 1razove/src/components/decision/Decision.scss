@@ -2,14 +2,14 @@
 @import "src/styles/vars";
 
 .decision {
-  padding-top: 90px;
+  padding-top: 50px;
   background-color: $bg-blue;
   color: $white;
   position: relative;
   z-index: 10;
 
   @media (min-width: 950px) {
-    padding-top: 50px;
+    padding-top: 90px;
   }
 }
 
@@ -40,7 +40,7 @@
 
   &--logo{
     min-width: 325px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
     @media (min-width: 950px){
       margin-bottom: 0;
@@ -137,17 +137,71 @@
   margin-bottom: 0;
 }
 
-.decision__video {
+.decision__videowrapper {
+  position: relative;
   width: 100%;
   height: 200px;
   margin-top: 5px;
   border-radius: 20px;
-  opacity: 0.7;
 
   @media (min-width: 950px) {
     width: 100%;
     height: 589px;
     margin-top: 20px;
+    border-radius: 50px;
+  }
+}
+
+.decision__videocover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  background-color: transparent;
+  z-index: 1;
+
+  @media (min-width: 950px) {
+    width: 100%;
+    height: 589px;
+    border-radius: 50px;
+  }
+}
+
+.decision__videoimg {
+  width: 100%;
+  z-index: 2;
+}
+
+.decision__videotoggle {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+.decision__hovered {
+  fill: #FB4073;
+
+  &:hover {
+    fill: #0627B0;
+  }
+}
+
+.decision__video {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  background-color: white;
+
+  @media (min-width: 950px) {
+    width: 100%;
+    height: 589px;
     border-radius: 50px;
   }
 }
