@@ -54,6 +54,16 @@ export default function Contacts({data}) {
                       <path d="M20 30c5.524 0 10-4.476 10-10s-4.476-10-10-10-10 4.476-10 10 4.476 10 10 10zm-5.424-10.217l9.642-3.717c.447-.162.838.109.693.786v-.001l-1.641 7.734c-.122.548-.447.682-.903.423l-2.5-1.842-1.206 1.162c-.134.133-.246.245-.504.245l.177-2.544 4.634-4.186c.201-.177-.046-.277-.311-.1l-5.726 3.605-2.469-.77c-.535-.17-.547-.536.114-.795z" fill="#fff"/></svg>
                     </a>
                   </li>
+                  <li className="social__item">
+                    <a className="social__link social__link--yt" href="https://www.youtube.com/channel/UCkACr-U6T2TLGa1EBPFPtxw" aria-label="1razove yotube">
+                      <span className="visually-hidden">Razove in Youtube</span>
+                      <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect className="social__hovered" width="40" height="40" rx="6.667" fill="#0627B0"/>
+                        <path d="M18.666 21.747l3.253-1.873L18.666 18v3.747z" fill="#fff"/>
+                        <path d="M20 10c-5.522 0-10 4.478-10 10s4.478 10 10 10 10-4.478 10-10-4.478-10-10-10zm6.248 10.01s0 2.028-.257 3.006a1.566 1.566 0 01-1.101 1.102c-.978.257-4.89.257-4.89.257s-3.901 0-4.89-.268a1.566 1.566 0 01-1.101-1.101C13.75 22.038 13.75 20 13.75 20s0-2.028.258-3.006a1.598 1.598 0 011.101-1.112c.978-.257 4.89-.257 4.89-.257s3.912 0 4.89.268c.535.144.957.566 1.101 1.101.268.978.258 3.016.258 3.016z" fill="#fff"/>
+                      </svg>
+                    </a>
+                  </li>
                 </ul>
               </section>
             </li>
