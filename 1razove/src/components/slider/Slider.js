@@ -3,20 +3,15 @@ import React, {useEffect, useState} from "react";
 import {tns} from 'tiny-slider/src/tiny-slider';
 import "./Slider.scss";
 import Overlay from '../overlay/Overlay';
-import swipeHandler from "../../helpers/swipeHandler";
 
 let initialized = false;
 let imgIndex = 0;
 export default function Slider({data}) {
-  let [animationClass, setAnimationClass] = useState('');
-  let [selectedImg, setSelectedImage] = useState('');
   let [showPopup, setShowPopup] = useState(false);
 
   function openOverlay(e, url, index){
-    setSelectedImage(url);
     imgIndex = index;
     setShowPopup(true);
-    swipeHandler.addSwipes(e, );
   }
 
   function closePopup(){
@@ -26,30 +21,6 @@ export default function Slider({data}) {
   function preventClose(e){
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
-  }
-
-  function moveSlides(e, increment){
-    e.stopPropagation();
-    e.nativeEvent.stopImmediatePropagation();
-    if(!isAvailable(increment))
-      return;
-    setAnimationClass( increment < 0 ? 'animated--right' : 'animated--left');
-
-    setTimeout(() => {
-      setAnimationClass( increment < 0 ? 'animated--left-start' : 'animated--right-start' );
-      imgIndex += increment;
-
-      if(!data.images[imgIndex])
-        imgIndex = increment < 0 ? 0 : (data.images.length - 1);
-
-      setSelectedImage(data.images[imgIndex].url, imgIndex);
-      setTimeout(() => {setAnimationClass('')}, 50);
-    }, 500);
-
-  }
-
-  function isAvailable(increment){
-    return ((imgIndex + increment) < data.images.length) && ((imgIndex + increment) >= 0);
   }
 
   useEffect (() => {
@@ -79,7 +50,32 @@ export default function Slider({data}) {
         }
       });
       initialized = true;
-    }, 200)
+    }, 200);
+
+    setTimeout (() => {
+      var slider = tns({
+        container: '#overlay-slider',
+        items: 1,
+        //autoWidth: true,
+        //gutter: 10,
+        controls: true,
+        nav: false,
+        autoplay: false,
+        loop: false,
+        mouseDrag: true,
+        arrowKeys: true,
+        controlsContainer: '.slider__popup--absolute',
+        prevButton: '.slider__popup-left',
+        nextButton: '.slider__popup-right',
+        // responsive: {
+        //   900: {
+        //     items: 4,
+        //     gutter: 15
+        //   }
+        // }
+      });
+      //initialized = true;
+    }, 200);
   });
 
   return (
@@ -105,21 +101,34 @@ export default function Slider({data}) {
           }
         </div>
       </div>
-      {
-        showPopup && <Overlay closePopup={() => closePopup()}>
+      <div className={`overlay-wrapper ${showPopup ? '' : 'hide'}`}>
+        <Overlay closePopup={() => closePopup()}>
           <div className="slider__popup">
-            <div className="slider__popup-left" onClick={(e) => moveSlides(e, -1)}></div>
-            <div className="slider__popup-right" onClick={(e) => moveSlides(e, 1)}></div>
-            <div className={`wrapper__popup animated ${animationClass}`} onClick={preventClose}>
-              <picture>
-                <img className="product__slideimg" src={selectedImg} />
-              </picture>
-              <div className="close" onClick={() => closePopup()}></div>
+            <div className="slider__popup slider__popup--absolute" onClick={preventClose}>
+              <div className="slider__popup-left"></div>
+              <div className="slider__popup-right"></div>
+            </div>
+            <div onClick={preventClose}>
+              <div id="overlay-slider">
+                {
+                  data.images.map((value,index) => {
+                    return <div  key={index} className="slide__wrapper">
+                      <div className="slideimg__wrapper">
+                        <picture>
+                          <img className="product__slideimg" src={value.url} />
+                        </picture>
+                        <div className="close" onClick={() => closePopup()}></div>
+                      </div>
+                    </div>
+                  })
+                }
+              </div>
             </div>
           </div>
 
         </Overlay>
-      }
+      </div>
+      
     </div>
   )
 }
