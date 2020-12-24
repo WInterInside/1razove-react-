@@ -3,11 +3,15 @@ import ScrollMagic from 'scrollmagic';
 import "./Decision.scss";
 import YouTubePlayer from 'youtube-player';
 
+let initialized = false;
 export default function Decision({data}) {
   let [videoStarted, setVideoStarted] = useState(false);
   let player;
 
   useEffect(() => {
+    if(initialized)
+      return;
+
     player = YouTubePlayer('decision__video');
     player.loadVideoById(data.videoUrl);
     player.stopVideo();
@@ -19,10 +23,11 @@ export default function Decision({data}) {
       .setPin("#moving-logo")
       //.addIndicators({name: "1"}) // add indicators (requires plugin)
       .addTo(controller);
+
+    initialized = true;
   })
 
   function clickVideo(){
-    console.log('clicked');
     setVideoStarted(true);
     player.playVideo();
   }

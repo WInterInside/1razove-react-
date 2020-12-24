@@ -6,11 +6,15 @@ import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid s
 import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
+let initialized = false;
 export default function Header({data}) {
   let [ showMenu, setShowMenu ] = useState(false);
   ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
   useEffect(() => {
+    if(initialized)
+      return;
+
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
         triggerHook: 'onLeave',
@@ -30,10 +34,16 @@ export default function Header({data}) {
       .addTo(controller)
       .setTween(scrollAnimation);
       //scene.offset(400);
+    initialized = true;
   })
 
   function toggleMenu(){
     setShowMenu(!showMenu);
+  }
+
+  function stopPropagation(e){
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
   }
 
   return (
@@ -47,14 +57,16 @@ export default function Header({data}) {
             </picture>
           </a>
           <div className="header__wrapper header__wrapper--index header__wrapper--column">
-            <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`}>
-              <div className="header__wrapper header__wrapper--row">
-                <a className="header__logo header__logo--mobile" href="/">
-                  <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
-                </a>
+            <div className={`header__wrapper-mobile ${showMenu ? 'header__wrapper-mobile--opened' : ''}`} onClick={toggleMenu}>
+              <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
+                <div className="header__wrapper header__wrapper--row">
+                  <a className="header__logo header__logo--mobile" href="/">
+                    <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
+                  </a>
+                </div>
+                <Nav data={data.heroBlock.menu} />
+                <Lang data={data.project.langs}/>
               </div>
-              <Nav data={data.heroBlock.menu}/>
-              <Lang data={data.project.langs}/>
             </div>
             <div className="header__wrapper--text">
               <div id="animated-text">

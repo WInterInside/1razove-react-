@@ -76,6 +76,22 @@
     }
   }
 
+  &-mobile{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @media (min-width: 950px) {
+      position: relative;
+    }
+
+    &--opened{
+      height: 100%;
+    }
+  }
+
   @media (min-width: 950px) {
     flex-direction: row;
   }

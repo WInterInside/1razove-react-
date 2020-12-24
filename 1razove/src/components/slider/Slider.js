@@ -101,7 +101,7 @@ export default function Slider({data}) {
           }
         </div>
       </div>
-      <div className={`overlay-wrapper ${showPopup ? '' : 'hide'}`}>
+      <div className={`overlay-wrapper ${showPopup ? '' : 'hide'}`} onClick={preventClose}>
         <Overlay closePopup={() => closePopup()}>
           <div className="slider__popup">
             <div className="slider__popup slider__popup--absolute" onClick={preventClose}>
@@ -124,6 +124,7 @@ export default function Slider({data}) {
                 }
               </div>
             </div>
+            <div className="close close--mobile" onClick={() => closePopup()}></div>
           </div>
 
         </Overlay>

@@ -4,10 +4,14 @@ import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid s
 import { TweenMax, TimelineMax } from "gsap"; // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
  
+let initialized = false;
 export default function Problematic({data}) {
   ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
   
   useEffect(() => {
+    if(initialized)
+      return;
+
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
         triggerHook: 'onLeave',
@@ -28,6 +32,7 @@ export default function Problematic({data}) {
       .addTo(controller)
       .setTween(scrollAnimation);
       //scene.offset(400);
+    initialized = true;
   })
 
   return (
