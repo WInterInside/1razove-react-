@@ -1,19 +1,14 @@
-import dataRu from '../data.ru.json';
-import dataUa from '../data.ua.json';
-import dataEn from '../data.en.json';
+import axios from 'axios';
 
-const dataLangs = {
-  ru: dataRu,
-  ua: dataUa,
-  en: dataEn
-};
 const langItem = 'lang';
 
-function getData(){
+async function getData(){
   let lang = localStorage.getItem(langItem);
-  if(!lang || !dataLangs[lang])
-    return dataLangs.ua;
-  return dataLangs[lang];
+  let link = `http://razove.com.ua/data/data.ua.json`;
+  link = lang ? `http://razove.com.ua/data/data.${lang}.json` : link;
+  //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
+  let request = await axios.get(link);
+  return request.data;
 }
 
 function changeLang(lang){

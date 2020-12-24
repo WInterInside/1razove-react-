@@ -4,6 +4,7 @@ import "./ProductCard.scss";
 import ProductIndications from "../productIndications/ProductIndications";
 import ProductAdvantages from "../productAdvantages/ProductAdvantages";
 import Leaflet from "../leaflet/Leaflet";
+import ProductNumbereditem from "../productNumbereditem/ProductNumbereditem";
 
 export default function ProductCard({data}) {
   return (
@@ -21,12 +22,11 @@ export default function ProductCard({data}) {
           </picture>
         </div>
         <p className="product__text">{data.text}</p>
-        <ProductIndications />
-        <p className="product__text"></p>
-
-        <ProductAdvantages />
+        <ProductIndications data={data}/>
+        <div dangerouslySetInnerHTML={{__html: data.textHtml}}></div>
         <Leaflet />
       </div>
     </div>
   )
 }
+
