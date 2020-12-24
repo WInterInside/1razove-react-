@@ -20,7 +20,7 @@ export default function Header({data}) {
 
     var scrollAnimation = new TimelineMax();
     scrollAnimation.set(document.getElementById('home-header'), {autoAlpha: 1})
-      .to(document.getElementById('animated-text'), 305, {y:'-110%', ease:Power1.easeIn, autoAlpha: 1, delay:2}, "trans1");
+      .to(document.getElementById('animated-text'), 305, {y:'-110%', ease:Power1.easeOut, autoAlpha: 1, delay:2}, "trans1");
       //.to(document.getElementById('scroll-text-1'), 305, {y:'-500px', ease:Power4.ease, autoAlpha: 0, delay:2}, "trans2")
       //.to(document.getElementById('scroll-text-2'), 305, {y:'-500px', ease:Power4.ease, autoAlpha: 0, delay:2}, "trans3");
 

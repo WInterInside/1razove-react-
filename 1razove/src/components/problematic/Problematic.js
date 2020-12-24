@@ -20,7 +20,7 @@ export default function Problematic({data}) {
     data.cards.forEach((val, index) => {
       console.log(index);
       if((data.cards.length - 1) > index)
-        scrollAnimation = scrollAnimation.to(document.getElementById(`problematic-${index}`), 8, {y:'200%', autoAlpha: 1, delay:2}, `trans${index}`);
+        scrollAnimation = scrollAnimation.to(document.getElementById(`problematic-${index}`), 8, {y:'-200%', autoAlpha: 1, delay:2}, `trans${index}`);
     })
     let element = window.innerWidth <= 1200 ? "#problematic-text" : "#problematic";
     var scene = new ScrollMagic.Scene({triggerElement: element, duration: 100})
