@@ -1,9 +1,14 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import "./Footer.scss";
 
 export default function Footer() {
+  let [show, setShow] = useState(true);
 
-let show = window.location.pathname != "/404";
+
+  useEffect(() => {
+    debugger;
+    setShow(window.location.pathname != "/404")
+  })
 
   return (
     show && <footer className="footer">
