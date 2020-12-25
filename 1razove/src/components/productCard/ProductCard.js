@@ -23,7 +23,29 @@ export default function ProductCard({data}) {
         </div>
         <p className="product__text">{data.text}</p>
         <ProductIndications data={data}/>
-        <div dangerouslySetInnerHTML={{__html: data.textHtml}}></div>
+        <div>
+          {
+            data.textHtmlElements.map((elem, index) => {
+              switch(elem.type) {
+                case 'card':
+                  return <ul key={index} className="product__list product__list----advantages">
+                    <li className="product__item product__item--advantages">
+                      <h3 className="product__heading product__heading--advantages">{elem.title}</h3>
+                      <p className="product__text product__text--advantages">{elem.text}</p>
+                    </li>
+                  </ul>;
+                case 'list':
+                  return <div key={index} className="product__numbereditem">{elem.text}</div>;
+                case 'title':
+                  return <h2 key={index} className='product__heading'>{elem.title}</h2>;
+                case 'text':
+                  return <p key={index} className='product__text'>{elem.text}</p>;
+                default:
+                  return <p key={index} className='product__text'>{elem.text}</p>;
+              }
+            })
+          }
+        </div>
         <Leaflet />
       </div>
     </div>
