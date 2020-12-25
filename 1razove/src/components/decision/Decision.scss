@@ -6,7 +6,6 @@
   background-color: $bg-blue;
   color: $white;
   position: relative;
-  z-index: 10;
 
   @media (min-width: 950px) {
     padding-top: 90px;
@@ -176,7 +175,6 @@
 
 .decision__videotoggle {
   position: absolute;
-  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
