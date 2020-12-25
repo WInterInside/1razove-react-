@@ -71,6 +71,7 @@
 
 .product__text {
   @include pragmatica (18px, 22px, #0627b0);
+  margin: 0;
 
   &--advantages {
     line-height: 27px;
@@ -78,6 +79,10 @@
 
   @media (min-width: 950px) {
     @include pragmatica (18px, 24px, #0627b0);
+  }
+
+  &--data {
+    margin-bottom: 25px;
   }
 }
 
@@ -108,18 +113,24 @@
       @include din-pro (50px, 54px, #0627b0);
     }
   }
+
+  &--data {
+    margin-bottom: 25px;
+  }
+}
+
+.product__data {
 }
 
 .product__item {
-  min-height: 255px;
   padding: 30px 40px;
   border-radius: 30px;
   background-color: #f0f0f0;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
-  &:last-child {
-    margin-bottom: 70px;
-  }
+  // &:last-child {
+  //   margin-bottom: 70px;
+  // }
 }
 
 .product__numberedlist {
@@ -130,7 +141,7 @@
 }
 
 .product__numbereditem {
-  counter-increment: product-counter;
+  // counter-increment: product-counter;
   position: relative;
   padding-left: 58px;
   padding-top: 5px;
@@ -138,28 +149,28 @@
   margin-bottom: 25px;
 
   @include pragmatica (18px, 24px, #0627b0);
-
-  &::before {
-    @include pseudo;
-    content: counter(product-counter);
-    top: 0;
-    left: 0;
-    width: 33px;
-    height: 33px;
-    padding-top: 5px;
-    border-radius: 7px;
-    background-color: #fb4073;
-    display: inline-block;
-    color: $white;
-    font-size: 17px;
-    line-height: 22px;
-    text-align: center;
-  }
 }
 
-.product__numbereditem:last-child {
-  margin-bottom: 0;
+.product__number {
+  @include pseudo;
+  // content: counter(product-counter);
+  top: 0;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  padding-top: 5px;
+  border-radius: 7px;
+  background-color: #fb4073;
+  display: inline-block;
+  color: $white;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
 }
+
+// .product__numbereditem:last-child {
+//   margin-bottom: 0;
+// }
 
 .product__indications {
   margin-bottom: 32px;

@@ -23,7 +23,7 @@ export default function ProductCard({data}) {
         </div>
         <p className="product__text">{data.text}</p>
         <ProductIndications data={data}/>
-        <div>
+        <div className="product__data">
           {
             data.textHtmlElements.map((elem, index) => {
               switch(elem.type) {
@@ -35,13 +35,13 @@ export default function ProductCard({data}) {
                     </li>
                   </ul>;
                 case 'list':
-                  return <div key={index} className="product__numbereditem">{elem.text}</div>;
+                  return <div key={index} className="product__numbereditem">{elem.text} <div className="product__number">.I.</div> </div>;
                 case 'title':
-                  return <h2 key={index} className='product__heading'>{elem.title}</h2>;
+                  return <h2 key={index} className='product__heading product__heading--data'>{elem.title}</h2>;
                 case 'text':
-                  return <p key={index} className='product__text'>{elem.text}</p>;
+                  return <p key={index} className='product__text product__text--data'>{elem.text}</p>;
                 default:
-                  return <p key={index} className='product__text'>{elem.text}</p>;
+                  return <p key={index} className='product__text product__text--data'>{elem.text}</p>;
               }
             })
           }
@@ -51,4 +51,3 @@ export default function ProductCard({data}) {
     </div>
   )
 }
-
