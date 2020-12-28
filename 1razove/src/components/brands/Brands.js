@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from 'react';
 import "./Brands.scss";
-
+import { Link } from "react-router-dom";
 
 export default function Brands({data}) {
 
@@ -21,7 +21,7 @@ export default function Brands({data}) {
   }
 
   return (
-    <section className="brands">
+    <section className="brands" id="brands">
       <a className="brands__link" name="brands"></a>
       <div className="container">
         <h2 className="brands__heading">{data.title}</h2>
@@ -29,13 +29,13 @@ export default function Brands({data}) {
           {
             data.brands.slice(0, count).map((value,index) => {
               return <li key={index} className="brands__item">
-                <a className="brands__link" href={`/brand/${value.url}`}>
+                <Link className="brands__link" to={`/brand/${value.url}`}>
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
                     <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
                     <p className="brands__description brands__description--maxtec">{value.text}</p>
                   </div>
-                </a>
+                </Link>
               </li>
             })
           }

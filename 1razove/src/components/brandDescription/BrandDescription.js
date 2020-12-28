@@ -15,7 +15,7 @@ export default function BrandDescription({data}) {
   }
 
   return (
-    <section className="brand__discription">
+    <section className="brand__description">
       <div className="container">
         <div className="brand__wrapper">
           <div className="brand__logotype brand__logotype--desctop">
@@ -30,7 +30,7 @@ export default function BrandDescription({data}) {
                 <img className="brand__img" src={data.brandImage} alt="logotype" width="277" height="92" />
               </picture>
             </div>
-            <p className="brand__text brand__text--discription">{data.description}</p>
+            <p className="brand__text brand__text--description">{data.description}</p>
             <div className="brand__sphere">
               <h2 className="brand__heading brand__heading--colored brand__heading--h2">{data.blueText}</h2>
               <p className="brand__text brand__text--sphere">{data.text}</p>

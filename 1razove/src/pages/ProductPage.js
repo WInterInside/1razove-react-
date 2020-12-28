@@ -4,6 +4,7 @@ import Slider  from "../components/slider/Slider";
 import Product__card from "../components/productCard/ProductCard";
 import WhiteHeader from "../components/header/WhiteHeader";
 import { useHistory } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 
 export default function ProductPage(props) {
   const history = useHistory();
@@ -26,15 +27,15 @@ export default function ProductPage(props) {
   });
 
   return (
-    <div className="product">
-      { !!data && !!product && <div>
-          <WhiteHeader data={data} brandLink={product.brandLink} brand={product.brand}/>
-          <div className="container">
-            <Product__card data={product}/>
+      <div className="page product">
+        { !!data && !!product && <div>
+            <WhiteHeader data={data} brandLink={product.brandLink} brand={product.brand}/>
+            <div className="container">
+              <Product__card data={product}/>
+            </div>
+            <Slider data={product}/>
           </div>
-          <Slider data={product}/>
-        </div>
-      }
-    </div>
+        }
+      </div>
   )
 }

@@ -42,13 +42,13 @@
   text-transform: uppercase;
 
   @media (min-width: 950px) {
-    @include din-pro (54px, 54px, #0627b0);
+    @include din-pro (50px, 50px, #0627b0);
   }
 
   &--h2 {
     @include din-pro (54px, 54px, #fb4073);
     padding-left: 15px;
-    margin: 50px 0;
+    margin: 50px 0 30px 0;
 
     @media (min-width: 950px) {
       @include din-pro (90px, 54px, #fb4073);
@@ -108,7 +108,7 @@
   }
 }
 
-.products__discription {
+.products__description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

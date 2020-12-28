@@ -1,5 +1,6 @@
 import React from "react"
 import "./Products.scss";
+import { Link } from 'react-router-dom';
 
 export default function Products({data}) {
   return (
@@ -12,15 +13,15 @@ export default function Products({data}) {
               <h2 className="products__heading products__heading--card">{value.title}</h2>
               <div className="products__wrapper products__wrapper--row">
                 <div className="products__prev">
-                  <a className="products__link" href="/product/12">
+                  <Link className="products__link" to={`/product/${value.url}`}>
                     <picture>
                       <img className="products__img" src={value.img} alt={value.title} width="228" height="317" />
                     </picture>
-                  </a>
+                  </Link>
                 </div>
-                <div className="products__discription">
+                <div className="products__description">
                   <p className="products__text">{value.text}</p>
-                  <a href={`/product/${value.url}`} className="button button--products">{value.btnText}</a>
+                  <Link className="button button--products" to={`/product/${value.url}`}>{value.btnText}</Link>
                 </div>
               </div>
             </div>

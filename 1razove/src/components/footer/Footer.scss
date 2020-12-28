@@ -20,7 +20,7 @@
     max-width: 1360px;
     min-height: 525px;
     padding: 40px 45px;
-    padding-right: 415px;
+    padding-right: 27%;
   }
 }
 
@@ -34,7 +34,7 @@
   @include din-pro (34px, 34px, #fb4073);
 
   @media (min-width: 950px) {
-    padding-right: 55px;
+    //padding-right: 55px;
 
     @include din-pro (54px, 54px, #fb4073);
   }
@@ -65,8 +65,8 @@
   @include pragmatica (18px, 32px, #0627b0);
 
   @media (min-width: 950px) {
-    float: none;
-    padding-right: 0;
+    //float: none;
+    padding-right: 28%;
 
     @include pragmatica (18px, 22px, #0627b0);
   }

@@ -17,7 +17,7 @@
 
   @media (min-width: 950px) {
     flex-direction: row;
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
 }
 
@@ -36,6 +36,11 @@
 
   @media (min-width: 950px) {
     width: 50%;
+  }
+
+  &-sticky{
+    position: sticky;
+    top: 25px;
   }
 }
 

@@ -5,6 +5,7 @@ import Lang from "../lang/Lang";
 import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import { Link } from 'react-router-dom';
 
 let initialized = false;
 export default function Header({data}) {
@@ -50,21 +51,21 @@ export default function Header({data}) {
     <header className="header" id="home-header">
       <div className="container">
         <div className="header__wrapper header__wrapper--main">
-          <a className="header__logo" href="/">
+          <Link className="header__logo" to={`/`}>
             <picture>
               <source media="(min-width: 950px)" srcSet="/images/logo.svg" />
               <img className="header__img" src="/images/1mobile.svg" alt="1razovoe logotype" width="316" height="522" />
             </picture>
-          </a>
+          </Link>
           <div className="header__wrapper header__wrapper--index header__wrapper--column">
             <div className={`header__wrapper-mobile ${showMenu ? 'header__wrapper-mobile--opened' : ''}`} onClick={toggleMenu}>
               <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
                 <div className="header__wrapper header__wrapper--row">
-                  <a className="header__logo header__logo--mobile" href="/">
+                  <Link className="header__logo header__logo--mobile" to={`/`}>
                     <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
-                  </a>
+                  </Link>
                 </div>
-                <Nav data={data.heroBlock.menu} />
+                <Nav data={data.heroBlock.menu} closeMenu={() => !showMenu ? null : toggleMenu()} />
                 <Lang data={data.project.langs}/>
               </div>
             </div>
@@ -81,9 +82,13 @@ export default function Header({data}) {
               </div>
             </div>
             <div className={`header__hamburger ${showMenu ? 'header__hamburger--on' : ''}`} onClick={() => toggleMenu()}>
-              <span className="header__hamburger-span"></span>
-              <span className="header__hamburger-span"></span>
-              <span className="header__hamburger-span"></span>
+              <div className="header__hamburger-wrapper">
+                <div className="header__hamburger-span-wrapper">
+                  <span className="header__hamburger-span"></span>
+                  <span className="header__hamburger-span"></span>
+                  <span className="header__hamburger-span"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -35,7 +35,7 @@ export default function ProductCard({data}) {
                     </li>
                   </ul>;
                 case 'list':
-                  return <div key={index} className="product__numbereditem">{elem.text} <div className="product__number">.I.</div> </div>;
+                  return <div key={index} className="product__numbereditem">{elem.text} <div className="product__number">{elem.title}</div> </div>;
                 case 'title':
                   return <h2 key={index} className='product__heading product__heading--data'>{elem.title}</h2>;
                 case 'text':

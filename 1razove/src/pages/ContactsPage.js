@@ -7,12 +7,12 @@ export default function ContactsPage() {
   let [data, setData] = useState(null);
   useEffect(async () => data ? data : setData(await dataStore.getData()) );
   return (
-    <div className="ContactsPage">
-      { !!data && <div>
-            <WhiteHeader data={data}/>
-            <Contacts data={data}/>
-        </div>
-      }
-    </div>
+      <div className="page ContactsPage">
+        { !!data && <div>
+              <WhiteHeader data={data}/>
+              <Contacts data={data}/>
+          </div>
+        }
+      </div>
   )
 }

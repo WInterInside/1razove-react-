@@ -8,7 +8,16 @@ import dataStore from '../stores/dataStore';
 
 export default function HomePage() {
   let [data, setData] = useState(null);
-  useEffect(async () => data ? data : setData(await dataStore.getData()) );
+  useEffect(async () => {
+    if(!data)
+      setData(await dataStore.getData());
+
+    let hash = window.location.hash;
+    if(hash)
+      document.querySelector(hash).scrollIntoView({
+        behavior: 'smooth'
+      });
+  });
 
   return (
     <div className="HomePage">
