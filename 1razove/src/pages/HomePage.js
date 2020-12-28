@@ -6,6 +6,14 @@ import Problematic from "../components/problematic/Problematic";
 import Header from "../components/header/Header";
 import dataStore from '../stores/dataStore';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
+
 export default function HomePage() {
   let [data, setData] = useState(null);
   useEffect(async () => {

@@ -3,6 +3,14 @@ import dataStore from '../stores/dataStore';
 import Contacts from "../components/contacts/Contacts";
 import WhiteHeader from "../components/header/WhiteHeader";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
+
 export default function ContactsPage() {
   let [data, setData] = useState(null);
   useEffect(async () => data ? data : setData(await dataStore.getData()) );

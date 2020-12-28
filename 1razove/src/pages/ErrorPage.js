@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react"
 import "../components/header/Header.scss";
 import dataStore from '../stores/dataStore';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
+
 export default function ErrorPage() {
   let [data, setData] = useState(null);
   useEffect(async () => data ? data : setData(await dataStore.getData()) );
@@ -57,7 +65,7 @@ export default function ErrorPage() {
               </div>
             </div>
           </div>
-      
+
         </div>
         }
         </header>

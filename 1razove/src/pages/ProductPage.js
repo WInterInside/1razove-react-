@@ -6,6 +6,14 @@ import WhiteHeader from "../components/header/WhiteHeader";
 import { useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
+
 export default function ProductPage(props) {
   const history = useHistory();
   let [data, setData] = useState(null);

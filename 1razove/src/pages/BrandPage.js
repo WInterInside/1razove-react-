@@ -6,6 +6,14 @@ import Products from "../components/products/Products";
 import BrandHeader from "../components/header/BrandHeader";
 import { useHistory } from "react-router-dom";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
+
 export default function BrandPage(props) {
   let [data, setData] = useState(null);
   let [brand, setBrand] = useState(null);
@@ -17,7 +25,7 @@ export default function BrandPage(props) {
       newData = await dataStore.getData();
       setData(newData);
     }
-    console.log(newData);  
+    console.log(newData);
     let [ currentBrand ] = newData.brandsList.filter(x => x.url === props.match.params.id);
     console.log(currentBrand);
     if(!currentBrand){
