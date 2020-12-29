@@ -35,6 +35,9 @@ export default function ProductPage(props) {
   });
 
   return (
+    <div className="view">
+    <div className="content">
+    <div className="content--inner">
       <div className="page product">
         { !!data && !!product && <div>
             <WhiteHeader data={data} brandLink={product.brandLink} brand={product.brand}/>
@@ -44,6 +47,9 @@ export default function ProductPage(props) {
             <Slider data={product}/>
           </div>
         }
+      </div>
+      </div>
+      </div>
       </div>
   )
 }

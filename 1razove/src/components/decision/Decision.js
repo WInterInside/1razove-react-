@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import ScrollMagic from 'scrollmagic';
 import "./Decision.scss";
 import YouTubePlayer from 'youtube-player';
 
@@ -15,14 +14,6 @@ export default function Decision({data}) {
     player = YouTubePlayer('decision__video');
     player.loadVideoById(data.videoUrl);
     player.stopVideo();
-    if(window.innerWidth <= 950)
-      return;
-
-    var controller = new ScrollMagic.Controller();
-    var scene = new ScrollMagic.Scene({triggerElement: "#moving-logo-trigger", duration: 800, triggerHook: 0, })
-      .setPin("#moving-logo")
-      //.addIndicators({name: "1"}) // add indicators (requires plugin)
-      .addTo(controller);
 
     initialized = true;
   })

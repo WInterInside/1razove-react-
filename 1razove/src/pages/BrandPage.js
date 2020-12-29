@@ -36,6 +36,9 @@ export default function BrandPage(props) {
   });
 
   return (
+    <div className="view">
+    <div className="content">
+          <div className="content--inner">
     <div className="brand">
       { !!data && !!brand && <div>
           <BrandHeader data={data} />
@@ -43,6 +46,9 @@ export default function BrandPage(props) {
           <Products data={brand} />
         </div>
       }
+    </div>
+    </div>
+    </div>
     </div>
   )
 }

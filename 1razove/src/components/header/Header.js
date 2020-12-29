@@ -3,39 +3,39 @@ import "./Header.scss";
 import Nav from "../nav/Nav";
 import Lang from "../lang/Lang";
 import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
-import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLite and TimelineLite
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+//import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import { Link } from 'react-router-dom';
 
 let initialized = false;
+let animation = null;
 export default function Header({data}) {
   let [ showMenu, setShowMenu ] = useState(false);
-  ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
-
+  //ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    if(initialized)
-      return;
+    //if(initialized)
+      //animation.scrollTrigger.kill();
 
-    var controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: 'onLeave',
-        duration: "200%"
-      }
-    });
-
-    var scrollAnimation = new TimelineMax();
-    scrollAnimation.set(document.getElementById('home-header'), {autoAlpha: 1})
-      .to(document.getElementById('animated-text'), 305, {y:'-110%', ease:Power1.easeOut, autoAlpha: 1, delay:2}, "trans1");
-      //.to(document.getElementById('scroll-text-1'), 305, {y:'-500px', ease:Power4.ease, autoAlpha: 0, delay:2}, "trans2")
-      //.to(document.getElementById('scroll-text-2'), 305, {y:'-500px', ease:Power4.ease, autoAlpha: 0, delay:2}, "trans3");
-
-
-    var scene = new ScrollMagic.Scene({triggerElement: "#home-header", duration: 1000})
-      .setPin("#home-header")
-      .addTo(controller)
-      .setTween(scrollAnimation);
-      //scene.offset(400);
-    initialized = true;
+      setTimeout(() => {
+        gsap.timeline({
+          defaults: {duration: 1 },
+          scrollTrigger: {
+            trigger: "#home-header",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true
+          }
+        })
+          .to("#animated-text",  { y: window.innerWidth > 950 ? -700 : -500})
+          .addLabel("color");
+      },500);
+    
+    
+    //initialized = true;
   })
 
   function toggleMenu(){

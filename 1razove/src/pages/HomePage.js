@@ -28,17 +28,25 @@ export default function HomePage() {
   });
 
   return (
-    <div className="HomePage">
+    <div className="view">
+    <div className="content">
+    <div className="content--inner">
+    <div className="HomePage" id="homepage">
       { !!data && <div>
+            <div id="header-animation-wrapper">
             <Header data={data}/>
             <h1 className="main__heading visually-hidden">1razovoe</h1>
 
             <Problematic data={data.cardsBlock}/>
+            </div>
             <Decision data={data.videoBlock} />
             <Brands data={data.brandBlock} />
             <About />
           </div>
       }
+    </div>
+    </div>
+    </div>
     </div>
   )
 }
