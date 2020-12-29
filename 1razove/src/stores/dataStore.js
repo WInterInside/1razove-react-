@@ -11,11 +11,15 @@ async function getData(){
   return request.data;
 }
 
+function getLang() {
+  return localStorage.getItem(langItem) || "ua";
+}
+
 function changeLang(lang){
   localStorage.setItem(langItem, lang);
   window.location.reload();
 }
 
-const dataStore = { getData, changeLang };
+const dataStore = { getData, changeLang, getLang };
 
 export default dataStore;
