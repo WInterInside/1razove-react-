@@ -2,22 +2,15 @@ import React, { useEffect, useState } from "react"
 import "./Header.scss";
 import Nav from "../nav/Nav";
 import Lang from "../lang/Lang";
-import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
-//import { TweenMax, TimelineMax, Power1 } from "gsap"; // Also works with TweenLite and TimelineLite
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import { Link } from 'react-router-dom';
 
-let initialized = false;
-let animation = null;
 export default function Header({data}) {
   let [ showMenu, setShowMenu ] = useState(false);
-  //ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    //if(initialized)
-      //animation.scrollTrigger.kill();
 
       setTimeout(() => {
         gsap.timeline({
@@ -34,8 +27,6 @@ export default function Header({data}) {
           .addLabel("color");
       },500);
     
-    
-    //initialized = true;
   })
 
   function toggleMenu(){
