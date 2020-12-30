@@ -98,10 +98,12 @@
   &--advantages {
     font-size: 34px;
     line-height: 34px;
+    margin-bottom: 10px;
 
     @media (min-width: 950px) {
       font-size: 50px;
       line-height: 50px;
+      margin-bottom: 15px;
     }
   }
 

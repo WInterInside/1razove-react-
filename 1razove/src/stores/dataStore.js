@@ -6,7 +6,7 @@ async function getData(){
   let lang = localStorage.getItem(langItem);
   let link = `http://razove.com.ua/data/data.ua.json`;
   link = lang ? `http://razove.com.ua/data/data.${lang}.json` : link;
-  //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
+  link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
   let request = await axios.get(link);
   return request.data;
 }
