@@ -22,9 +22,12 @@ export default function HomePage() {
 
     let hash = window.location.hash;
     if(hash)
+    setTimeout(() => {
       document.querySelector(hash).scrollIntoView({
         behavior: 'smooth'
       });
+    }, 1000);
+
   });
 
   return (
