@@ -57,7 +57,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                   <ul className="languages__list">
                     {
                       data.project.langs.map((value, index) => {
-                        return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className="languages__item languages__item--blue languages__item--mobile">{value.langText}</li>
+                        return <li key={index} onClick={() => dataStore.changeLang(value.lang)} className={`languages__item languages__item languages__item--blue languages__item--mobile ${dataStore.getLang() == value.lang ? 'languages__item--current':''}`}>{value.langText}</li>
                       })
                     }
                   </ul>

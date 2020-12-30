@@ -20,6 +20,9 @@ export default function ProductPage(props) {
   let [product, setProduct] = useState(null);
 
   useEffect(async () => {
+    if(window.location.pathname == "/404")
+      return;
+
     let newData = data;
     if(!newData){
       newData = await dataStore.getData();
@@ -30,8 +33,9 @@ export default function ProductPage(props) {
     if(!currentProduct){
       history.push("/404");
       return '';
+    } else {
+      setProduct(currentProduct);
     }
-    setProduct(currentProduct);
   });
 
   return (

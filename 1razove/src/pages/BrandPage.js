@@ -20,6 +20,9 @@ export default function BrandPage(props) {
   const history = useHistory();
 
   useEffect(async () => {
+    if(window.location.pathname == "/404")
+      return;
+
     let newData = data;
     if(!data){
       newData = await dataStore.getData();
