@@ -96,6 +96,13 @@
       position: relative;
     }
 
+    &--duplicate{
+      display: block;
+      @media (min-width: 950px) {
+        display: none;
+      }
+    }
+
     &--opened{
       height: 100%;
     }
