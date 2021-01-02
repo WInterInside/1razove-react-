@@ -6,7 +6,7 @@ export default function Footer() {
 
 
   useEffect(() => {
-    setShow(window.location.pathname != "/404")
+    setShow(window.location.pathname != "/404");
   })
 
   return (
