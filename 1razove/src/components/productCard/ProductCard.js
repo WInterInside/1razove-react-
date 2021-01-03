@@ -2,9 +2,7 @@ import React from "react"
 import "./ProductCard.scss";
 
 import ProductIndications from "../productIndications/ProductIndications";
-import ProductAdvantages from "../productAdvantages/ProductAdvantages";
 import Leaflet from "../leaflet/Leaflet";
-import ProductNumbereditem from "../productNumbereditem/ProductNumbereditem";
 
 export default function ProductCard({data}) {
   return (
@@ -46,7 +44,7 @@ export default function ProductCard({data}) {
             })
           }
         </div>
-        <Leaflet />
+        <Leaflet data={data} />
       </div>
     </div>
   )

@@ -44,7 +44,7 @@ export default function HomePage() {
             </div>
             <Decision data={data.videoBlock} />
             <Brands data={data.brandBlock} />
-            <About />
+            <About data={data.aboutBlock} />
           </div>
       }
     </div>

@@ -20,14 +20,14 @@ export default function BrandDescription({data}) {
         <div className="brand__wrapper">
           <div className="brand__logotype brand__logotype--desctop">
           <picture>
-            <img className="brand__img" src={data.brandImage} alt="logotype" width="277" height="92" />
+            <img className="brand__img" src={data.imgUrl} alt="logotype" width="277" height="92" />
           </picture>
           </div>
           <div className="brand__wrapper brand__wrapper--column">
             <h1 className="brand__heading">{data.title}</h1>
             <div className="brand__logotype brand__logotype--mobile">
               <picture>
-                <img className="brand__img" src={data.brandImage} alt="logotype" width="277" height="92" />
+                <img className="brand__img" src={data.imgUrl} alt="logotype" width="277" height="92" />
               </picture>
             </div>
             <p className="brand__text brand__text--description">{data.description}</p>
