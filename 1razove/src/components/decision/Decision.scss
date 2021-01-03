@@ -211,3 +211,30 @@
     border-radius: 50px;
   }
 }
+
+.decision__numbereditem {
+  // counter-increment: product-counter;
+  position: relative;
+  padding-left: 58px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  margin-bottom: 25px;
+
+  @include pragmatica (18px, 24px, #ffffff);
+}
+
+.decision__number {
+  @include pseudo;
+  // content: counter(product-counter);
+  top: 0;
+  left: 0;
+  min-width: 33px;
+  height: 33px;
+  padding-top: 6px;
+  border-radius: 7px;
+  background-color: #fb4073;
+  color: $white;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+}

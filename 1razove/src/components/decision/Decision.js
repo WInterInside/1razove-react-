@@ -45,11 +45,14 @@ export default function Decision({data}) {
                   return <li key={index} className="decision__item">{value}</li>
                 })
               }
+              
+              <li className="decision__numbereditem"><div className="decision__number">69</div>тут должен быть крутой текст</li>
+
             </ol>
             <p className="decision__text">{data.videoTitle}</p>
             <div className="decision__videowrapper">
               { !videoStarted && <div className="decision__videocover" onClick={clickVideo}> </div> }
-              { 
+              {
                 !videoStarted && <div className="decision__videotoggle">
                   <svg width="54" height="54" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg-play" onClick={clickVideo}>
                     <rect className="decision__hovered" width="54" height="54" rx="10" fill="#FB4073"/>
