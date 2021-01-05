@@ -58,15 +58,15 @@ export default function Slider({data}) {
         items: 1,
         //autoWidth: true,
         //gutter: 10,
-        controls: true,
+        controls: false,
         nav: false,
         autoplay: false,
         loop: false,
         mouseDrag: true,
         arrowKeys: true,
-        controlsContainer: '.slider__popup--absolute',
-        prevButton: '.slider__popup-left',
-        nextButton: '.slider__popup-right',
+        // controlsContainer: '.slider__popup--absolute',
+        // prevButton: '.slider__popup-left',
+        // nextButton: '.slider__popup-right',
         // responsive: {
         //   900: {
         //     items: 4,
@@ -104,18 +104,18 @@ export default function Slider({data}) {
       <div className={`overlay-wrapper ${showPopup ? '' : 'hide'}`} onClick={preventClose}>
         <Overlay closePopup={() => closePopup()}>
           <div className="slider__popup">
-            <div className="slider__popup slider__popup--absolute" onClick={preventClose}>
+            {/* <div className="slider__popup slider__popup--absolute" onClick={preventClose}>
               <div className="slider__popup-left"></div>
               <div className="slider__popup-right"></div>
-            </div>
-            <div onClick={preventClose}>
+            </div> */}
+            <div>
               <div id="overlay-slider">
                 {
                   data.images.map((value,index) => {
                     return <div  key={index} className="slide__wrapper">
-                      <div className="slideimg__wrapper">
+                      <div className="slideimg__wrapper" onClick={preventClose}>
                         <picture>
-                          <img className="product__slideimg" src={value.url} />
+                          <img className="product__slideimg--opened" src={value.url} />
                         </picture>
                         <div className="close" onClick={() => closePopup()}></div>
                       </div>

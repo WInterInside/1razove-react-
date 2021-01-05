@@ -23,6 +23,12 @@
     height: 468px;
   }
   cursor: pointer;
+
+  &--opened{
+    border-radius: 20px;
+    max-height: 95vh;
+    max-width: 95vw;
+  }
 }
 
 .product__wrapper {
@@ -50,6 +56,10 @@
   cursor: pointer;
 
   &:hover {
+    color: $hb;
+  }
+
+  &[aria-disabled="true"]{
     color: $hb;
   }
 }
@@ -157,6 +167,7 @@
   }
 
   &-left{
+    display: none;
     position: absolute;
     left: 0;
     width: 33%;
@@ -170,8 +181,9 @@
   }
 
   &-right{
+    display: none;
     position: absolute;
-    width: 33%;
+    width: 10%;
     right: 0;
     height: 100%;
     outline: none;
