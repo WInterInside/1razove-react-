@@ -54,7 +54,9 @@ export default function ProductPage(props) {
           </div>
         }
       </div>
-      <Footer />
+      { !!data && 
+      <Footer data={data.contactBlock} />
+    }
       </div>
       </div>
       </div>

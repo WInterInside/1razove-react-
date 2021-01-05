@@ -48,7 +48,9 @@ export default function HomePage() {
           </div>
       }
     </div>
-    <Footer />
+    { !!data && 
+      <Footer data={data.contactBlock} />
+    }
     </div>
     </div>
     </div>

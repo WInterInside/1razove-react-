@@ -21,11 +21,13 @@ export default function ContactsPage() {
       <div className="page ContactsPage">
         { !!data && <div>
               <WhiteHeader data={data}/>
-              <Contacts data={data}/>
+              <Contacts data={data.contactPage}/>
           </div>
         }
       </div>
-      <Footer />
+      { !!data && 
+      <Footer data={data.contactBlock} />
+    }
       </div>
       </div>
       </div>
