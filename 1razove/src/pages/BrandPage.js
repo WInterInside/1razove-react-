@@ -5,7 +5,7 @@ import BrandDescription from "../components/brandDescription/BrandDescription";
 import Products from "../components/products/Products";
 import BrandHeader from "../components/header/BrandHeader";
 import { useHistory } from "react-router-dom";
-
+import Footer from "../components/footer/Footer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -50,6 +50,7 @@ export default function BrandPage(props) {
         </div>
       }
     </div>
+    <Footer />
     </div>
     </div>
     </div>

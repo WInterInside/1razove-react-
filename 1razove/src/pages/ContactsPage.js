@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import dataStore from '../stores/dataStore';
 import Contacts from "../components/contacts/Contacts";
 import WhiteHeader from "../components/header/WhiteHeader";
-
+import Footer from "../components/footer/Footer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +25,7 @@ export default function ContactsPage() {
           </div>
         }
       </div>
+      <Footer />
       </div>
       </div>
       </div>

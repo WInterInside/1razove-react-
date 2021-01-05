@@ -5,7 +5,7 @@ import About from "../components/about/About";
 import Problematic from "../components/problematic/Problematic";
 import Header from "../components/header/Header";
 import dataStore from '../stores/dataStore';
-
+import Footer from "../components/footer/Footer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -48,6 +48,7 @@ export default function HomePage() {
           </div>
       }
     </div>
+    <Footer />
     </div>
     </div>
     </div>

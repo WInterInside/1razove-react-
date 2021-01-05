@@ -5,6 +5,7 @@ import Product__card from "../components/productCard/ProductCard";
 import WhiteHeader from "../components/header/WhiteHeader";
 import { useHistory } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import Footer from "../components/footer/Footer";
 
 import {
   BrowserRouter as Router,
@@ -53,6 +54,7 @@ export default function ProductPage(props) {
           </div>
         }
       </div>
+      <Footer />
       </div>
       </div>
       </div>

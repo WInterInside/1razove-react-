@@ -7,7 +7,7 @@ import ProductPage from "./pages/ProductPage";
 import BrandPage from "./pages/BrandPage";
 import ErrorPage from "./pages/ErrorPage";
 import { Transition, TransitionGroup } from 'react-transition-group';
-import Footer from "./components/footer/Footer";
+
 import { play, exit } from './animation'
 import {
   BrowserRouter as Router,
@@ -45,7 +45,7 @@ function App() {
                       <Route path="/" exact component={HomePage} />
                       <Redirect from='*' to='/404' />
                     </Switch>
-                    <Footer />
+                    
                   </div>
                 </Transition>
               </TransitionGroup>
