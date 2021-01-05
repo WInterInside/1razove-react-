@@ -52,7 +52,11 @@
 }
 
 .footer__contactlink {
-  @include din-pro (54px, 54px, $white);
+  @include din-pro (34px, 34px, $white);
+
+  @media (min-width: 950px) {
+    @include din-pro (54px, 54px, $white);
+  }
 }
 
 .footer__link {

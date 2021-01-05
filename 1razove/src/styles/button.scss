@@ -30,11 +30,11 @@
   }
 
   &--pdf {
-    padding-top: 20px;
+    padding-top: 22px;
     margin-top: 50px;
 
     @media (min-width: 950px) {
-      padding-top: 15px;
+      padding-top: 17px;
     }
   }
 
@@ -57,7 +57,7 @@
   &--price {
     width: 100%;
     margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 22px;
     background-color: $white;
     color: #0627b0;
 
@@ -79,11 +79,11 @@
   }
 
   &--products {
-    padding-top: 20px;
+    padding-top: 22px;
     width: 100%;
 
     @media (min-width: 950px) {
-      padding-top: 15px;
+      padding-top: 17px;
     }
   }
 
