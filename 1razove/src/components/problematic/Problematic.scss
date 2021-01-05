@@ -53,21 +53,30 @@
 
 .problematic__card {
 
-  max-width: 55%;
+  //max-width: 55%;
   //height: 466px;
   background: #2789ff;
   border-radius: 30px;
   padding: 30px 10px;
-  margin-left: 10px;
+  //margin-left: 10px;
 
   @media (min-width: 1200px) {
-    max-width: 100%;
+    //max-width: 100%;
     padding-top: 40px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 90px;
     position: absolute;
     left: 0;
+  }
+
+  &-wrapper{
+    max-width: 55%;
+    padding: 0 5px;
+    @media (min-width: 1200px) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
   // &--first {
   //   top: 0;

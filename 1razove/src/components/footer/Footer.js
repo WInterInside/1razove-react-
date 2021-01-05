@@ -25,7 +25,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <a className="footer__link" href="#">Айдентика і Сайт: Other Land</a>
+        <a className="footer__link" target="_blank" href="https://otherland.studio/">Айдентика і Сайт: Other Land</a>
       </div>
     </footer>
   )

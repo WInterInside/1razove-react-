@@ -18,7 +18,7 @@ export default function Nav({data, closeMenu}) {
       <ul className="navigation__list">
         {data.map((value, index) => {
           return <li key={index} className="navigation__item">
-             <Link className="navigation__link navigation__link--mobile" to={`/${value.url}`} onClick={(e) => hashClick(e, value.url.substr(1))}>
+             <Link className="navigation__link navigation__link--mobile" to={`/${value.url}`} onClick={(e) => hashClick(e, value.url)}>
               {value.text}
              </Link>
             </li>

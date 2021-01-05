@@ -243,7 +243,7 @@
   text-transform: uppercase;
 
   @media (min-width: 950px) {
-    margin-top: 325px;
+    margin-top: 368px;
     margin-bottom: 0;
 
     @include din-pro (54px, 54px, $white);
@@ -345,8 +345,8 @@
 
       &:nth-child(1) {
         transform: rotate(45deg);
-        top: -3px;
-        left: 8px;
+        top: -4px;
+        left: 5px;
       }
 
       &:nth-child(2) {
@@ -356,8 +356,8 @@
 
       &:nth-child(3) {
         transform: rotate(-45deg);
-        top: 25px;
-        left: 8px;
+        top: 27px;
+        left: 5px;
       }
     }
   }
