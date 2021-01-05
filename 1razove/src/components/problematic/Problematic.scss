@@ -2,8 +2,15 @@
 @import "src/styles/vars";
 
 .problematic {
+
   padding-top: 100px;
-  padding-bottom: 150px;
+
+
+  @media (min-width: 950px) {
+    height: 100vh;
+    max-height: 100vh;
+    padding-bottom: 150px;
+  }
 }
 
 .problematic__heading {
@@ -45,17 +52,22 @@
 }
 
 .problematic__card {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 466px;
+  
+  max-width: 55%;
+  //height: 466px;
   background: #2789ff;
   border-radius: 30px;
-  padding-top: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 90px;
+  padding: 30px 10px;
 
+  @media (min-width: 1200px) {
+    max-width: 100%;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 90px;
+    position: absolute;
+    left: 0;
+  }
   // &--first {
   //   top: 0;
   //   left: 0;

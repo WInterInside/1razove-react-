@@ -9,7 +9,12 @@
   transform: none;
 
   @media (min-width: 950px) {
-    padding-bottom: 95px;
+    padding-bottom: 120px;
+  }
+
+  &--full-height{
+    height: 100vh;
+    max-height: 100vh;
   }
 
   &--contacts {
@@ -123,7 +128,7 @@
   }
 
   &--text{
-    max-height: 280px;
+    max-height: 60vh;
     overflow: hidden;
     position: relative;
 
@@ -137,7 +142,7 @@
     }
 
     @media (min-width: 950px) {
-      max-height: 430px;
+      max-height: 80vh;
     }
   }
 
@@ -227,7 +232,8 @@
 }
 
 .header__text {
-  margin-top: 16vw;
+  //margin-top: 16vw;
+  margin-top: 20vh;
   // position: absolute;
   // bottom: 0;
   padding: 0;
@@ -243,8 +249,9 @@
   }
 
   &:not(:first-child){
+    margin-top: 33vh;
     @media (min-width: 950px) {
-      margin-top: 160px;
+      margin-top: 33vh;
     }
   }
 

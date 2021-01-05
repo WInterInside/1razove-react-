@@ -5,6 +5,7 @@ import "./Problematic.scss";
 //import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {tns} from 'tiny-slider/src/tiny-slider';
 
 let initialized = false;
 export default function Problematic({data}) {
@@ -35,6 +36,31 @@ export default function Problematic({data}) {
     //   .setTween(scrollAnimation);
       //scene.offset(400);
 
+    if(window.innerWidth <= 1200){
+      setTimeout(() => {
+        var slider = tns({
+          container: '#problematic-text',
+          items: 2,
+          autoWidth: true,
+          gutter: 10,
+          controls: false,
+          nav: false,
+          autoplay: false,
+          loop: false,
+          mouseDrag: true,
+          arrowKeys: false,
+          //controlsContainer: '.product__toggls',
+          //prevButton: '.product__arrow--prev',
+          //nextButton: '.product__arrow--next',
+          // responsive: {
+          //   900: {
+          //     items: 4,
+          //     gutter: 15
+          //   }
+          // }
+        });
+      },500);
+    } else {
       setTimeout(() => {
         let animation = gsap.timeline({
           defaults: {duration: 1 },
@@ -52,6 +78,7 @@ export default function Problematic({data}) {
             .addLabel("color");
         });
       },500);
+    }
 
     initialized = true;
   })

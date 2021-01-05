@@ -23,7 +23,7 @@ export default function Header({data}) {
             pin: true
           }
         })
-          .to("#animated-text",  { y: window.innerWidth > 950 ? -700 : -500})
+          .to("#animated-text",  { y: window.innerWidth > 950 ? -800 : -900})
           .addLabel("color");
       },500);
     
@@ -60,7 +60,7 @@ export default function Header({data}) {
           <Lang data={data.project.langs}/>
         </div>
       </div>
-      <header className="header" id="home-header">
+      <header className="header header--full-height" id="home-header">
         
         <div className="container">
           <div className="header__wrapper header__wrapper--main">
