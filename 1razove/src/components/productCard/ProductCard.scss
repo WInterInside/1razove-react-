@@ -66,7 +66,7 @@
 
   @media (min-width: 950px) {
     @include din-pro (54px, 54px, #0627b0);
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -161,7 +161,8 @@
   left: 0;
   width: 33px;
   height: 33px;
-  padding-top: 5px;
+  padding-top: 6px;
+  padding-right: 1px;
   border-radius: 7px;
   background-color: #fb4073;
   display: inline-block;
