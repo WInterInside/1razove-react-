@@ -29,7 +29,8 @@
   }
 
   @media (min-width: 950px) {
-    width: 50%;
+    width: 47%;
+    max-height: 70vh;
 
     &--mobile {
       display: none;
@@ -52,7 +53,7 @@
   width: 100%;
 
   @media (min-width: 950px) {
-    width: 50%;
+    width: 47%;
   }
 }
 

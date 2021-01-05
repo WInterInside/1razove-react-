@@ -17,6 +17,8 @@
 .product__slideimg {
   height: 288px;
 
+  border-radius: 20px;
+
   @media (min-width: 950px) {
     height: 468px;
   }
@@ -172,7 +174,7 @@
     right: 0;
     height: 100%;
     outline: none;
-    
+
     @media (min-width: 950px) {
       z-index: 1;
     }
