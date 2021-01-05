@@ -48,7 +48,8 @@ export default function ProductPage(props) {
             <div className="container">
               <Product__card data={product}/>
             </div>
-            <Slider data={product}/>
+            { (product.images.length > 0) && <Slider data={product}/> }
+            
           </div>
         }
       </div>

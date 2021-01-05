@@ -45,9 +45,6 @@ export default function Decision({data}) {
                   return <li key={index} className="decision__item">{value}</li>
                 })
               }
-              
-              <li className="decision__numbereditem"><div className="decision__number">69</div>тут должен быть крутой текст</li>
-
             </ol>
             <p className="decision__text">{data.videoTitle}</p>
             <div className="decision__videowrapper">
