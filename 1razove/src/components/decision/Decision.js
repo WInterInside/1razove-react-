@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react"
 import "./Decision.scss";
 import YouTubePlayer from 'youtube-player';
 
-let initialized = false;
+//let initialized = false;
 export default function Decision({data}) {
   let [videoStarted, setVideoStarted] = useState(false);
   let player;
 
   useEffect(() => {
-    if(initialized)
-      return;
+    // if(initialized)
+    //   return;
 
     player = YouTubePlayer('decision__video');
     player.loadVideoById(data.videoUrl);
     player.stopVideo();
 
-    initialized = true;
+    //initialized = true;
   })
 
   function clickVideo(){
@@ -42,7 +42,10 @@ export default function Decision({data}) {
             <ol className="decision__list" id="moving-logo-trigger">
               {
                 data.text.split('|').map((value,index) => {
-                  return <li key={index} className="decision__item">{value}</li>
+                  return <li key={index} className="decision__item">
+                    <span className="decision__item-counter">{index + 1}</span>
+                    <span className="decision__item-text">{value}</span>
+                  </li>
                 })
               }
             </ol>

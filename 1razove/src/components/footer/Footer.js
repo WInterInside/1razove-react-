@@ -16,11 +16,11 @@ export default function Footer({data}) {
           <p className="footer__text"><span className="footer__text footer__text--colored">{data.text}</span> {data.redText}</p>
           <ul className="footer__contacts">
             <li className="footer__contact footer__contact--email">
-              <h2 className="footer__heading visually-hidden">Емейл:</h2>
+              <h2 className="footer__heading visually-hidden">{data.emailTitle}:</h2>
               <a className="footer__contactlink" href={`mailto:${data.email}`}>{data.email}</a>
             </li>
               <li className="footer__contact footer__contact--telephone">
-              <h2 className="footer__heading visually-hidden">Телефон:</h2>
+              <h2 className="footer__heading visually-hidden">{data.phoneTitle}:</h2>
               <a className="footer__contactlink" href={`tel:${data.phone}`}> {data.phone}</a>
             </li>
           </ul>

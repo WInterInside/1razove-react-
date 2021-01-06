@@ -7,7 +7,7 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {tns} from 'tiny-slider/src/tiny-slider';
 
-let initialized = false;
+//let initialized = false;
 export default function Problematic({data}) {
   //ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
   gsap.registerPlugin(ScrollTrigger);
@@ -83,7 +83,7 @@ export default function Problematic({data}) {
       },500);
     }
 
-    initialized = true;
+    //initialized = true;
   })
 
   return (

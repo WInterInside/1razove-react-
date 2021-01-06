@@ -102,9 +102,10 @@
 }
 
 .decision__item {
-  counter-increment: decision-counter;
+  //counter-increment: decision-counter;
   position: relative;
-  padding-left: 58px;
+  display: flex;
+  //padding-left: 58px;
   padding-top: 5px;
   padding-bottom: 7px;
   margin-bottom: 23px;
@@ -118,14 +119,16 @@
     padding-bottom: 0;
   }
 
-  &::before {
-    @include pseudo;
-    content: counter(decision-counter);
-    top: 0;
-    left: 0;
+  &-counter {
+    // @include pseudo;
+    // content: counter(decision-counter);
+    // top: 0;
+    // left: 0;
     width: 33px;
+    min-width: 33px;
     height: 33px;
-    padding-top: 5px;
+    padding-top: 6px;
+    margin-right: 24px;
     border-radius: 7px;
     background-color: #fb4073;
     display: inline-block;
@@ -133,6 +136,11 @@
     font-size: 17px;
     line-height: 22px;
     text-align: center;
+  }
+
+  &-text{
+    display: flex;
+    align-items: center;
   }
 }
 

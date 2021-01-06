@@ -4,7 +4,7 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 import "./Slider.scss";
 import Overlay from '../overlay/Overlay';
 
-let initialized = false;
+//let initialized = false;
 let imgIndex = 0;
 export default function Slider({data}) {
   let [showPopup, setShowPopup] = useState(false);
@@ -24,10 +24,12 @@ export default function Slider({data}) {
   }
 
   useEffect (() => {
-    if(initialized)
-      return;
-
+    
+    //debugger;
     setTimeout (() => {
+      if(!document.querySelector('.product__slider'))
+        return;
+
       var slider = tns({
         container: '.product__slider',
         items: 2,
@@ -49,10 +51,13 @@ export default function Slider({data}) {
           }
         }
       });
-      initialized = true;
+      //initialized = true;
     }, 200);
 
     setTimeout (() => {
+      if(!document.getElementById('overlay-slider'))
+        return;
+
       var slider = tns({
         container: '#overlay-slider',
         items: 1,

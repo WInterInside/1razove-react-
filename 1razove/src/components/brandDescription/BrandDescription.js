@@ -42,7 +42,7 @@ export default function BrandDescription({data}) {
 
       { 
         showPopup && <Overlay closePopup={() => closePopup()}>
-          <Form closePopup={() => closePopup()}/>
+          <Form closePopup={() => closePopup()} data={data} />
         </Overlay>
       }
 
