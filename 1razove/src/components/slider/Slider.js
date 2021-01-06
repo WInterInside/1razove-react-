@@ -6,11 +6,14 @@ import Overlay from '../overlay/Overlay';
 
 //let initialized = false;
 let imgIndex = 0;
+var mainSlider = null;
+var overlaySlider = null;
 export default function Slider({data}) {
   let [showPopup, setShowPopup] = useState(false);
 
   function openOverlay(e, url, index){
     imgIndex = index;
+    setTimeout(() => overlaySlider.goTo(index), 300);
     setShowPopup(true);
   }
 
@@ -30,7 +33,7 @@ export default function Slider({data}) {
       if(!document.querySelector('.product__slider'))
         return;
 
-      var slider = tns({
+      mainSlider = tns({
         container: '.product__slider',
         items: 2,
         autoWidth: true,
@@ -58,7 +61,7 @@ export default function Slider({data}) {
       if(!document.getElementById('overlay-slider'))
         return;
 
-      var slider = tns({
+      overlaySlider = tns({
         container: '#overlay-slider',
         items: 1,
         //autoWidth: true,
