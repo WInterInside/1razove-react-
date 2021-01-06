@@ -16,12 +16,14 @@
 
 .product__slideimg {
   height: 288px;
+  max-width: none;
 
   border-radius: 20px;
 
   @media (min-width: 950px) {
     height: 468px;
   }
+
   cursor: pointer;
 
   &--opened{
