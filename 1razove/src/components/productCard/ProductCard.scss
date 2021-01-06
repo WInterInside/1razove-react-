@@ -145,25 +145,31 @@
 
 .product__numbereditem {
   // counter-increment: product-counter;
-  position: relative;
-  padding-left: 58px;
-  padding-top: 5px;
-  padding-bottom: 4px;
+  // position: relative;
+  display: flex;
+
   margin-bottom: 25px;
 
   @include pragmatica (18px, 24px, #0627b0);
 }
 
+.product__numbereditem-text {
+  display: flex;
+  align-items: center;
+}
+
 .product__number {
-  @include pseudo;
-  // content: counter(product-counter);
-  top: 0;
-  left: 0;
+  // @include pseudo;
+  // // content: counter(product-counter);
+  // top: 0;
+  // left: 0;
   width: 33px;
+  min-width: 33px;
   height: 33px;
   padding-top: 6px;
   padding-right: 1px;
   border-radius: 7px;
+  margin-right: 24px;
   background-color: #fb4073;
   display: inline-block;
   color: $white;
