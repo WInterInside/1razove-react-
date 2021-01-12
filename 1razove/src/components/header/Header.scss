@@ -37,7 +37,8 @@
 }
 
 .header__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-top: 30px;
 
   font-family: "Pragmatica", "Arial", sans-serif;
@@ -51,10 +52,14 @@
     color: $hb;
   }
 
+  @media (min-width: 950px) {
+    display: inline-block;
+  }
+
   &-span{
     font-family: "DINPro-noncond";
     font-size: 14px;
-    vertical-align: text-bottom;
+    height: 30px;
   }
 }
 

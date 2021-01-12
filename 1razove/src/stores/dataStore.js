@@ -5,8 +5,8 @@ const langItem = 'lang';
 async function getData(){
   let random = Math.round(Math.random() * 100000);
   let lang = localStorage.getItem(langItem);
-  let link = `http://razove.com.ua/data/data.ua.json`;
-  link = lang ? `http://razove.com.ua/data/data.${lang}.json?${random}` : link;
+  let link = `https://razove.com.ua/data/data.ua.json`;
+  link = lang ? `https://razove.com.ua/data/data.${lang}.json?${random}` : link;
   //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
   let request = await axios.get(link);
   return request.data;

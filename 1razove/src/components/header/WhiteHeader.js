@@ -79,7 +79,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
         </div>
         {
           brandLink && <Link className="header__link" to={`/brand/${brandLink}`}>
-            <span className="header__link-span">←</span> Назад до бренду <span>{brand}</span>
+            <span className="header__link-span">←</span>&nbsp;Назад до бренду&nbsp;<span>{brand}</span>
           </Link>
         }
 
