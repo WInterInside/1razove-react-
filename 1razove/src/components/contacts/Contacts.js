@@ -30,7 +30,7 @@ export default function Contacts({data}) {
               <section className="social">
                 <ul className="social__list">
                   <li className="social__item">
-                    <a className="social__link social__link--fb" href={data.fbLink} aria-label="1razove facebook">
+                    <a className="social__link social__link--fb" target="_blank" href={data.fbLink} aria-label="1razove facebook">
                       <span className="visually-hidden">facebook</span>
                       <svg className="social__icon social__icon--fb" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect className="social__hovered" width="40" height="40" rx="6.667" fill="#0627B0"/>
@@ -38,7 +38,7 @@ export default function Contacts({data}) {
                     </a>
                   </li>
                   <li className="social__item">
-                    <a className="social__link social__link--inst" href={data.instaLink} aria-label="1razove Instagram">
+                    <a className="social__link social__link--inst" target="_blank" href={data.instaLink} aria-label="1razove Instagram">
                       <span className="visually-hidden">Instagram</span>
                       <svg className="social__icon social__icon--inst"width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect className="social__hovered" width="40" height="40" rx="6.667" fill="#0627B0"/><path d="M21.914 20a1.914 1.914 0 11-3.828 0 1.914 1.914 0 013.828 0z" fill="#fff"/>
@@ -46,7 +46,7 @@ export default function Contacts({data}) {
                     </a>
                   </li>
                   <li className="social__item">
-                    <a className="social__link social__link--tm" href={data.telegramLink} aria-label="1razove telegram">
+                    <a className="social__link social__link--tm" target="_blank" href={data.telegramLink} aria-label="1razove telegram">
                       <span className="visually-hidden">telegram</span>
                       <svg className="social__icon social__icon--tm" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect className="social__hovered" width="40" height="40" rx="6.667" fill="#0627B0"/>
@@ -54,7 +54,7 @@ export default function Contacts({data}) {
                     </a>
                   </li>
                   <li className="social__item">
-                    <a className="social__link social__link--yt" href={data.ytLink} aria-label="1razove yotube">
+                    <a className="social__link social__link--yt" target="_blank" href={data.ytLink} aria-label="1razove yotube">
                       <span className="visually-hidden">Razove in Youtube</span>
                       <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect className="social__hovered" width="40" height="40" rx="6.667" fill="#0627B0"/>
