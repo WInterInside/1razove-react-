@@ -2,13 +2,9 @@
 @import "src/styles/vars";
 
 .problematic {
-
   padding-top: 100px;
 
-
   @media (min-width: 950px) {
-    height: 100vh;
-    max-height: 100vh;
     padding-bottom: 150px;
   }
 }
@@ -51,8 +47,12 @@
   }
 }
 
-.problematic__card {
+.problematic__sticky {
+  position: sticky;
+  top: 0;
+}
 
+.problematic__card {
   //max-width: 55%;
   //height: 466px;
   background: #2789ff;
@@ -66,8 +66,9 @@
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 90px;
-    position: absolute;
-    left: 0;
+    margin-bottom: 20px;
+    // position: absolute;
+    // left: 0;
   }
 
   &-wrapper{
@@ -78,21 +79,7 @@
       padding: 0;
     }
   }
-  // &--first {
-  //   top: 0;
-  //   left: 0;
-  // }
 
-  // &--second {
-  //   background: #fdbdc7;
-  //   top: 40px;
-  //   left: 0;
-  // }
-
-  // &--third {
-  //   top: 80px;
-  //   left: 0;
-  // }
 }
 
 .problematic__list {
@@ -110,6 +97,10 @@
   margin-bottom: 16px;
 }
 
+.problematic__wrapper {
+  position: relative;
+}
+
 .problematic__wrapper--main {
   display: flex;
   flex-direction: column-reverse;
@@ -118,7 +109,7 @@
   width: 100%;
 
   @media (min-width: 1200px) {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 }
 
@@ -132,7 +123,7 @@
   min-width: 375px;
 
   @media (min-width: 950px) {
-    min-width: 554px;
+    min-width: 50%;
   }
 }
 
@@ -142,7 +133,7 @@
   margin-bottom: 60px;
 
   @media (min-width: 1200px) {
-    width: 50%;
+    width: 80%;
     padding: 0;
   }
 }

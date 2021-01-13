@@ -71,8 +71,10 @@ export default function Problematic({data}) {
           </div>
           </div>
           <div className="problematic__description container">
-            <h2 className="problematic__heading">{data.title}</h2>
-            <p className="problematic__text">{data.text}</p>
+            <div className="problematic__sticky">
+              <h2 className="problematic__heading">{data.title}</h2>
+              <p className="problematic__text">{data.text}</p>             
+            </div>
           </div>
         </div>
     </section>
