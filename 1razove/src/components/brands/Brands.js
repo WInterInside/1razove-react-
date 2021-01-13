@@ -34,6 +34,7 @@ export default function Brands({data}) {
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
                     <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
                     <p className="brands__description brands__description--maxtec">{value.text}</p>
+                    <a className="button button--brands" href="">Открыть товары</a>
                   </div>
                 </Link>
               </li>

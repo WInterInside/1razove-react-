@@ -59,26 +59,34 @@
 }
 
 .brands__wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 192px;
+  min-height: 207px;
   padding: 30px 15px;
+  padding-bottom: 10px;
   border-radius: 18px;
   background-color: $white;
 
   @media (min-width: 700px) {
-    min-height: 225px;
+    min-height: 240px;
   }
 
   @media (min-width: 950px) {
     width: 100%;
-    min-height: 232px;
+    min-height: 300px;
     padding: 30px 20px;
     border-radius: 20px;
+    padding-bottom: 15px;
   }
 
   &:hover {
     background-color: #9ACDFF;
   }
+}
+
+.brands__img {
+  margin: 0 auto;
 }
 
 .brands__item {
@@ -109,7 +117,9 @@
 .brands__description {
   @include pragmatica (18px, 24px, #0627b0);
   vertical-align: bottom;
-  margin: 0;
+  
+  margin: 0 auto;
+  text-align: center;
 
   @media (min-width: 950px) {
     @include pragmatica (18px, 22px, #0627b0);

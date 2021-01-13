@@ -9,32 +9,8 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 
 //let initialized = false;
 export default function Problematic({data}) {
-  //ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    // if(!initialized)
-    //   return;
 
-    // var controller = new ScrollMagic.Controller({
-    //   globalSceneOptions: {
-    //     triggerHook: 'onLeave',
-    //     duration: "200%"
-    //   }
-    // });
-  
-    // var scrollAnimation = new TimelineMax();
-    // scrollAnimation = scrollAnimation.set(document.getElementById('problematic-cards'), {autoAlpha: 1});
-    // data.cards.forEach((val, index) => {
-    //   console.log(index);
-    //   if((data.cards.length - 1) > index)
-    //     scrollAnimation = scrollAnimation.to(document.getElementById(`problematic-${index}`), 8, {y:'-200%', autoAlpha: 1, delay:2}, `trans${index}`);
-    // })
-    // let element = window.innerWidth <= 1200 ? "#problematic-text" : "#problematic";
-    // var scene = new ScrollMagic.Scene({triggerElement: element, duration: 100})
-    //   .setPin(element)
-    //   .addTo(controller)
-    //   .setTween(scrollAnimation);
-      //scene.offset(400);
+  useEffect(() => {
 
     if(window.innerWidth <= 1200){
       setTimeout(() => {
@@ -63,25 +39,7 @@ export default function Problematic({data}) {
           // }
         });
       },500);
-    } else {
-      setTimeout(() => {
-        let animation = gsap.timeline({
-          defaults: {duration: 1 },
-          scrollTrigger: {
-            trigger: window.innerWidth <= 1200 ? "#problematic-text" : "#problematic",
-            start: "top top",
-            end: "+=2000",
-            scrub: true,
-            pin: true
-          }
-        });
-        data.cards.forEach((val, index) => {
-          if((data.cards.length - 1) > index)
-            animation.to(`#problematic-${index}`,  { y: -700})
-            .addLabel("color");
-        });
-      },500);
-    }
+    } 
 
     //initialized = true;
   })
