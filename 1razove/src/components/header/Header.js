@@ -3,11 +3,13 @@ import "./Header.scss";
 import Nav from "../nav/Nav";
 import Lang from "../lang/Lang";
 import gsap from "gsap";
+import dataStore from '../../stores/dataStore';
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { Link } from 'react-router-dom';
 
 export default function Header({data}) {
   let [ showMenu, setShowMenu ] = useState(false);
+  const lang = dataStore.getLang();
 
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -52,11 +54,11 @@ export default function Header({data}) {
       <div className={`header__wrapper-mobile header__wrapper-mobile--duplicate ${showMenu ? 'header__wrapper-mobile--opened' : ''}`} onClick={toggleMenu}>
         <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
           <div className="header__wrapper header__wrapper--row">
-            <Link className="header__logo header__logo--mobile" to={`/`}>
+            <Link className="header__logo header__logo--mobile" to={`/${lang}/`}>
               <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
             </Link>
           </div>
-          <Nav data={data.heroBlock.menu} closeMenu={() => !showMenu ? null : toggleMenu()} />
+          <Nav data={data.heroBlock} closeMenu={() => !showMenu ? null : toggleMenu()} />
           <Lang data={data.project.langs}/>
         </div>
       </div>
@@ -64,7 +66,7 @@ export default function Header({data}) {
         
         <div className="container">
           <div className="header__wrapper header__wrapper--main">
-            <Link className="header__logo" to={`/`}>
+            <Link className="header__logo" to={`/${lang}/`}>
               <picture>
                 <source media="(min-width: 950px)" srcSet="/images/logo.svg" />
                 <img className="header__img" src="/images/1mobile.svg" alt="1razovoe logotype" width="316" height="522" />
@@ -74,11 +76,11 @@ export default function Header({data}) {
               <div className={`header__wrapper-mobile ${showMenu ? 'header__wrapper-mobile--opened' : ''}`} onClick={toggleMenu}>
                 <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
                   <div className="header__wrapper header__wrapper--row">
-                    <Link className="header__logo header__logo--mobile" to={`/`}>
+                    <Link className="header__logo header__logo--mobile" to={`/${lang}/`}>
                       <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
                     </Link>
                   </div>
-                  <Nav data={data.heroBlock.menu} closeMenu={() => !showMenu ? null : toggleMenu()} />
+                  <Nav data={data.heroBlock} closeMenu={() => !showMenu ? null : toggleMenu()} />
                   <Lang data={data.project.langs}/>
                 </div>
               </div>

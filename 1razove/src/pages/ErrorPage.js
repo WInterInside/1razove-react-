@@ -12,6 +12,7 @@ import {
 
 export default function ErrorPage() {
   let [data, setData] = useState(null);
+  const lang = dataStore.getLang();
   useEffect(async () => data ? data : setData(await dataStore.getData()) );
 
   return (
@@ -19,13 +20,13 @@ export default function ErrorPage() {
         { !!data && <div>
           <div className="container">
             <div className="header__wrapper header__wrapper--main">
-              <Link className="header__logo" to={`/`}>
+              <Link className="header__logo" to={`/${lang}/`}>
                 <img className="header__img" src="/images/logo.svg" alt="1razovoe logotype" width="316" height="522" />
               </Link>
               <div className="header__wrapper header__wrapper--column">
                 <div className="header__wrapper header__wrapper--menu">
                   <div className="header__wrapper header__wrapper--row">
-                    <Link className="header__logo header__logo--mobile" to={`/`}>
+                    <Link className="header__logo header__logo--mobile" to={`/${lang}`}>
                       <img className="header__img header__img--small" src="/images/logo-small-blue.svg" alt="1razovoe logotype" width="247" height="56" />
                     </Link>
                     <div className="header__menu">
@@ -39,7 +40,7 @@ export default function ErrorPage() {
                       {
                         data.heroBlock.menu.map((value, index) => {
                           return <li className="navigation__item" key={index}>
-                              <Link className="navigation__link navigation__link--mobile" to={value.url}>
+                              <Link className="navigation__link navigation__link--mobile" to={`/${lang}/${value.url}`}>
                                 {value.text}
                               </Link>
                             </li>
@@ -59,8 +60,8 @@ export default function ErrorPage() {
                 </div>
                 <div className="header__error">
                   <h1 className="header__text header__text--err">404</h1>
-                  <p className="header__texterror"> Упс! <span className="header__text header__text--colored">ТакоЇ сторінки не існує</span></p>
-                  <Link className="header__link button button--index" to={`/`}>На головну сторінку</Link>
+                  <p className="header__texterror"> {data.errorBlock.whiteText} <span className="header__text header__text--colored">{data.errorBlock.blueText}</span></p>
+                  <Link className="header__link button button--index" to={`/${lang}`}>{data.errorBlock.btnText}</Link>
                 </div>
               </div>
             </div>

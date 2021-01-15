@@ -2,13 +2,14 @@ import React from "react"
 import { useState } from 'react';
 import "./Brands.scss";
 import { Link } from "react-router-dom";
+import dataStore from '../../stores/dataStore';
 
 export default function Brands({data}) {
 
 
   const [count, setCount] = useState(window.innerWidth <= 950 ? 4:100);
   const [name, setName] = useState("Показати більше");
-
+  const lang = dataStore.getLang();
 
   function toggleBrands() {
     if (count <= 4) {
@@ -29,12 +30,12 @@ export default function Brands({data}) {
           {
             data.brands.slice(0, count).map((value,index) => {
               return <li key={index} className="brands__item">
-                <Link className="brands__link" to={`/brand/${value.url}`}>
+                <Link className="brands__link" to={`/${lang}/brand/${value.url}`}>
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
                     <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
                     <p className="brands__description brands__description--maxtec">{value.text}</p>
-                    <a className="button button--brands" href="">Открыть товары</a>
+                    <button className="button button--brands">{value.btnText} </button>
                   </div>
                 </Link>
               </li>

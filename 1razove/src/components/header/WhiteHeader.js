@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import "./Header.scss";
+import "../nav/Nav.scss";
+import "../lang/Lang.scss";
 import dataStore from '../../stores/dataStore';
 import { Link } from 'react-router-dom';
 
 export default function WhiteHeader({data, brandLink, brand}) {
   let [ showMenu, setShowMenu ] = useState(false);
-
+  const lang = dataStore.getLang();
   function toggleMenu(){
     setShowMenu(!showMenu);
   }
@@ -19,7 +21,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
     <header className="header header--product">
       <div className="container">
         <div className="header__wrapper header__wrapper--main">
-          <Link className="header__logo" to={`/`}>
+          <Link className="header__logo" to={`/${lang}/`}>
             <picture>
               <source media="(min-width: 950px)" srcSet="/images/logo-small-blue.svg" />
               <img className="header__img header__img--smallblue" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="316" height="522" />
@@ -30,7 +32,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
               <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
 
                 <div className="header__wrapper header__wrapper--row">
-                  <Link className="header__logo header__logo--mobile" to={`/`}>
+                  <Link className="header__logo header__logo--mobile" to={`/${lang}/`}>
                     <picture>
                       <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
                     </picture>
@@ -47,7 +49,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                     {
                       data.heroBlock.menu.map((value,index) => {
                         return <li key={index} className="navigation__item">
-                            <Link className="navigation__link navigation__link--blue navigation__link--mobile" to={`/${value.url}`}>{value.text}</Link>
+                            <Link className="navigation__link navigation__link--blue navigation__link--mobile" to={`/${lang}/${value.url}`}>{value.text}</Link>
                           </li>
                       })
                     }
@@ -78,7 +80,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
           
         </div>
         {
-          brandLink && <Link className="header__link" to={`/brand/${brandLink}`}>
+          brandLink && <Link className="header__link" to={`/${lang}/brand/${brandLink}`}>
             <span className="header__link-span">←</span>&nbsp;Назад до бренду&nbsp;<span>{brand}</span>
           </Link>
         }

@@ -1,8 +1,9 @@
 import React from "react"
 import "./Nav.scss";
 import { Link } from 'react-router-dom';
-
+import dataStore from '../../stores/dataStore';
 export default function Nav({data, closeMenu}) {
+  const lang = dataStore.getLang();
   function hashClick(e, hash){
     if(hash.indexOf('#') > -1){ 
       e.preventDefault();
@@ -16,9 +17,9 @@ export default function Nav({data, closeMenu}) {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
-        {data.map((value, index) => {
+        {data.menu.map((value, index) => {
           return <li key={index} className="navigation__item">
-             <Link className="navigation__link navigation__link--mobile" to={`/${value.url}`} onClick={(e) => hashClick(e, value.url)}>
+             <Link className="navigation__link navigation__link--mobile" to={`/${lang}/${value.url}`} onClick={(e) => hashClick(e, value.url)}>
               {value.text}
              </Link>
             </li>

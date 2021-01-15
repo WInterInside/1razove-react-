@@ -15,8 +15,8 @@ export default function About({data}) {
           </div>
           <div className="about__block">
             {
-              data.descriptionList.map(item => {
-                return <p className="about__text">{ item.text }</p>
+              data.descriptionList.map((item,i) => {
+                return <p key={i} className="about__text">{ item.text }</p>
               })
             }
             <Leaflet data={data} />

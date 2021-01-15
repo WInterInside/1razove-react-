@@ -92,14 +92,14 @@
   }
 
   &--brands {    
-    padding-top: 22px;
+    padding-top: 0;
     color: #0627B0;
     background-color: #F0F0F0;
     margin-top: 14px;
     
     @media (min-width: 950px) {
       margin-top: auto;
-      padding-top: 17px;
+      padding-top: 0;
       width: 100%;
     }
   }
