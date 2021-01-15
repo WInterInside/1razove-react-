@@ -87,6 +87,7 @@
 
 .brands__img {
   margin: 0 auto;
+  height: min-content;
 }
 
 .brands__item {
@@ -124,22 +125,11 @@
   @media (min-width: 950px) {
     @include pragmatica (18px, 22px, #0627b0);
   }
+}
 
-  &--maxtec {
-    margin-top: 32px;
-  }
-
-  &--ulrich {
-    margin-top: 32px;
-  }
-
-  &--flexicare {
-    margin-top: 44px;
-  }
-
-  &--deltamed {
-    margin-top: 16px;
-  }
+.brands__logowrapper {
+  display: flex;
+  min-height: 88px;
 }
 
 .brands__button {

@@ -33,7 +33,9 @@ export default function Brands({data}) {
                 <Link className="brands__link" to={`/${lang}/brand/${value.url}`}>
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
-                    <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
+                    <div className="brands__logowrapper">                       
+                      <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
+                    </div>
                     <p className="brands__description brands__description--maxtec">{value.text}</p>
                     <button className="button button--brands">{value.btnText} </button>
                   </div>
