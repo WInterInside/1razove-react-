@@ -3,13 +3,24 @@ import axios from 'axios';
 const langItem = 'lang';
 
 async function getData(){
-  let random = Math.round(Math.random() * 100000);
+  let random = sessionStorage.getItem('random');
+  if(!random){
+    random = Math.round(Math.random() * 100000);
+    sessionStorage.setItem('random', random);
+  }
   let lang = localStorage.getItem(langItem);
-  let link = `/data/data.ua.json`;
-  link = lang ? `/data/data.${lang}.json?${random}` : link;
-  link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
-  let request = await axios.get(link);
-  return request.data;
+  let result = sessionStorage.getItem(`data-${random}-${langItem}`);
+  if(!result){
+    let link = `/data/data.ua.json`;
+    link = lang ? `/data/data.${lang}.json?${random}` : link;
+    //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
+    let request = await axios.get(link);
+    result = request.data;
+    sessionStorage.setItem(`data-${random}-${langItem}`, JSON.stringify(result));
+  } else {
+    result = JSON.parse(result);
+  }
+  return result;
 }
 
 function getLang() {

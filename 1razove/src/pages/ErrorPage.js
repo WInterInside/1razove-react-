@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import "../components/header/Header.scss";
 import dataStore from '../stores/dataStore';
-
+import "../components/nav/Nav.scss";
+import "../components/lang/Lang.scss";
 import {
   BrowserRouter as Router,
   Switch,

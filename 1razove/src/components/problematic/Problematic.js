@@ -1,18 +1,14 @@
 import React, { useEffect } from "react"
 import "./Problematic.scss";
-//import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
-//import { TweenMax, TimelineMax } from "gsap"; // Also works with TweenLite and TimelineLite
-//import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
-import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {tns} from 'tiny-slider/src/tiny-slider';
 
-//let initialized = false;
+let initialized = false;
 export default function Problematic({data}) {
 
   useEffect(() => {
 
     if(window.innerWidth <= 1200){
+      console.log('slider init');
       setTimeout(() => {
         if(!document.getElementById('problematic-text'))
           return;
@@ -26,7 +22,8 @@ export default function Problematic({data}) {
           nav: false,
           autoplay: false,
           loop: false,
-          mouseDrag: true,
+          swipeAngle: false,
+          //mouseDrag: true,
           arrowKeys: false,
           //controlsContainer: '.product__toggls',
           //prevButton: '.product__arrow--prev',
@@ -41,13 +38,13 @@ export default function Problematic({data}) {
       },500);
     } 
 
-    //initialized = true;
+    initialized = true;
   })
 
   return (
     <section className="problematic" id="problematic">
         <div className="problematic__wrapper problematic__wrapper--main container container--padding0" id="problematic-cards">
-          <div >
+          <div>
             <div className="problematic__wrapper problematic__wrapper--card" id="problematic-text">
             {
               data.cards.map((value,index) => {

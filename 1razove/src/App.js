@@ -1,11 +1,16 @@
 import "./App.scss";
-import axios from 'axios';
-import React, { Suspense, useEffect } from 'react';
-// import HomePage from "./pages/HomePage";
-// import ContactsPage from "./pages/ContactsPage";
-// import ProductPage from "./pages/ProductPage";
-// import BrandPage from "./pages/BrandPage";
-// import ErrorPage from "./pages/ErrorPage";
+import React from 'react';
+// import HomePageWrapper from "./pages/HomePageWrapper";
+// import ContactsPageWrapper from "./pages/ContactsPageWrapper";
+// import ProductPageWrapper from "./pages/ProductPageWrapper";
+// import BrandPageWrapper from "./pages/BrandPageWrapper";
+// import ErrorPageWrapper from "./pages/ErrorPageWrapper";
+
+import HomePageWrapper from "./pages/HomePageWrapper";
+import ContactsPageWrapper from "./pages/ContactsPageWrapper";
+import ProductPageWrapper from "./pages/ProductPageWrapper";
+import BrandPageWrapper from "./pages/BrandPageWrapper";
+import ErrorPageWrapper from "./pages/ErrorPageWrapper";
 
 import { Transition, TransitionGroup } from 'react-transition-group';
 
@@ -15,16 +20,9 @@ import {
   Switch,
   Route,
   Redirect,
-  Link
 } from "react-router-dom";
 import dataStore from "./stores/dataStore";
 
-
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const ContactsPage = React.lazy(() => import('./pages/ContactsPage'));
-const ProductPage = React.lazy(() => import('./pages/ProductPage'));
-const BrandPage = React.lazy(() => import('./pages/BrandPage'));
-const ErrorPage = React.lazy(() => import('./pages/ErrorPage'));
 function App() {
   window.loadPromise = new Promise(resolve => {
     window.addEventListener('DOMContentLoaded', resolve)
@@ -65,17 +63,17 @@ function App() {
                   timeout={{enter: 750, exit: 150}}
                 >
                   <div>
-                  <Suspense fallback={<div></div>}>
+                  {/* <Suspense fallback={<div></div>}> */}
                     <Switch location={location}>
-                      <Route path="/:lang/contacts" component={ContactsPage} />
-                      <Route path="/:lang/product/:id" component={ProductPage} />
-                      <Route path="/:lang/brand/:id" component={BrandPage} />
-                      <Route path="/:lang/404" component={ErrorPage} />
-                      <Route path="/:lang" exact component={HomePage} />
+                      <Route path="/:lang/contacts" component={ContactsPageWrapper} />
+                      <Route path="/:lang/product/:id" component={ProductPageWrapper} />
+                      <Route path="/:lang/brand/:id" component={BrandPageWrapper} />
+                      <Route path="/:lang/404" component={ErrorPageWrapper} />
+                      <Route path="/:lang" exact component={HomePageWrapper} />
                       <Redirect path="/" to="/ua" />
                       <Redirect from='*' to='/404' />
                     </Switch>
-                    </Suspense>
+                    {/* </Suspense> */}
                   </div>
                 </Transition>
               </TransitionGroup>

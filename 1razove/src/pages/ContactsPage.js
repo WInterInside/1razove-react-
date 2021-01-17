@@ -3,13 +3,6 @@ import dataStore from '../stores/dataStore';
 // import Contacts from "../components/contacts/Contacts";
 // import WhiteHeader from "../components/header/WhiteHeader";
 // import Footer from "../components/footer/Footer";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link
-} from "react-router-dom";
 
 const WhiteHeader = React.lazy(() => import('../components/header/WhiteHeader'));
 const Footer = React.lazy(() => import('../components/footer/Footer'));
