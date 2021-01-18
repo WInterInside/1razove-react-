@@ -88,7 +88,8 @@
 .brands__img {
   margin: 0 auto;
   height: min-content;
-  
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .brands__item {

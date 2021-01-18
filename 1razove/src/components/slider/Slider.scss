@@ -13,9 +13,22 @@
     margin-bottom: 150px;
   }
 }
-
+.product__slide{
+  @media (max-width: 950px) {
+    max-width: 92vw;
+    overflow: hidden;
+  }
+}
+picture{
+  @media (max-width: 950px) {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+}
 .product__slideimg {
-  height: 288px;
+  max-height: 288px;
   max-width: none;
 
   border-radius: 20px;

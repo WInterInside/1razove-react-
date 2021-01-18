@@ -8,7 +8,7 @@ export default function Problematic({data}) {
   useEffect(() => {
 
     if(window.innerWidth <= 1200){
-      console.log('slider init');
+
       setTimeout(() => {
         if(!document.getElementById('problematic-text'))
           return;
@@ -22,7 +22,7 @@ export default function Problematic({data}) {
           nav: false,
           autoplay: false,
           loop: false,
-          swipeAngle: false,
+          swipeAngle: 30,
           //mouseDrag: true,
           arrowKeys: false,
           //controlsContainer: '.product__toggls',

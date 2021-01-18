@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 html {
@@ -16,6 +18,7 @@ body {
   position: relative;
   //min-width: 375px;
   margin: 0 auto;
+  //-webkit-transform:translate3d(0,0,0);
 }
 
 a {

@@ -34,7 +34,7 @@ export default function Brands({data}) {
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}
                     <div className="brands__logowrapper">                       
-                      <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" width="176" height="59" />
+                      <img className="brands__img brands__img--maxtec" src={value.img} alt="maxtec logotype" />
                     </div>
                     <p className="brands__description brands__description--maxtec">{value.text}</p>
                     <button className="button button--brands">{value.btnText} </button>

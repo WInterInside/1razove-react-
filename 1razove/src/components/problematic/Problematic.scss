@@ -138,3 +138,9 @@
     padding-bottom: 50px;
   }
 }
+
+#problematic-text, #problematic-text > .tns-item, .problematic__card{
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  
+}

@@ -35,7 +35,7 @@ export default function Slider({data}) {
 
       mainSlider = tns({
         container: '.product__slider',
-        items: 2,
+        items: 1,
         autoWidth: true,
         gutter: 10,
         controls: true,
@@ -49,7 +49,7 @@ export default function Slider({data}) {
         nextButton: '.product__arrow--next',
         responsive: {
           900: {
-            items: 4,
+            items: 1,
             gutter: 15
           }
         }
