@@ -7,13 +7,14 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.1",
-    "imports-loader": "^1.2.0",
     "gsap": "^3.5.1",
-    "youtube-player": "^5.5.2",
     "axios": "^0.21.0",
+    "tiny-slider": "^2.9.3"
+  },
+  "devDependencies": {
+    "imports-loader": "^1.2.0",
     "sass": "^1.30.0",
-    "tiny-slider": "^2.9.3",
-    "babel-preset-react-optimize": "^1.0.1"
+    "react-scripts": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,25 +1,51 @@
 import React, { useEffect, useState } from "react"
 import "./Decision.scss";
-import YouTubePlayer from 'youtube-player';
+//import YouTubePlayer from 'youtube-player';
 
 //let initialized = false;
 export default function Decision({data}) {
   let [videoStarted, setVideoStarted] = useState(false);
+  let [loadYT, setLoadYT] = useState(false);
   let player;
 
   useEffect(() => {
-    // if(initialized)
-    //   return;
+    // player = YouTubePlayer('decision__video');
+    // player.loadVideoById(data.videoUrl);
+    // player.stopVideo();
+    window.addEventListener("scroll", () => {
+      if(document.body.scrollTop > 3200 || document.documentElement.scrollTop > 3200){
+        setLoadYT(true);
 
-    player = YouTubePlayer('decision__video');
-    player.loadVideoById(data.videoUrl);
-    player.stopVideo();
+        var tag = document.createElement('script');
 
-    //initialized = true;
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        //var player;
+        window.onYouTubeIframeAPIReady = function() {
+          player = new window.YT.Player('decision__video', {
+            height: '390',
+            width: '640',
+            videoId: data.videoUrl,
+            // events: {
+            //   'onReady': onPlayerReady,
+            //   'onStateChange': onPlayerStateChange
+            // }
+          });
+        }
+
+      }
+    });
   })
 
   function clickVideo(){
+    debugger;
+    //let player = document.getElementById('ytplayer');
     setVideoStarted(true);
+    //player.playVideo();
     player.playVideo();
   }
 
@@ -60,7 +86,10 @@ export default function Decision({data}) {
                   </svg>
                 </div>
               }
-              <div id="decision__video" className="decision__video" width="480" height="360"></div>
+              { loadYT && <div id="decision__video" className="decision__video">
+                  {/* <iframe id="ytplayer" frameBorder="0" type="text/html" width="100%" height="100%" src={`https://www.youtube.com/embed/${data.videoUrl}`}></iframe> */}
+                </div>
+              }
             </div>
           </div>
         </div>
