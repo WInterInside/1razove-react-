@@ -78,16 +78,17 @@
     padding: 30px 20px;
     border-radius: 20px;
     padding-bottom: 15px;
-  }
 
-  &:hover {
-    background-color: #9ACDFF;
+    &:hover {
+      background-color: #9ACDFF;
+    }
   }
 }
 
 .brands__img {
   margin: 0 auto;
   height: min-content;
+  
 }
 
 .brands__item {
