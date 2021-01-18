@@ -4,7 +4,6 @@
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 580px;
 }
 
 .navigation__heading {
@@ -40,9 +39,35 @@
   }
 }
 
-.navigation__social {
-  &--fb {
-    margin-right: 16px;
+.navigation__sociallist {
+   display: flex;
+   flex-direction: row-reverse;
+
+   margin: 0;
+   margin-bottom: 5px;
+   padding-top: 0;
+   padding-bottom: 5px;
+   align-self: center;
+   
+   @media (min-width: 950px) {
+     flex-direction: row;
+     padding-top: 5px;
+     padding-bottom: 0;
+     margin-bottom: 0;
+   }
+}
+
+.navigation__socialitem {
+  margin-right: 20px;
+}
+
+.navigation__svg {
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: 950px) {
+    width: 20px;
+    height: 20px;
   }
 }
 
