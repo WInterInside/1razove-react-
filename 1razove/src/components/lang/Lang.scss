@@ -31,6 +31,18 @@
 
 }
 
-.languages__item:last-child {
+.languages__item:nth-child(3){
   margin-right: 0;
+}
+
+.navigation__sociallist--mobile {
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin-top: 15px;
+  align-self: center;
+  
+  @media (min-width: 950px) {
+    display: none;
+  }
 }

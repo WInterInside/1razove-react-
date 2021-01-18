@@ -27,7 +27,7 @@ export default function Nav({data, closeMenu}) {
              </Link>
             </li>
         })}
-        <ul className="navigation__sociallist">
+        <ul className="navigation__sociallist navigation__sociallist--desctop">
           <li className="navigation__socialitem">
             <a className="social__link social__link--yt" target="_blank" href={data.ytLink} aria-label="1razove yotube">
               <span className="visually-hidden">Razove in Youtube</span>
