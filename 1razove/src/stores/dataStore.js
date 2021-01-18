@@ -10,7 +10,7 @@ async function getData(){
   }
   let lang = localStorage.getItem(langItem);
   let result = sessionStorage.getItem(`data-${random}-${lang}`);
-  if(!result) {
+  if(!result){
     let link = `/data/data.ua.json`;
     link = lang ? `/data/data.${lang}.json?${random}` : link;
     link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
