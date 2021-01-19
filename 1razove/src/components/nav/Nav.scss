@@ -74,6 +74,13 @@
   }
 }
 
+.navigation__svgblue path{
+  fill: #0627b0;
+  @media (min-width: 950px) {
+    fill: #0627b0;
+  }
+}
+
 .navigation__svg:hover path {fill: #2789FF;}
 
 .navigation__link {
