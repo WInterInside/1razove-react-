@@ -13,7 +13,7 @@ async function getData(){
   if(!result){
     let link = `/data/data.ua.json`;
     link = lang ? `/data/data.${lang}.json?${random}` : link;
-    //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
+    link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
     let request = await axios.get(link);
     result = request.data;
     sessionStorage.setItem(`data-${random}-${lang}`, JSON.stringify(result));

@@ -75,7 +75,7 @@
     z-index: 20;
     width: 100%;
     padding: 15px 15px 30px 15px;
-    top: -310px;
+    top: -360px;
     left: 0;
     background-color: $white;
     color: #0627b0;
@@ -190,6 +190,10 @@
     margin-right: 146px;
   }
 
+  @media (min-width: 1200px) and(max-width: 1400px) {
+    margin-right: 106px;
+  }
+
   &--menu {
     width: 173px;
     height: 39px;
@@ -218,6 +222,7 @@
 
     @media (min-width: 950px) {
       height: 56px;
+      margin-right: 40px;
     }
   }
 }

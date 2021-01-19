@@ -17,6 +17,10 @@
   margin-right: 52px;
   margin-bottom: 10px;
 
+  @media (min-width: 1279px) and(max-width: 1400px) {
+    margin-right: 22px;
+  }
+
   &--contacts {
     margin: 0;
     padding-top: 0;
@@ -50,7 +54,6 @@
      margin-bottom: 0;
    }
 }
-
 
 .navigation__socialitem {
   margin-right: 20px;

@@ -10,6 +10,10 @@
 .languages__item {
   margin-right: 30px;
 
+  @media (min-width: 1200px) and(max-width: 1400px) {
+    margin-right: 22px;
+  }
+
   @include pragmatica (18px, 22px, #0627b0);
   cursor: pointer;
 
