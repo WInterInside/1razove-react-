@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import dataStore from '../../stores/dataStore';
 
 export default function Brands({data}) {
-
-
   const [count, setCount] = useState(window.innerWidth <= 950 ? 4:100);
   const [name, setName] = useState("Показати більше");
   const lang = dataStore.getLang();
@@ -29,7 +27,7 @@ export default function Brands({data}) {
         <ul className="brands__list">
           {
             data.brands.slice(0, count).map((value,index) => {
-              return <li key={index} className="brands__item">
+              return <li key={index} className="brands__item" id={`brands${index}`}>
                 <Link className="brands__link" to={`/${lang}/brand/${value.url}`}>
                   <div className="brands__wrapper">
                     {/* <h2 className="brands__name visually-hidden">Maxtec</h2> */}

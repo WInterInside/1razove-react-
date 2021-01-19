@@ -10,9 +10,15 @@ export default function Nav({data, closeMenu}) {
   function hashClick(e, hash){
     if(hash.indexOf('#') > -1){ 
       e.preventDefault();
-      document.querySelector(hash).scrollIntoView({
+      // document.querySelector(hash + 2).scrollIntoView({
+      //   behavior: 'smooth'
+      // });
+      let elem = document.querySelector(hash);
+      var rect = elem.getBoundingClientRect();
+      window.parent.scrollTo({
+        top: rect.top,
         behavior: 'smooth'
-      });
+      })
       closeMenu();
     }
   }

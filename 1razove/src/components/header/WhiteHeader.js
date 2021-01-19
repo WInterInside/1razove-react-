@@ -5,7 +5,7 @@ import "../lang/Lang.scss";
 import dataStore from '../../stores/dataStore';
 import { Link } from 'react-router-dom';
 
-export default function WhiteHeader({data, brandLink, brand}) {
+export default function WhiteHeader({data, brandLink, brand, brandText}) {
   let [ showMenu, setShowMenu ] = useState(false);
   const lang = dataStore.getLang();
   function toggleMenu(){
@@ -55,7 +55,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                     }
                     <ul className="navigation__sociallist navigation__sociallist--desctop">
                       <li className="navigation__socialitem">
-                        <a className="social__link social__link--yt" target="_blank" href={data.ytLink} aria-label="1razove yotube">
+                        <a className="social__link social__link--yt" target="_blank" href={data.heroBlock.ytLink} aria-label="1razove yotube">
                           <span className="visually-hidden">Razove in Youtube</span>
                           <svg className="navigation__svgblue" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M8.667 11.747l3.253-1.874L8.667 8v3.747z" fill="#fff"/>
@@ -64,7 +64,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                         </a>
                       </li>
                       <li className="navigation__socialitem">
-                        <a className="social__link social__link--tm" target="_blank" href={data.telegramLink} aria-label="1razove telegram">
+                        <a className="social__link social__link--tm" target="_blank" href={data.heroBlock.telegramLink} aria-label="1razove telegram">
                           <span className="visually-hidden">Razove in telegram</span>
                           <svg className="navigation__svgblue" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M10 20c5.524 0 10-4.476 10-10S15.524 0 10 0 0 4.476 0 10s4.476 10 10 10zM4.576 9.783l9.642-3.717c.447-.162.838.109.693.786V6.85l-1.641 7.734c-.122.548-.447.682-.903.423l-2.5-1.842-1.206 1.162c-.133.133-.246.245-.504.245l.177-2.544 4.633-4.186c.202-.177-.045-.277-.31-.1L6.93 11.346l-2.468-.77c-.536-.17-.548-.535.113-.794z" fill="#fff"/>
@@ -72,7 +72,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                         </a>
                       </li>
                       <li className="navigation__socialitem">
-                        <a className="navigation__social navigation__social--inst" target="_blank" href={data.instaLink} aria-label="1razove Instagram">
+                        <a className="navigation__social navigation__social--inst" target="_blank" href={data.heroBlock.instaLink} aria-label="1razove Instagram">
                           <span className="visually-hidden">Razove in Instagram</span>
                           <svg className="navigation__svgblue" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.9141 10C11.9141 11.0571 11.0571 11.9141 10 11.9141C8.94287 11.9141 8.08594 11.0571 8.08594 10C8.08594 8.94287 8.94287 8.08594 10 8.08594C11.0571 8.08594 11.9141 8.94287 11.9141 10Z" fill="white"/>
@@ -82,7 +82,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
                         </a>
                       </li>
                       <li className="navigation__socialitem">
-                        <a className="navigation__social navigation__social--fb" target="_blank" href={data.fbLink} aria-label="1razove facebook">
+                        <a className="navigation__social navigation__social--fb" target="_blank" href={data.heroBlock.fbLink} aria-label="1razove facebook">
                           <span className="visually-hidden">Razove in Facebook</span>
                           <svg className="navigation__svgblue" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.612 19.87zM11.812 19.836l-.12.02.12-.02zM11.139 19.935zM11.33 19.912zM12.085 19.782zM12.76 19.614l-.085.023.085-.023zM12.556 19.67l-.093.024.093-.024zM12.289 19.736l-.1.023.1-.023zM10.84 19.965zM20 10c0-5.522-4.478-10-10-10S0 4.478 0 10s4.478 10 10 10l.176-.002v-7.785H8.027V9.71h2.149V7.867c0-2.137 1.304-3.3 3.21-3.3.913 0 1.698.068 1.927.098V6.9h-1.315c-1.037 0-1.238.493-1.238 1.216v1.594h2.48l-.323 2.504H12.76v7.4C16.94 18.416 20 14.566 20 10zM10.66 19.978zM10.342 19.994z" fill="#fff"/>
@@ -154,7 +154,7 @@ export default function WhiteHeader({data, brandLink, brand}) {
         </div>
         {
           brandLink && <Link className="header__link" to={`/${lang}/brand/${brandLink}`}>
-            <span className="header__link-span">←</span>&nbsp;Назад до бренду&nbsp;<span>{brand}</span>
+            <span className="header__link-span">←</span>&nbsp;{brandText}&nbsp;<span>{brand}</span>
           </Link>
         }
 

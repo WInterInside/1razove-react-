@@ -43,7 +43,7 @@ export default function ProductPage(props) {
           <div className="content--inner">
             <div className="page product">
               { !!data && !!product && <div>
-                  <WhiteHeader data={data} brandLink={product.brandLink} brand={product.brand}/>
+                  <WhiteHeader data={data} brandLink={product.brandLink} brand={product.brand} brandText={product.brandText}/>
                   <div className="container">
                     <Product__card data={product}/>
                   </div>

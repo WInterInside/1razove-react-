@@ -59,7 +59,7 @@ export default function Header({data}) {
             </Link>
           </div>
           <Nav data={data.heroBlock} closeMenu={() => !showMenu ? null : toggleMenu()} />
-          <Lang data={data.project.langs}/>
+          <Lang data={data.project.langs} hero={data.heroBlock}/>
         </div>
       </div>
       <header className="header header--full-height" id="home-header">
@@ -81,7 +81,7 @@ export default function Header({data}) {
                     </Link>
                   </div>
                   <Nav data={data.heroBlock} closeMenu={() => !showMenu ? null : toggleMenu()} />
-                  <Lang data={data.project.langs}/>
+                  <Lang data={data.project.langs} hero={data.heroBlock}/>
                 </div>
               </div>
               <div className="header__wrapper--text">
