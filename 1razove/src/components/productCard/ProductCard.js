@@ -1,10 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import "./ProductCard.scss";
-
+import Overlay from '../overlay/Overlay';
 import ProductIndications from "../productIndications/ProductIndications";
 import Leaflet from "../leaflet/Leaflet";
+import Form from '../form/Form';
 
 export default function ProductCard({data}) {
+  let [showPopup, setShowPopup] = useState(false);
+
+  function closePopup(){
+    setShowPopup(false);
+  }
+
+  function openPopup(){
+    setShowPopup(true);
+  }
+
   return (
     <div className="product__card">
       <div className="product__image product__image--desktop">
@@ -43,9 +54,14 @@ export default function ProductCard({data}) {
               }
             })
           }
-        </div>
-        <Leaflet data={data} />
+        </div> 
+        <Leaflet data={data} openPopup={() => openPopup()}/>
       </div>
+      { 
+        showPopup && <Overlay closePopup={() => closePopup()}>
+          <Form closePopup={() => closePopup()} data={data} fileUrl={data.downloadBlockBtnLink} />
+        </Overlay>
+      }
     </div>
   )
 }

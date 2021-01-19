@@ -101,30 +101,16 @@ export default function Slider({data}) {
       </div>
       <div className="container container--slider">
         <div className="product__slider">
-                <div className="product__slide" onClick={(e) => openOverlay(0)}>
-                  <picture>
-                    <source type="image/webp" srcSet={'https://razove.com.ua/images/veoflo-1.jpg'} />
-                    <img className="product__slideimg" src={'https://razove.com.ua/images/veoflo-1.jpg'} />
-                  </picture>
-                </div>
-                <div className="product__slide" onClick={(e) => openOverlay(1)}>
-                  <picture>
-                    <source type="image/webp" srcSet={'https://razove.com.ua/images/veoflo1.jpg'} />
-                    <img className="product__slideimg" src={'https://razove.com.ua/images/veoflo1.jpg'}/>
-                  </picture>
-                </div>
-                <div className="product__slide" onClick={(e) => openOverlay(2)}>
-                  <picture>
-                    <source type="image/webp" srcSet={'https://razove.com.ua/images/veoflo2.jpg'} />
-                    <img className="product__slideimg" src={'https://razove.com.ua/images/veoflo2.jpg'}/>
-                  </picture>
-                </div>
-                <div className="product__slide" onClick={(e) => openOverlay(3)}>
-                  <picture>
-                    <source type="image/webp" srcSet={'https://razove.com.ua/images/veoflo3.jpg'} />
-                    <img className="product__slideimg" src={'https://razove.com.ua/images/veoflo3.jpg'}/>
-                  </picture>
-                </div>
+          {
+            data.images.map((value,index) => {
+              return <div key={index} className="product__slide" onClick={(e) => openOverlay(index)}>
+                <picture>
+                  <source type="image/webp" srcSet={value.url} />
+                  <img className="product__slideimg" src={value.url} alt={value.title} />
+                </picture>
+              </div>
+            })
+          }
         </div>
       </div>
       <div className={`overlay-wrapper ${showPopup ? '' : 'hide'} ${animate ? 'slider-animated' : ''}`} onClick={preventClose}>
@@ -136,38 +122,6 @@ export default function Slider({data}) {
             </div> */}
             <div>
               <div id="overlay-slider">
-                <div className="slide__wrapper">
-                  <div className="slideimg__wrapper" onClick={preventClose}>
-                    <picture>
-                      <img className="product__slideimg--opened" src={'https://razove.com.ua/images/veoflo-1.jpg'} />
-                    </picture>
-                    <div className="close" onClick={() => closePopup()}></div>
-                  </div>
-                </div>
-                <div className="slide__wrapper">
-                  <div className="slideimg__wrapper" onClick={preventClose}>
-                    <picture>
-                      <img className="product__slideimg--opened" src={'https://razove.com.ua/images/veoflo1.jpg'} />
-                    </picture>
-                    <div className="close" onClick={() => closePopup()}></div>
-                  </div>
-                </div>
-                <div className="slide__wrapper">
-                  <div className="slideimg__wrapper" onClick={preventClose}>
-                    <picture>
-                      <img className="product__slideimg--opened" src={'https://razove.com.ua/images/veoflo2.jpg'} />
-                    </picture>
-                    <div className="close" onClick={() => closePopup()}></div>
-                  </div>
-                </div>
-                <div className="slide__wrapper">
-                  <div className="slideimg__wrapper" onClick={preventClose}>
-                    <picture>
-                      <img className="product__slideimg--opened" src={'https://razove.com.ua/images/veoflo3.jpg'} />
-                    </picture>
-                    <div className="close" onClick={() => closePopup()}></div>
-                  </div>
-                </div>
                 {
                   data.images.map((value,index) => {
                     return <div  key={index} className="slide__wrapper">

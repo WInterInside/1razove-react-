@@ -35,14 +35,14 @@ export default function BrandDescription({data}) {
               <h2 className="brand__heading brand__heading--colored brand__heading--h2">{data.blueText}</h2>
               <p className="brand__text brand__text--sphere">{data.text}</p>
             </div>
-            <a className="brand__link button button--price" onClick={() => openPopup()}>{data.btnText}</a>
+            <a className="brand__link button button--price" onClick={() => openPopup()}>{data.btnText}</a> 
           </div>
         </div>
       </div>
 
       { 
         showPopup && <Overlay closePopup={() => closePopup()}>
-          <Form closePopup={() => closePopup()} data={data} />
+          <Form closePopup={() => closePopup()} data={data} fileUrl={data.btnLink} />
         </Overlay>
       }
 

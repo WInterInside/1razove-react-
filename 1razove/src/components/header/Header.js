@@ -7,28 +7,30 @@ import dataStore from '../../stores/dataStore';
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { Link } from 'react-router-dom';
 
+const portraitOrientation = window.innerHeight > window.innerWidth;
+const isDesktop = window.innerWidth > 950;
+
 export default function Header({data}) {
   let [ showMenu, setShowMenu ] = useState(false);
   const lang = dataStore.getLang();
-
+  console.log(portraitOrientation);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
 
-      setTimeout(() => {
-        gsap.timeline({
-          defaults: {duration: 1 },
-          scrollTrigger: {
-            trigger: "#home-header",
-            start: "top top",
-            end: "+=2000",
-            scrub: true,
-            pin: true
-          }
-        })
-          .to("#animated-text",  { y: window.innerWidth > 950 ? -800 : -900})
-          .addLabel("color");
-      },500);
-    
+    setTimeout(() => {
+      gsap.timeline({
+        defaults: {duration: 1 },
+        scrollTrigger: {
+          trigger: "#home-header",
+          start: "top top",
+          end: "+=2000",
+          scrub: true,
+          pin: true
+        }
+      })
+        .to("#animated-text",  { y: window.innerWidth > 950 ? -800 : (!portraitOrientation ? -300 : -900) })
+        .addLabel("color");
+    },500);
   })
 
   function toggleMenu(){
@@ -66,7 +68,7 @@ export default function Header({data}) {
         
         <div className="container">
           <div className="header__wrapper header__wrapper--main">
-            <Link className="header__logo" to={`/${lang}/`}>
+            <Link className={`header__logo  ${!portraitOrientation && !isDesktop ? 'header__logo--landscape' : ''}`} to={`/${lang}/`}>
               <picture>
                 <source media="(min-width: 950px)" srcSet="/images/logo.svg" />
                 <img className="header__img" src="/images/1mobile.svg" alt="1razovoe logotype" width="316" height="522" />
@@ -76,7 +78,7 @@ export default function Header({data}) {
               <div className={`header__wrapper-mobile ${showMenu ? 'header__wrapper-mobile--opened' : ''}`} onClick={toggleMenu}>
                 <div className={`header__wrapper header__wrapper--menu ${showMenu ? 'header__wrapper--opened' : ''}`} onClick={stopPropagation}>
                   <div className="header__wrapper header__wrapper--row">
-                    <Link className="header__logo header__logo--mobile" to={`/${lang}/`}>
+                    <Link className={`header__logo header__logo--mobile`} to={`/${lang}/`}>
                       <img className="header__img header__img--menu" src="/images/mobile-bl.svg" alt="1razovoe logotype" width="173" height="39" />
                     </Link>
                   </div>
@@ -84,7 +86,7 @@ export default function Header({data}) {
                   <Lang data={data.project.langs} hero={data.heroBlock}/>
                 </div>
               </div>
-              <div className="header__wrapper--text">
+              <div className={`header__wrapper--text ${!portraitOrientation && !isDesktop ? 'slider-text-landscape' : ''}`}>
                 <div id="animated-text">
                   {
                     data.heroBlock.scrollText.map((value, index) => {

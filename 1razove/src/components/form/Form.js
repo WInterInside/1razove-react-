@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./Form.scss";
 import axios from 'axios';
 
-export default function Form({closePopup, data}) {
+export default function Form({closePopup, data, fileUrl}) {
   let [email, setEmail] = useState('');
   let [name, setName] = useState('');
 
@@ -27,6 +27,8 @@ export default function Form({closePopup, data}) {
     let url = `https://crm.razove.com.ua/rest/1/tmz971rk5etxiy2j/crm.lead.add.json?FIELDS[TITLE]=Новий лід&FIELDS[NAME]=${name}&FIELDS[EMAIL][0][VALUE]=${email}&FIELDS[EMAIL][0][VALUE_TYPE]=WORK&FIELDS[UTM_SOURCE]=fb&FIELDS[UTM_CAMPAIGN]=123&FIELDS[UTM_CONTENT]=123&FIELDS[UTM_MEDIUM]=123&FIELDS[UTM_TERM]=123`;
     axios.get(url);
     close();
+    if(fileUrl)
+      window.open(fileUrl,'_newtab');
   }
 
   return (
