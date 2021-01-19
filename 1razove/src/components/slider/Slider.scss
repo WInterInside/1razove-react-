@@ -19,7 +19,8 @@
     overflow: hidden;
   }
 }
-.product__slide picture{
+.product__slide picture,
+.slideimg__wrapper picture {{
   @media (max-width: 950px) {
     display: flex;
     justify-content: center;
