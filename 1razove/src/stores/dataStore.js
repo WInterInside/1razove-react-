@@ -9,11 +9,11 @@ async function getData(){
     sessionStorage.setItem('random', random);
   }
   let lang = localStorage.getItem(langItem);
-  let result = sessionStorage.getItem(`data-${random}-${lang}`);
+  let result = null;//sessionStorage.getItem(`data-${random}-${lang}`);
   if(!result){
     let link = `/data/data.ua.json`;
     link = lang ? `/data/data.${lang}.json?${random}` : link;
-    link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
+    //link = `https://dmitry-alexa.s3.eu-central-1.amazonaws.com/data.${lang}.json`;
     let request = await axios.get(link);
     result = request.data;
     sessionStorage.setItem(`data-${random}-${lang}`, JSON.stringify(result));
